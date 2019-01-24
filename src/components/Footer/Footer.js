@@ -3,6 +3,7 @@ import './Footer.css';
 import academeLogoSmall from './../../images/logos/academe/academe-logo-only-30x30.png';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
+
 const footerStyle = {
   backgroundColor: "#4C4C4C",
   fontSize: "20px",
