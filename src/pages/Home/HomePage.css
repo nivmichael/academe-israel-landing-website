@@ -1,0 +1,54 @@
+#homepage-component {}
+
+#homepage-component .universities-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#homepage-component .single-university-container {
+    display: flex;
+    margin: 10px 0;
+}
+
+#homepage-component .welcome-msg-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#homepage-component .welcome-msg-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#homepage-component .welcome-msg {
+    font-size: 1.5em;
+}
+#homepage-component .welcome-msg > span > span {
+    color: #2194d3;
+    font-weight: bold;
+}
+
+#homepage-component .read-more-btn {
+    background-color: white;
+    border: 1px solid #2194d3;
+    border-radius: 5px;
+    color: #2194d3;
+    box-shadow: 2px 2px 4px 0px #7c7c7c;
+    padding: 4px 20px;
+    margin: 20px;
+}
+
+#homepage-component .advantages-list-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9B24A;
+    padding: 30px 0;
+}

@@ -1,0 +1,25 @@
+#page-main-title-component .students-color { background-color: #2194d3; }
+#page-main-title-component .employers-color { background-color: #FAB047; }
+#page-main-title-component .about-us-color { background-color: #2194d3; }
+#page-main-title-component .contact-us-color { background-color: #2194d3; }
+#page-main-title-component .faq-color { background-color: #2194d3; }
+#page-main-title-component .default-color { background-color: #2194d3; }
+
+#page-main-title-component .message-container {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* background-color: #2194d3; */
+}
+
+#page-main-title-component .page-logo-container {
+    display: flex;
+    align-self: center;
+}
+
+#page-main-title-component .message {
+    font-size: 1.3em;
+    color: white;
+    margin-top: 15px;
+}

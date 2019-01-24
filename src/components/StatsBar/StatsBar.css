@@ -1,0 +1,71 @@
+#statsbar-component {
+    /* display: flex;
+    width: 100%; */
+}
+
+#statsbar-component .container {
+    padding: 0;
+    width: 100%;
+}
+
+#statsbar-component .main-divider-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* flex-direction: row;
+    align-items: center;
+    justify-content: center; */
+    margin: 15px 0;
+    width: 100%;
+}
+
+#statsbar-component .main-divider {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    align-self: center;
+    height: 2px;
+    background-color: #2194d3;
+    width: 66%;
+}
+#statsbar-component .main-divider-title {
+    display: flex;
+    align-self: center;
+    border: 1px solid #2194d3;
+    border-radius: 3px;
+    padding: 0 15px;
+    font-size: 1em;
+    background: white;
+    z-index: 1;
+}
+
+#statsbar-component .sub-divider {
+    display: flex;
+    margin: 15px 0;
+    height: 2px;
+    background-color: grey;
+    width: 33%;
+}
+
+#statsbar-component .stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#statsbar-component .single-stat-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#statsbar-component .single-stat-container .single-stat {
+    font-size: 2.3em;
+}
+
+#statsbar-component .single-stat-container .single-stat-title {
+    font-size: 1.1em;
+    color: grey;
+}

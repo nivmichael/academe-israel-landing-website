@@ -1,0 +1,17 @@
+#root-app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#root-app .body-container {
+    flex: 1 0 auto;
+}
+
+#root-app .header-container {
+    flex: none;
+    width: 100%;
+}
+#root-app .footer-container {
+    flex: none;
+}

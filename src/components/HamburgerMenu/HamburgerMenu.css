@@ -1,0 +1,86 @@
+#hamburger-menu-component {}
+
+
+#hamburger-sidebar .bm-menu-wrap {
+    right: -9px !important;
+}
+
+/* HamburgerMenu Module Styling */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: relative;
+    top: 8px;
+    height: 25px;
+    width: 30px;
+    right: 5px;
+    /* width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px; */
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: #373a47;
+  height: 15% !important;
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* .bm-burger-button .bm-burger-bars:first-child { top: 0%; } */
+/* .bm-burger-button .bm-burger-bars:nth-child(2) { top: 33.3%; } */
+/* .bm-burger-button .bm-burger-bars:last-child { top: 66.6%; } */
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+.bm-menu {
+  /* background: #373a47; */
+  background: #ededed;
+  /* padding: 2.5em 1.5em 0; */
+  padding: 0 10px;
+  font-size: 1.15em;
+  overflow: hidden!important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  /* padding: 0.8em 0; */
+  padding: 2.1em 0;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  padding: 5px 0;
+  color: #2194d3;
+  text-decoration: none;
+  border-bottom: 1px solid #bbbbbb;
+  font-size: 0.9em;
+}
+.bm-item:last-of-type {
+    border-bottom: none;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

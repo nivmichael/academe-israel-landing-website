@@ -1,0 +1,106 @@
+#employers-page-component {}
+
+#employers-page-component .publish-job-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#employers-page-component .publish-job-form-container .form-title {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+#employers-page-component .hiring-companies-list-container {
+    margin: 30px 0;
+}
+
+#employers-page-component .hiring-companies-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #EFEFEF;
+    padding: 15px;
+}
+
+#employers-page-component .hiring-companies {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    transition: height linear 2s;
+}
+
+#employers-page-component .hiring-companies-list .title {
+    display: block;
+    border-bottom: 1px solid black;
+    font-size: 0.9em;
+    margin-bottom: 10px;
+    padding: 3px;
+}
+
+#employers-page-component .hiring-companies-list-container .expand-button {
+    display: block;
+    background-color: #2194d3;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    padding: 10px 13px;
+    margin: 0 auto;
+    position: relative;
+    bottom: 20px;
+    box-shadow: 0px 0px 0px 8px white;
+}
+
+#employers-page-component .hiring-companies-list-container .expand-button:hover {
+    background-color: #1b80b7;
+}
+
+#employers-page-component .company-img-container {
+    /* width: 100%; */
+    margin: 30px 50px;
+}
+#employers-page-component .company-img-container:last-of-type {
+    margin: 30px 50px 60px;
+}
+
+#employers-page-component .company-img-container.collapsed {
+    display: none;
+}
+#employers-page-component .hiring-companies-list.expanded .company-img-container {
+    display: block;
+}
+
+/* #employers-page-component .floating-label {
+    text-align: start;
+    padding-right: 10px;
+} */
+
+/* initially label is below input */
+/* label {
+    display: inline-block;
+    position:absolute;
+    left: 15px;
+    top: 16px;
+    transition: all 150ms ease-in;
+    color: #676767;
+} */
+/* when the label is activated, it jumps up (using translateY) */
+        /* you could add animation here as well */
+/* label.field-active {
+    transform: translateY(-25px);
+    font-size: .9em;
+    color: #000;
+    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 2px 0 0 #fff, -2px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff;
+}
+.floating-label {
+    -webkit-appearance: none !important;
+} */

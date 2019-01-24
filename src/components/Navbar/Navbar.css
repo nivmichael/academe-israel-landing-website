@@ -1,0 +1,27 @@
+#navbar-component .container {
+    position: relative;
+    box-shadow: 0 5px 3px -2px #585858;
+}
+
+#navbar-component .logo-container {
+    display: flex;
+    text-align: left;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 5px;
+}
+
+#navbar-component .logo-container .title {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#navbar-component .inner-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 5px;
+}

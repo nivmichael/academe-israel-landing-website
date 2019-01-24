@@ -1,0 +1,56 @@
+#students-page-component {}
+
+#students-page-component .sub-title {
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+#students-page-component .sub-title div {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+#students-page-component .sub-title div:nth-child(2) {
+    color: #2194d3;
+}
+#students-page-component .sub-title div#chevron {
+    font-size: 3em;
+    color: #2194d3;
+}
+
+#students-page-component .universities-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0 20px 0;
+}
+
+#students-page-component .universities-container img {
+    flex: auto;
+    margin: 5px;
+}
+
+#students-page-component .universities-container img.uni-icon {
+    width: 100%;
+}
+
+#students-page-component .universities-container button {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid #2194d3;
+    border-radius: 5px;
+    color: #2194d3;
+    box-shadow: 2px 2px 4px 0px #7c7c7c;
+    padding: 4px 20px;
+    width: 120px;
+}
+
+
+
+/* #students-page-component .sub-title div#chevron {
+    font-size: 3em;
+    color: #2194d3;
+    font-weight: normal;
+    transform: rotate(270deg);
+} */

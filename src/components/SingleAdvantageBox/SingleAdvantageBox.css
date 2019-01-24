@@ -1,0 +1,38 @@
+#single-advantage-box-component {}
+
+#single-advantage-box-component .box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 15px 15px;
+    background-color: white;
+    box-shadow: 3px 3px 4px 0px #6c6c6c;
+}
+
+#single-advantage-box-component .box > p {
+    text-align: center;
+    margin-top: 5px;
+}
+
+#single-advantage-box-component .box > h1 {
+    margin: 0.3em 0;
+}
+
+#single-advantage-box-component .no-title {
+    display: none;
+}
+
+#single-advantage-box-component .no-background {
+    background-color: white;
+}
+
+#single-advantage-box-component .no-shadow {
+    box-shadow: none;
+}
+
+#single-advantage-box-component .box.text-with-padding > p {
+    padding: 0 30px;
+}
