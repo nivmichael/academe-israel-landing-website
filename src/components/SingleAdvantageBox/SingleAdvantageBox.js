@@ -90,6 +90,11 @@ const advantagesResources = {
 
 export default class SingleAdvantageBox extends Component {
 
+    /**
+     * Toggles between classes that change the style of the component when displaying for employers
+     *
+     * @param employer_only_flag - if employer dedicated
+     */
     isEmployerType = (employer_only_flag) => {
         return employer_only_flag ? ' no-background no-shadow text-with-padding' : '';
     }

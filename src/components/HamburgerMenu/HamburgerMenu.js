@@ -15,6 +15,7 @@ export default class HamburgerMenu extends Component {
 
     /**
      * Keeps your state in sync with the opening/closing of the menu
+     *
      * @param state
      */
     handleStateChange = (state) => {
@@ -23,6 +24,7 @@ export default class HamburgerMenu extends Component {
 
     /**
      * Checks if the menu is open
+     * 
      * @param state
      * @returns {Boolean} isOpen
      */

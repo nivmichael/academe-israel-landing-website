@@ -39,6 +39,24 @@ const advantagesList = ['central_arena', 'grounded', 'market_and_share', 'expens
 
 
 export default class HomePage extends Component {
+    constructor () {
+        super();
+
+        this.state = {
+            isAdvantagesHidden: true
+        }
+    }
+
+    /**
+     * Toggles the 'advantages' container
+     */
+    onToggleAdvantages = () => {
+        // get isAdvantagesHidden object from state first
+        let isAdvantagesHidden  = this.state.isAdvantagesHidden;
+        // flip flag
+        isAdvantagesHidden = !isAdvantagesHidden;
+        this.setState({ ...this.state, isAdvantagesHidden });
+    }
 
     /**
      * Creates array of elements to render, which contain images of universities
@@ -94,14 +112,18 @@ export default class HomePage extends Component {
                             <div className="welcome-msg">
                                 <span>ברוכים הבאים ל- <span>AcadeME</span></span>
                             </div>
-                            <div>
-                                <button className="pure-button read-more-btn">קראו עוד</button>
-                            </div>
                         </div>
                     </div>
                     <div className="pure-u-1">
-                        <div className="advantages-list-container">
+                        <div className={ 'advantages-list-container' + (this.state.isAdvantagesHidden ? ' hidden' : '') }>
                             { this.renderAdvantagesList(advantagesList) }
+                        </div>
+                    </div>
+                    <div className="pure-u-1">
+                        <div style={{ textAlign: 'center' }}>
+                            <button className="pure-button read-more-btn" onClick={ this.onToggleAdvantages }>
+                                { this.state.isAdvantagesHidden ? 'קראו עוד' : 'סגור' }
+                            </button>
                         </div>
                     </div>
                 </div>

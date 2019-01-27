@@ -29,8 +29,13 @@ const footerText = 'רשת גיוס הסטודנטים והבוגרים הגדו
 
 export default class Footer extends Component {
 
+    /**
+     * Redirects the user to the academe social page
+     *
+     * @param {String} icon - which social network icon the user has clicked
+     */
     onSocialClicked = (icon) => {
-        console.log(`clicked on ${icon} icon`);
+        // console.log(`clicked on ${icon} icon`);
     }
 
     render() {

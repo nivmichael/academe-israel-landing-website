@@ -17,17 +17,6 @@ import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
 export default class Navbar extends Component {
     render() {
         return (
-            // <Grid divided='vertically'>
-            //     <Grid.Row id="navbar-component" columns={2}>
-            //         <Grid.Column>
-            //             <HamburgerMenu></HamburgerMenu>
-            //         </Grid.Column>
-            //         <Grid.Column>
-            //             <Image src={mainAcademeLogo} verticalAlign="middle" floated="left" />
-            //         </Grid.Column>
-            //     </Grid.Row>
-            // </Grid>
-
             <div id="navbar-component">
                 <div className="pure-g container">
                     <div className="pure-u-1-3">

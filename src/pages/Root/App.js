@@ -20,11 +20,11 @@ class App extends Component {
               </div>
               <div className="pure-u-1 body-container">
                   <Switch>
-                      <Route exact path="/" component={HomePage} />
-                      <Route path="/home" component={HomePage} />
-                      <Route path="/students" component={StudentsPage} />
-                      <Route path="/employers" component={EmployersPage} />
-                      <Route path="/contact-us" component={ContactUsPage} />
+                      <Route exact path="/" component={ HomePage } />
+                      <Route path="/home" component={ HomePage } />
+                      <Route path="/students" component={ StudentsPage } />
+                      <Route path="/employers" component={ EmployersPage } />
+                      <Route path="/contact-us" component={ ContactUsPage } />
                   </Switch>
               </div>
               <div className="pure-u-1 footer-container">

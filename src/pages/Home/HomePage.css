@@ -52,3 +52,7 @@
     background-color: #F9B24A;
     padding: 30px 0;
 }
+
+#homepage-component .hidden {
+    display: none;
+}

@@ -78,6 +78,7 @@ export default class EmployersPage extends Component {
 
     /**
      * Stores the employer's email input value
+     *
      * @param {Event} e - event
      */
     handleEmployerEmail = (e) => {
@@ -90,6 +91,7 @@ export default class EmployersPage extends Component {
 
     /**
      * Stores the employer's phone input value
+     *
      * @param {Event} e - event
      */
     handleEmployerPhone = (e) => {
@@ -103,6 +105,7 @@ export default class EmployersPage extends Component {
 
     /**
      * Keeps your state in sync with the expanding/collapsing companies list
+     *
      * @param {Boolean} is_expanded
      */
     handleStateChange = (is_expanded) => {
@@ -114,6 +117,7 @@ export default class EmployersPage extends Component {
     /**
      * Toggles between the collapsed mode and the expanded mode of the companies list
      * Updates state when toggling
+     *
      * @param {Boolean} is_expanded
      */
     onCompaniesListToggleExpand = (is_expanded) => {
@@ -156,6 +160,7 @@ export default class EmployersPage extends Component {
      * Creates array of Companies Logos for rendering
      *
      * @param {Array} companies_list - array of companies logos to render
+     * @param {Boolean} is_collapsed - [optional] state of collapsed container flag
      * @returns {Array} list - list of html elements, contains the <img> wrapped in <div>
      */
     renderCompaniesList = (companies_list, is_collapsed = false) => {
@@ -174,6 +179,7 @@ export default class EmployersPage extends Component {
 
     /**
      * Renders the (expand/collapse)Icon based on the given flag
+     *
      * @param {Boolean} is_expanded
      * @returns {Element} FontAwesomeIcon
      */

@@ -17,18 +17,6 @@ const pageMainTitleResourcesList = {
 };
 
 export default class PageMainTitle extends Component {
-    defaultBackgroundColorClass = 'default-color';
-    currentBackgroundColorClass = 'default-color';
-    currentPageTitle = '';
-    currentPageIconBig = '';
-
-    handleBackgroundColorChange = (e) => {
-        console.log('### PageMainTitle.handleBackgroundColorChange called!', e);
-    };
-
-    handlePageLogoChange = (e) => {
-        console.log('### PageMainTitle.handlePageLogoChange called!', e);
-    }
 
     render() {
         return (

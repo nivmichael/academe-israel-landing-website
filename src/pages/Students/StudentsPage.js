@@ -37,12 +37,21 @@ const universitiesList = {
 
 export default class StudentsPage extends Component {
 
+    /**
+     * Redirects the user to the desired university login page
+     * @param {Event} e
+     */
     onUniversityClicked = (e) => {
         e.preventDefault();
         let university = e.target.alt;
         console.log('clicked university -> ', university);
     }
 
+    /**
+     * Renders the list of universities images wrapped in div element
+     * @param {Object} universities_list - list of names and logos
+     * @returns {Array} list - list of elements
+     */
     renserUniversitiesList = (universities_list) => {
         let list = [];
 

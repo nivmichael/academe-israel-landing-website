@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './MainIntro.css';
 
 import mainAcademeLogoBig from './../../images/logos/academe/academe-logo-100x100.png';
-// import { Grid } from 'semantic-ui-react';
 
 
 export default class MainIntro extends Component {

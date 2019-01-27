@@ -20,6 +20,7 @@ export default class ContactUsPage extends Component {
 
     /**
      * Stores the employer's email input value
+     *
      * @param {Event} e - event
      */
     handleContactMessageFields = (e) => {

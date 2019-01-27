@@ -65,6 +65,10 @@
     font-size: 2.3em;
 }
 
+#statsbar-component .single-stat-container .single-stat.plus-sign:after {
+    content: '+';
+}
+
 #statsbar-component .single-stat-container .single-stat-title {
     font-size: 1.1em;
     color: grey;
