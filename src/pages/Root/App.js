@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
 
 import Navbar from './../../components/Navbar/Navbar';
+import Footer from './../../components/Footer/Footer';
 import HomePage from './../Home/HomePage';
 import ContactUsPage from './../ContactUs/ContactUsPage';
 import StudentsPage from './../Students/StudentsPage';
@@ -27,7 +28,7 @@ class App extends Component {
                   </Switch>
               </div>
               <div className="pure-u-1 footer-container">
-
+                  <Footer></Footer>
               </div>
           </div>
       </div>

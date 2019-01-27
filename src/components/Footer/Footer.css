@@ -1,13 +1,61 @@
 #footer-component.container {
     background-color: #4C4C4C;
+    padding: 30px 20px;
 }
 
 #footer-component .social {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#footer-component .social > div {
+    padding: 0 30px;
+}
+#footer-component .social > div:first-of-type {
+    border-left: 1px solid white;
+}
+#footer-component .social .icon {
+    color: white;
+    font-size: 2.5em;
 }
 
 #footer-component .footer-text {
+    display: flex;
+    padding-top: 15px;
+    flex-direction: row;
+    justify-content: center;
+}
 
+#footer-component .footer-text .text {
+    display: flex;
+    align-self: center;
+    color: white;
+    font-weight: bold;
+    font-size: 0.6em;
+    border-left: 1px solid white;
+    padding-left: 10px;
+}
+
+#footer-component .logo-container {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+    /* text-align: left; */
+    /* flex-direction: row; */
+    /* justify-content: flex-end; */
+    /* padding: 5px 5px; */
+}
+
+#footer-component .logo-container .academe-logo {
+    width: 15px;
+}
+
+#footer-component .logo-container .title {
+    margin-left: 5px;
+    font-weight: bold;
+    font-size: 0.6em;
+    color: white;
 }
 
 #footer-component {}

@@ -26,7 +26,7 @@ export default class ContactUsPage extends Component {
         e.preventDefault();
         let prop            = null;
         let value           = null;
-        let contactMessage  = { ...this.state.contactMessage };
+        let contactMessage  = { ...this.state.contactMessage };     // get contactMessage object from state first
 
         if(e.target.id.indexOf([ 'subject', 'fromEmail', 'message' ])) { prop = e.target.id; }
 
@@ -64,9 +64,9 @@ export default class ContactUsPage extends Component {
 
                                 <input id="fromEmail" type="email" placeholder="אימייל חזרה*" onChange={ this.handleContactMessageFields } />
 
-                                <textarea id="message" placeholder="גוף הפנייה*" onChange={ this.handleContactMessageFields }></textarea>
+                                <textarea id="message" placeholder="גוף הפנייה*" rows="10" onChange={ this.handleContactMessageFields }></textarea>
 
-                                <button type="submit" className="pure-button pure-button-primary">שלח/י פנייה</button>
+                                <button type="submit" className="pure-button academe-button-full">שלח/י פנייה</button>
                             </fieldset>
                         </form>
                     </div>

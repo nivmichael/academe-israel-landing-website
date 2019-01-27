@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { CONST_UNIVERSITY_BASE_URL } from './../../constants';
 
 /* =========== component style ========== */
 import './StudentsPage.css';
@@ -35,6 +36,27 @@ const universitiesList = {
 };
 
 export default class StudentsPage extends Component {
+
+    onUniversityClicked = (e) => {
+        e.preventDefault();
+        let university = e.target.alt;
+        console.log('clicked university -> ', university);
+    }
+
+    renserUniversitiesList = (universities_list) => {
+        let list = [];
+
+        list = Object.keys(universities_list).map((uni_key) => {
+            return (
+                <div key={uni_key} onClick={ this.onUniversityClicked }>
+                    <img className="pure-img uni-icon" src={universities_list[uni_key]} alt={uni_key}></img>
+                </div>
+            )
+        });
+
+        return list;
+    }
+
     render() {
         return (
             <div id="students-page-component">
@@ -51,16 +73,7 @@ export default class StudentsPage extends Component {
                     </div>
                     <div className="pure-u-1">
                         <div className="universities-container">
-                            {
-                                Object.keys(universitiesList).map((uni_key) => {
-                                    return (
-                                        <div key={uni_key}>
-                                            <img className="pure-img uni-icon" src={universitiesList[uni_key]} alt={uni_key}></img>
-                                        </div>
-                                    )
-                                })
-                            }
-
+                            { this.renserUniversitiesList(universitiesList) }
                             <div><button className="pure-button">אחר</button></div>
                         </div>
                     </div>
