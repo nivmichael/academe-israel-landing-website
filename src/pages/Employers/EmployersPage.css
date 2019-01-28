@@ -79,6 +79,10 @@
     display: block;
 }
 
+#employers-page-component .continue-button {
+    margin: 15px;
+}
+
 /* #employers-page-component .floating-label {
     text-align: start;
     padding-right: 10px;

@@ -1,0 +1,39 @@
+/*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #footer-component .footer-text .text {
+        display: flex;
+        align-self: center;
+        color: white;
+        font-size: 1em;
+        font-weight: bold;
+        border-left: 1px solid white;
+        padding-left: 10px;
+    }
+
+    #footer-component .social .icon {
+        color: white;
+        font-size: 3em;
+    }
+
+    #footer-component .logo-container .academe-logo {
+        width: 25px;
+    }
+
+    #footer-component .logo-container .title {
+        margin-left: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        color: white;
+    }
+}
+
+/*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}

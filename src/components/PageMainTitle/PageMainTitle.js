@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './PageMainTitle.css';
+import './PageMainTitleResponsive.css';
 
 import ContactUsIcon from '../../images/icons/page-title/contact-us-icon-white-100x100.png';
 import StudentsIcon from '../../images/icons/page-title/students-icon-white-100x100.png';

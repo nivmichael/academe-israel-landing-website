@@ -35,15 +35,13 @@
     width: 100%;
 }
 
-#students-page-component .universities-container button {
-    margin-top: 20px;
-    background-color: white;
-    border: 1px solid #2194d3;
-    border-radius: 5px;
-    color: #2194d3;
-    box-shadow: 2px 2px 4px 0px #7c7c7c;
-    padding: 4px 20px;
-    width: 120px;
+#students-page-component .other-button-container {
+    display: flex;
+    margin: 10px 0 30px;
+}
+#students-page-component .other-button-container button {
+    margin: 0 auto;
+    width: 100px;
 }
 
 

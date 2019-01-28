@@ -1,0 +1,39 @@
+/*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    #statsbar-component .stats-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    #statsbar-component .single-stat-container:not(#jobs-stat) {
+        border-left: 2px solid grey;
+    }
+
+    #statsbar-component .sub-divider {
+        display: none;
+    }
+
+    #statsbar-component .main-divider {
+        display: flex;
+        position: absolute;
+        top: 10px;
+        align-self: center;
+        height: 2px;
+        background-color: #2194d3;
+        width: 50%;
+    }
+}
+
+/*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './Footer.css';
+import './FooterResponsive.css';
+
 import academeLogoSmall from './../../images/logos/academe/academe-logo-only-30x30.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';

@@ -7,6 +7,7 @@ import SingleAdvantageBox from './../../components/SingleAdvantageBox/SingleAdva
 
 /* =========== component style ========== */
 import './EmployersPage.css';
+import './EmployersPageResponsive.css';
 
 /* =========== companies logos =========== */
 import googleLogo from './../../images/logos/companies/google-100x34.png';
@@ -206,7 +207,7 @@ export default class EmployersPage extends Component {
                                     <div className="form-title">לפרסום משרה</div>
                                     <input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="floating-label" placeholder="הכנס את האימייל שלך"></input>
                                     <input id="publish-job-input-phone" type="text" onChange={ this.handleEmployerPhone } className="floating-label" placeholder="הכנס את מספר הטלפון שלך"></input>
-                                    <button type="submit" className="pure-button academe-button-full">המשך</button>
+                                    <button type="submit" className="pure-button academe-button-full continue-button">המשך</button>
                                 </fieldset>
                             </form>
                         </div>

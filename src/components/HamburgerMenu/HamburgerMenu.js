@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import { slide as Menu } from 'react-burger-menu';
 import Menu from 'react-burger-menu/lib/menus/slide'
 import './HamburgerMenu.css';
+import './HamburgerMenuResponsive.css';
 
 export default class HamburgerMenu extends Component {
     constructor () {
@@ -24,7 +25,7 @@ export default class HamburgerMenu extends Component {
 
     /**
      * Checks if the menu is open
-     * 
+     *
      * @param state
      * @returns {Boolean} isOpen
      */

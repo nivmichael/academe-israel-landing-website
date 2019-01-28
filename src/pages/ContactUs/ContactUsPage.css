@@ -20,6 +20,13 @@
     width: 60%;
 }
 
+#contact-us-page-component .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* #contact-us-page-component .page-title {
     padding: 0 30px;
     background-color: #2194d3;
@@ -36,4 +43,9 @@
 
 #contact-us-page-component .contact-form textarea {
     width: 100%;
+    height: 180px;
+}
+
+#contact-us-page-component .margin-md {
+    margin: 15px;
 }

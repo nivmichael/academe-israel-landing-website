@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './HomePage.css';
+import './HomePageResponsive.css';
 
 /* ============= components ============= */
 import MainIntro from './../../components/MainIntro/MainIntro';

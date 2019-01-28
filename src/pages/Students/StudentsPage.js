@@ -5,6 +5,7 @@ import { CONST_UNIVERSITY_BASE_URL } from './../../constants';
 
 /* =========== component style ========== */
 import './StudentsPage.css';
+import './StudentsPageResponsive.css';
 
 /* ========= universities logos ========= */
 import tauLogo from './../../images/logos/universities/tel-aviv-uni-200x75.png';
@@ -83,8 +84,10 @@ export default class StudentsPage extends Component {
                     <div className="pure-u-1">
                         <div className="universities-container">
                             { this.renserUniversitiesList(universitiesList) }
-                            <div><button className="pure-button">אחר</button></div>
                         </div>
+                    </div>
+                    <div className="pure-u-1 other-button-container">
+                        <button className="pure-button academe-button-outline">אחר</button>
                     </div>
                 </div>
             </div>

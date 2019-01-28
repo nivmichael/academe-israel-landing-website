@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './StatsBar.css';
+import './StatsBarResponsive.css';
 
 import CountUp from 'react-countup';
 
@@ -34,7 +35,7 @@ export default class StatsBar extends Component {
                 <div className="pure-g">
                     <div className="pure-u-1 stats-container">
                         <div className="pure-u-1">
-                            <div className="single-stat-container">
+                            <div id="students-stat" className="single-stat-container">
                                 <div className="single-stat" ref="studentsStatRef">
                                     <CountUp start={ 0 }
                                             end={ this.state.stats.students }
@@ -48,7 +49,7 @@ export default class StatsBar extends Component {
                         </div>
                         <div className="sub-divider"></div>
                         <div className="pure-u-1">
-                            <div className="single-stat-container">
+                            <div id="employers-stat" className="single-stat-container">
                                 <div className="single-stat">
                                     <CountUp start={0}
                                             end={ this.state.stats.employers }
@@ -61,7 +62,7 @@ export default class StatsBar extends Component {
                         </div>
                         <div className="sub-divider"></div>
                         <div className="pure-u-1">
-                            <div className="single-stat-container">
+                            <div id="jobs-stat" className="single-stat-container">
                                 <div className="single-stat">
                                     <CountUp start={0}
                                             end={ this.state.stats.jobs }
@@ -72,6 +73,8 @@ export default class StatsBar extends Component {
                                 <div className="single-stat-title">משרות פעילות</div>
                             </div>
                         </div>
+                    </div>
+                    <div className="pure-u-1">
                         <div className="main-divider-container">
                             <div className="main-divider"></div>
                             <div className="main-divider-title">בשיתוף</div>

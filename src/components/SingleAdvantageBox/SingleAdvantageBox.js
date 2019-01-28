@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './SingleAdvantageBox.css';
+import './SingleAdvantageBoxResponsive.css';
 
 /* ========= advantages icons ========= */
 import sunIcon from '../../images/icons/sun-100x100.png';
@@ -101,21 +102,19 @@ export default class SingleAdvantageBox extends Component {
 
     render() {
         return (
-            <div id="single-advantage-box-component">
-                <div className="pure-g">
-                    <div className="pure-u-1">
-                        <div className={ 'box' + this.isEmployerType(this.props.employerOnly) }>
-                            <img className="pure-img"
-                                src={ advantagesResources[this.props.advantage].src }
-                                alt={ advantagesResources[this.props.advantage].alt }>
-                            </img>
-                            <h1 className={ (advantagesResources[this.props.advantage].title === false) ? 'no-title' : '' }>
-                                { advantagesResources[this.props.advantage].title }
-                            </h1>
-                            <p>
-                                { advantagesResources[this.props.advantage].text }
-                            </p>
-                        </div>
+            <div id="single-advantage-box-component" className="pure-u-1 pure-u-md-1-2">
+                <div className="pure-u-1">
+                    <div className={ 'box' + this.isEmployerType(this.props.employerOnly) }>
+                        <img className="pure-img"
+                            src={ advantagesResources[this.props.advantage].src }
+                            alt={ advantagesResources[this.props.advantage].alt }>
+                        </img>
+                        <h1 className={ (advantagesResources[this.props.advantage].title === false) ? 'no-title' : '' }>
+                            { advantagesResources[this.props.advantage].title }
+                        </h1>
+                        <p>
+                            { advantagesResources[this.props.advantage].text }
+                        </p>
                     </div>
                 </div>
             </div>
