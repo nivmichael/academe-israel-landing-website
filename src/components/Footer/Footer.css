@@ -34,8 +34,8 @@
     display: flex;
     align-self: center;
     color: white;
-    font-weight: bold;
-    font-size: 0.6em;
+    font-weight: 400;
+    font-size: 0.5em;
     border-left: 1px solid white;
     padding-left: 10px;
 }
@@ -56,7 +56,7 @@
 
 #footer-component .logo-container .title {
     margin-left: 5px;
-    font-weight: bold;
-    font-size: 0.6em;
+    font-weight: 400;
+    font-size: 0.5em;
     color: white;
 }

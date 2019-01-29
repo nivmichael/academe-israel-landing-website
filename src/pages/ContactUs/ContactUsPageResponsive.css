@@ -12,7 +12,7 @@
         height: 446px;
     }
 
-    #contact-us-page-component .title-container {
+    #contact-us-page-component .form-container .title-container {
         display: flex;
         flex-direction: row;
         align-items: end;
@@ -21,14 +21,14 @@
         margin: 30px 0 80px 0;
     }
 
-    #contact-us-page-component .title-container .title {
+    #contact-us-page-component .form-container .title-container .title {
         font-size: 1.2em;
         font-weight: bold;
         border-right: 1px solid #2194d3;
         padding-right: 15px;
     }
 
-    #contact-us-page-component .title-container .divider {
+    #contact-us-page-component .form-container .title-container .divider {
         display: none;
     }
 
@@ -65,10 +65,10 @@
         justify-content: center;
         align-items: center;
         padding: 30px;
-        height: 443px;
+        height: 350px;
     }
 
-    #contact-us-page-component .title-container {
+    #contact-us-page-component .form-container .title-container {
         display: flex;
         flex-direction: row;
         align-items: end;
@@ -76,14 +76,14 @@
         margin: 30px 0 100px 0;
     }
 
-    #contact-us-page-component .title-container .title {
-        font-size: 1.2em;
-        font-weight: bold;
-        border-right: 1px solid #2194d3;
+    #contact-us-page-component .form-container .title-container .title {
+        font-size: 1.3em;
+        font-weight: 400;
+        border-right: 2px solid #2194d3;
         padding-right: 15px;
     }
 
-    #contact-us-page-component .title-container .divider {
+    #contact-us-page-component .form-container .title-container .divider {
         display: none;
     }
 

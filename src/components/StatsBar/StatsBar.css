@@ -35,8 +35,8 @@
 #statsbar-component .sub-divider {
     display: flex;
     margin: 15px 0;
-    height: 2px;
-    background-color: grey;
+    height: 1px;
+    background-color: black;
     width: 33%;
 }
 
@@ -56,6 +56,7 @@
 
 #statsbar-component .single-stat-container .single-stat {
     font-size: 2.3em;
+    font-weight: 300;
 }
 
 #statsbar-component .single-stat-container .single-stat.plus-sign:after {
@@ -64,5 +65,5 @@
 
 #statsbar-component .single-stat-container .single-stat-title {
     font-size: 1.1em;
-    color: grey;
+    font-weight: 300;
 }

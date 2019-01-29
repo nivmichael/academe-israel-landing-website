@@ -5,7 +5,7 @@
 #page-main-title-component .faq-color { background-color: #2194d3; }
 #page-main-title-component .default-color { background-color: #2194d3; }
 
-#page-main-title-component .message-container {
+#page-main-title-component .title-container {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
@@ -19,7 +19,12 @@
     align-self: center;
 }
 
-#page-main-title-component .message {
+#page-main-title-component .page-logo-container img {
+    width: 100px;
+    height: 100px;
+}
+
+#page-main-title-component .title {
     font-size: 1.3em;
     color: white;
     margin-top: 15px;

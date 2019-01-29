@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './MainIntro.css';
 import './MainIntroResponsive.css';
 
-import mainAcademeLogoBig from './../../images/logos/academe/academe-logo-100x100.png';
+import mainAcademeLogoBig from './../../images/logos/academe/academe-logo-150x192.png';
 
 
 export default class MainIntro extends Component {

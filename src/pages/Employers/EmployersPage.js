@@ -23,17 +23,43 @@ import attLogo from './../../images/logos/companies/att-50x76.png';
 import facebookLogo from './../../images/logos/companies/facebook-100x38.png';
 import intelLogo from './../../images/logos/companies/intel-100x76.png';
 import paypalLogo from './../../images/logos/companies/paypal-100x27.png';
-/* ==== companies logos (initialiy collapsed) ==== */
+
 import microsoftLogo from './../../images/logos/companies/microsoft-120x26.png';
 import nessLogo from './../../images/logos/companies/ness-75x75.png';
 import amdocsLogo from './../../images/logos/companies/amdocs-100x67.png';
 import amazonLogo from './../../images/logos/companies/amazon-120x44.png';
 import appleLogo from './../../images/logos/companies/apple-70x87.png';
 import audiocodesLogo from './../../images/logos/companies/audiocodes-120x21.png';
+/* ==== companies logos (initialiy collapsed) ==== */
 import comverseLogo from './../../images/logos/companies/comverse-100x35.png';
 import dellLogo from './../../images/logos/companies/dell-100x30.png';
 import fiverrLogo from './../../images/logos/companies/fiverr-100x30.png';
 import iaiLogo from './../../images/logos/companies/iai-100x62.png';
+import fedexLogo from './../../images/logos/companies/fedex-100x42.png';
+import geLogo from './../../images/logos/companies/ge-75x75.png';
+import gmLogo from './../../images/logos/companies/gm-100x72.png';
+import hapoalimLogo from './../../images/logos/companies/hapoalim-100x28.png';
+import hevratHashmalLogo from './../../images/logos/companies/hevrat_hashmal-100x73.png';
+import hotLogo from './../../images/logos/companies/hot-75x83.png';
+import altshoolerLogo from './../../images/logos/companies/altshooler-75x63.png';
+import bdoLogo from './../../images/logos/companies/bdo-100x39.png';
+import checkpointLogo from './../../images/logos/companies/checkpoint-120x20.png';
+import cocacolaLogo from './../../images/logos/companies/cocacola-100x33.png';
+import deutschebankLogo from './../../images/logos/companies/deutschebank-125x19.png';
+import eciLogo from './../../images/logos/companies/eci-75x74.png';
+import elalLogo from './../../images/logos/companies/elal-100x29.png';
+import electraLogo from './../../images/logos/companies/electra-100x27.png';
+import eyLogo from './../../images/logos/companies/ey-75x75.png';
+import ibmLogo from './../../images/logos/companies/ibm-100x40.png';
+import iclLogo from './../../images/logos/companies/icl-100x66.png';
+import ironsourceLogo from './../../images/logos/companies/ironsource-120x30.png';
+import jpmorganLogo from './../../images/logos/companies/jpmorgan-125x31.png';
+import kodakLogo from './../../images/logos/companies/kodak-100x67.png';
+import kpmgLogo from './../../images/logos/companies/kpmg-100x39.png';
+import lorealLogo from './../../images/logos/companies/loreal-120x22.png';
+import macabiLogo from './../../images/logos/companies/macabi-100x41.png';
+import manpowerLogo from './../../images/logos/companies/manpower-100x86.png';
+import tevaLogo from './../../images/logos/companies/teva-100x38.png';
 
 const companiesList = {
     'google'    : googleLogo,
@@ -47,20 +73,45 @@ const companiesList = {
     'att'       : attLogo,
     'facebook'  : facebookLogo,
     'intel'     : intelLogo,
-    'paypal'    : paypalLogo
+    'paypal'    : paypalLogo,
+    'microsoft' : microsoftLogo,
+    'ness'      : nessLogo,
+    'amdocs'    : amdocsLogo,
+    'amazon'    : amazonLogo
 };
 
 const companiesCollapsedList = {
-    'microsoft'     : microsoftLogo,
-    'ness'          : nessLogo,
-    'amdocs'        : amdocsLogo,
-    'amazon'        : amazonLogo,
+    'comverse'      : comverseLogo,
     'apple'         : appleLogo,
     'audiocodes'    : audiocodesLogo,
-    'comverse'      : comverseLogo,
     'dell'          : dellLogo,
     'fiverr'        : fiverrLogo,
-    'iai'           : iaiLogo
+    'iai'           : iaiLogo,
+    'fedex'         : fedexLogo,
+    'ge'            : geLogo,
+    'gm'            : gmLogo,
+    'hapoalim'      : hapoalimLogo,
+    'hevratHashmal' : hevratHashmalLogo,
+    'hot'           : hotLogo,
+    'teva'          : tevaLogo,
+    'altshooler'    : altshoolerLogo,
+    'bdo'           : bdoLogo,
+    'checkpoint'    : checkpointLogo,
+    'cocacola'      : cocacolaLogo,
+    'deutschebank'  : deutschebankLogo,
+    'eci'           : eciLogo,
+    'elal'          : elalLogo,
+    'electra'       : electraLogo,
+    'ey'            : eyLogo,
+    'ibm'           : ibmLogo,
+    'icl'           : iclLogo,
+    'ironsource'    : ironsourceLogo,
+    'jpmorgan'      : jpmorganLogo,
+    'kodak'         : kodakLogo,
+    'kpmg'          : kpmgLogo,
+    'loreal'        : lorealLogo,
+    'macabi'        : macabiLogo,
+    'manpower'      : manpowerLogo
 };
 
 const advantagesList = ['big_data_stock', 'efficient_process', 'accurate_matches', 'market_variety'];
@@ -71,8 +122,7 @@ export default class EmployersPage extends Component {
 
         this.state = {
             isCompaniesListExpanded: false,
-            employerEmail: '',
-            employerPhone: ''
+            employerEmail: ''
         }
 
         this.inputLabelValues = { email: 'הכנס את האימייל שלך', phone: 'הכנס את מספר הטלפון שלך' };
@@ -89,16 +139,6 @@ export default class EmployersPage extends Component {
         // if (regex.test(employerEmail))
 
         this.setState({ ...this.state, employerEmail }, () => { console.log(this.state); });
-    }
-
-    /**
-     * Stores the employer's phone input value
-     *
-     * @param {Event} e - event
-     */
-    handleEmployerPhone = (e) => {
-        let employerPhone = e.target.value;
-        this.setState({ ...this.state, employerPhone }, () => { console.log(this.state); });
     }
 
     onSubmitForm = () => {
@@ -207,7 +247,6 @@ export default class EmployersPage extends Component {
                                 <fieldset>
                                     <div className="form-title">לפרסום משרה</div>
                                     <input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="floating-label" placeholder="הכנס את האימייל שלך"></input>
-                                    <input id="publish-job-input-phone" type="text" onChange={ this.handleEmployerPhone } className="floating-label" placeholder="הכנס את מספר הטלפון שלך"></input>
                                     <button type="submit" className="pure-button academe-button-full continue-button">המשך</button>
                                 </fieldset>
                             </form>

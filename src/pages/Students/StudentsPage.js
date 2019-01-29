@@ -26,15 +26,18 @@ const universitiesList = {
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
     'technion'  : technionLogo,
+    'haifa'     : haifaLogo
+};
+
+const collegesList = {
     'openu'     : openuLogo,
-    'haifa'     : haifaLogo,
     'telHai'    : telHaiLogo,
-    'sce'       : sceLogo,
+    'yvc'       : yvcLogo,
     'sapir'     : sapirLogo,
     'ash'       : ashLogo,
     'mla'       : mlaLogo,
-    'wgalil'    : wgalilLogo,
-    'yvc'       : yvcLogo
+    'sce'       : sceLogo,
+    'wgalil'    : wgalilLogo
 };
 
 export default class StudentsPage extends Component {
@@ -53,16 +56,37 @@ export default class StudentsPage extends Component {
      * @param {Object} universities_list - list of names and logos
      * @returns {Array} list - list of elements
      */
-    renserUniversitiesList = (universities_list) => {
+    renderUniversitiesList = (universities_list) => {
         let list = [];
 
         list = Object.keys(universities_list).map((uni_key) => {
             return (
-                <div key={uni_key} onClick={ this.onUniversityClicked }>
+                <div className="icon-container" key={uni_key} onClick={ this.onUniversityClicked }>
                     <img className="pure-img uni-icon" src={universities_list[uni_key]} alt={uni_key}></img>
                 </div>
             )
         });
+
+        return list;
+    }
+
+    /**
+     * Renders the list of universities images wrapped in div element
+     * @param {Object} universities_list - list of names and logos
+     * @returns {Array} list - list of elements
+     */
+    renderCollegesList = (colleges_list) => {
+        let list = [];
+
+        list = Object.keys(colleges_list).map((clg_key) => {
+            return (
+                <div className="icon-container" key={clg_key} onClick={ this.onUniversityClicked }>
+                    <img className="pure-img uni-icon" src={colleges_list[clg_key]} alt={clg_key}></img>
+                </div>
+            )
+        });
+
+        list.push(<button className="pure-button academe-button-outline shadowless" key="colleges-btn">אחר</button>);
 
         return list;
     }
@@ -82,13 +106,13 @@ export default class StudentsPage extends Component {
                                 <div id="chevron"><FontAwesomeIcon icon="chevron-down"></FontAwesomeIcon></div>
                             </div>
                         </div>
-                        <div className="pure-u-1">
+                        <div className="pure-u-1 pure-u-md-1 pure-u-lg-1">
                             <div className="universities-container">
-                                { this.renserUniversitiesList(universitiesList) }
+                                { this.renderUniversitiesList(universitiesList) }
                             </div>
-                        </div>
-                        <div className="pure-u-1 other-button-container">
-                            <button className="pure-button academe-button-outline">אחר</button>
+                            <div className="colleges-container">
+                                { this.renderCollegesList(collegesList) }
+                            </div>
                         </div>
                     </div>
                     <div className="pure-u-1 footer-container">
@@ -99,3 +123,8 @@ export default class StudentsPage extends Component {
         );
     }
 }
+
+
+// <div className="pure-u-1 other-button-container">
+//     <button className="pure-button academe-button-outline shadowless">אחר</button>
+// </div>

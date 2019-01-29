@@ -16,7 +16,7 @@ export default class StatsBar extends Component {
             },
             counterOptions: {
                 separator: ',',
-                duration: 1
+                duration: 2
             }
         }
     }
@@ -34,7 +34,7 @@ export default class StatsBar extends Component {
             <div id="statsbar-component">
                 <div className="pure-g">
                     <div className="pure-u-1 stats-container">
-                        <div className="pure-u-1 pure-u-lg-1-6">
+                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
                             <div id="students-stat" className="single-stat-container">
                                 <div className="single-stat" ref="studentsStatRef">
                                     <CountUp start={ 0 }
@@ -48,7 +48,7 @@ export default class StatsBar extends Component {
                             </div>
                         </div>
                         <div className="sub-divider"></div>
-                        <div className="pure-u-1 pure-u-lg-1-6">
+                        <div className="pure-u-1 pure-u-md-1-4 pure-u-lg-1-4">
                             <div id="employers-stat" className="single-stat-container">
                                 <div className="single-stat">
                                     <CountUp start={0}
@@ -61,7 +61,7 @@ export default class StatsBar extends Component {
                             </div>
                         </div>
                         <div className="sub-divider"></div>
-                        <div className="pure-u-1 pure-u-lg-1-6">
+                        <div className="pure-u-1 pure-u-md-1-4 pure-u-lg-1-4">
                             <div id="jobs-stat" className="single-stat-container">
                                 <div className="single-stat">
                                     <CountUp start={0}

@@ -85,7 +85,7 @@ const advantagesResources = {
         src: megaphoneIcon,
         alt: '',
         title: false,
-        text: `מגוון מסלולי קידום ופרסום משרות`
+        text: `מגוון מסלולי קידום \nופרסום משרות`
     }
 }
 
@@ -112,7 +112,6 @@ export default class SingleAdvantageBox extends Component {
             if(element_type == CONST_EMPLOYER_CONTAINER) { class_list = ' pure-u-lg-1-3 additional-padding'; }
         }
 
-        // return employer_only_flag ? ' no-background no-shadow text-with-padding box-sm' : '';
         return class_list;
     }
 
@@ -128,7 +127,7 @@ export default class SingleAdvantageBox extends Component {
                         <h1 className={ (advantagesResources[this.props.advantage].title === false) ? 'no-title' : '' }>
                             { advantagesResources[this.props.advantage].title }
                         </h1>
-                        <p>
+                        <p className={ this.props.advantage == 'market_variety' ? 'pre-wrap-text' : '' }>
                             { advantagesResources[this.props.advantage].text }
                         </p>
                     </div>

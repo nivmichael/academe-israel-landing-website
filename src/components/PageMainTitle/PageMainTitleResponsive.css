@@ -3,8 +3,14 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-    #page-main-title-component .message {
-        font-size: 1.5em;
+    #page-main-title-component .page-logo-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #page-main-title-component .title {
+        font-size: 1.7em;
+        font-weight: bold;
         color: white;
         margin-top: 15px;
     }
@@ -31,8 +37,23 @@
     ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
-    #page-main-title-component .message {
-        font-size: 1.7em;
+    #page-main-title-component .title-container {
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 300px;
+    }
+
+    #page-main-title-component .page-logo-container img {
+        width: 150px;
+        height: 150px;
+    }
+
+    #page-main-title-component .title {
+        font-size: 2.1em;
+        font-weight: bold;
         color: white;
         margin-top: 15px;
     }

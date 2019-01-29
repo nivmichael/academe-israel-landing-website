@@ -38,9 +38,6 @@ export default class Navbar extends Component {
                                 <li className="pure-menu-item">
                                     <NavLink to="/contact-us" activeClassName="active-link">צור קשר</NavLink>
                                 </li>
-                                <li className="pure-menu-item">
-                                    <NavLink to="/faq" activeClassName="active-link">שאלות תשובות</NavLink>
-                                </li>
                             </ul>
                         </div>
 
@@ -57,3 +54,7 @@ export default class Navbar extends Component {
         );
     }
 }
+
+// <li className="pure-menu-item">
+//     <NavLink to="/faq" activeClassName="active-link">שאלות תשובות</NavLink>
+// </li>

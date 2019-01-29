@@ -6,10 +6,12 @@
 }
 
 #students-page-component .sub-title div {
-    font-size: 1.3em;
+    font-size: 1.9em;
     font-weight: bold;
 }
 #students-page-component .sub-title div:nth-child(2) {
+    font-size: 1.2em;
+    font-weight: bold;
     color: #2194d3;
 }
 #students-page-component .sub-title div#chevron {
@@ -17,7 +19,8 @@
     color: #2194d3;
 }
 
-#students-page-component .universities-container {
+#students-page-component .universities-container,
+#students-page-component .colleges-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -26,13 +29,24 @@
     margin: 10px 0 20px 0;
 }
 
-#students-page-component .universities-container img {
+/* #students-page-component .universities-container img,
+#students-page-component .colleges-container img {
     flex: auto;
+    margin: 5px;
+} */
+
+#students-page-component .universities-container .icon-container,
+#students-page-component .colleges-container .icon-container {
     margin: 5px;
 }
 
-#students-page-component .universities-container img.uni-icon {
+#students-page-component .colleges-container button {
+    width: 120px;
+}
+
+#students-page-component img.uni-icon {
     width: 100%;
+    cursor: pointer;
 }
 
 #students-page-component .other-button-container {

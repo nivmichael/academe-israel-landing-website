@@ -49,6 +49,9 @@
 .academe-button-outline:hover {
     background-color: #f3f3f3;
 }
+.academe-button-outline.shadowless {
+    box-shadow: none;
+}
 
 .academe-input {
     border: none;

@@ -54,7 +54,7 @@ export default class ContactUsPage extends Component {
                                 <div className="title">
                                     מלאו בבקשה
                                     <br />
-                                    את טפס הפנייה
+                                    את טופס הפנייה
                                     <br />
                                     ונחזור אלכים בהקדם
                                 </div>
