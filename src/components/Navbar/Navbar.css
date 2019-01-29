@@ -1,6 +1,42 @@
-#navbar-component .container {
+#navbar-component .navbar-container {
     position: relative;
     box-shadow: 0 5px 3px -2px #585858;
+}
+
+#navbar-component .hamburger-container {
+    display: flex;
+}
+
+#navbar-component .navigation-container {
+    display: none;
+}
+
+#navbar-component .navigation-container .active-link {
+    font-weight: bold;
+}
+
+#navbar-component .navigation-container ul.pure-menu-list {
+    padding-right: 30px;
+}
+
+#navbar-component .navigation-container .pure-menu-list .pure-menu-item {
+    padding: 0 20px;
+}
+
+#navbar-component .navigation-container .pure-menu-list .pure-menu-item a {
+    text-decoration: none;
+    color: #414141;
+}
+#navbar-component .navigation-container .pure-menu-list .pure-menu-item a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #2194d3;
+    transition: width .3s;
+}
+#navbar-component .navigation-container .pure-menu-list .pure-menu-item a.active-link::after {
+    width: 100%;
 }
 
 #navbar-component .logo-container {

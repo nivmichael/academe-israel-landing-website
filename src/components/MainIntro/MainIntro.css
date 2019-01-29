@@ -1,11 +1,10 @@
-#main-intro-component {}
-
 #main-intro-component .message-container {
     padding: 30px 0;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: #2194d3;
+    height: 210px;
 }
 
 #main-intro-component .academe-logo-container {

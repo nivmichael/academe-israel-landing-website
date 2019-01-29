@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from "react-router-dom";
+import { AnimatedSwitch } from 'react-router-transition';
 
 import Navbar from './../../components/Navbar/Navbar';
 import Footer from './../../components/Footer/Footer';
@@ -19,16 +20,16 @@ class App extends Component {
                   <Navbar></Navbar>
               </div>
               <div className="pure-u-1 body-container">
-                  <Switch>
+                  <AnimatedSwitch atEnter={{ opacity: 0 }} atLeave={{ opacity: 0 }} atActive={{ opacity: 1 }} className="switch-wrapper">
                       <Route exact path="/" component={ HomePage } />
                       <Route path="/home" component={ HomePage } />
                       <Route path="/students" component={ StudentsPage } />
                       <Route path="/employers" component={ EmployersPage } />
                       <Route path="/contact-us" component={ ContactUsPage } />
-                  </Switch>
+                  </AnimatedSwitch>
               </div>
               <div className="pure-u-1 footer-container">
-                  <Footer></Footer>
+
               </div>
           </div>
       </div>
@@ -37,3 +38,5 @@ class App extends Component {
 }
 
 export default App;
+
+// <Footer></Footer>

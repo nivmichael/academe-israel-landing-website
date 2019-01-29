@@ -3,6 +3,19 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+    #single-advantage-box-component .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        padding: 15px;
+        margin: 15px 15px;
+        min-height: 310px;
+        background-color: white;
+        box-shadow: 3px 3px 4px 0px #6c6c6c;
+    }
+
     #single-advantage-box-component .box > p {
         text-align: center;
         margin-top: 5px;
@@ -31,5 +44,20 @@
     ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
+    #single-advantage-box-component .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+        padding: 15px;
+        margin: 15px 15px;
+        min-height: 310px;
+        background-color: white;
+        box-shadow: 3px 3px 4px 0px #6c6c6c;
+    }
 
+    #single-advantage-box-component.additional-padding {
+        padding: 0 100px;
+    }
 }

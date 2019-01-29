@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LaddaButton, { XS, EXPAND_LEFT } from 'react-ladda'
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
+import Footer from './../../components/Footer/Footer';
 // styles
 import './ContactUsPage.css';
 import './ContactUsPageResponsive.css';
@@ -48,7 +49,7 @@ export default class ContactUsPage extends Component {
                         <PageMainTitle titleType="contact_us"></PageMainTitle>
                     </div>
                     <div className="pure-u-1 pure-md-1-2 form-container">
-                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-2">
+                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
                             <div className="title-container">
                                 <div className="title">
                                     מלאו בבקשה
@@ -60,7 +61,7 @@ export default class ContactUsPage extends Component {
                                 <div className="divider"></div>
                             </div>
                         </div>
-                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-2">
+                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
                             <form className="pure-form pure-form-stacked contact-form">
                                 <fieldset>
                                     <input id="subject" placeholder="נושא הפנייה*" onChange={ this.handleContactMessageFields } />
@@ -73,6 +74,9 @@ export default class ContactUsPage extends Component {
                                 </fieldset>
                             </form>
                         </div>
+                    </div>
+                    <div className="pure-u-1 footer-container">
+                        <Footer></Footer>
                     </div>
                 </div>
             </div>

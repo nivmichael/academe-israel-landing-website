@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 /* ========== import components ========= */
 import PageMainTitle from './../../components/PageMainTitle/PageMainTitle';
 import SingleAdvantageBox from './../../components/SingleAdvantageBox/SingleAdvantageBox';
+import Footer from './../../components/Footer/Footer';
 
 /* =========== component style ========== */
 import './EmployersPage.css';
@@ -225,6 +226,9 @@ export default class EmployersPage extends Component {
                                 { this.renderExpandButton(this.state.isCompaniesListExpanded) }
                             </button>
                         </div>
+                    </div>
+                    <div className="pure-u-1 footer-container">
+                        <Footer></Footer>
                     </div>
                 </div>
             </div>

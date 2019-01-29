@@ -1,6 +1,9 @@
-#footer-component.container {
+#footer-component .container {
+    display: flex;
+    flex-direction: column;
     background-color: #4C4C4C;
     padding: 30px 20px;
+    margin-top: 60px;
 }
 
 #footer-component .social {

@@ -26,7 +26,7 @@ export default class StatsBar extends Component {
      * Does that by adding class that chained to a pseudo class (with content prop)
      */
     onDisplayPlusSign = () => {
-        this.refs.studentsStatRef.classList.add('plus-sign');
+        if(this.refs.studentsStatRef) { this.refs.studentsStatRef.classList.add('plus-sign'); }
     }
 
     render() {
@@ -34,7 +34,7 @@ export default class StatsBar extends Component {
             <div id="statsbar-component">
                 <div className="pure-g">
                     <div className="pure-u-1 stats-container">
-                        <div className="pure-u-1">
+                        <div className="pure-u-1 pure-u-lg-1-6">
                             <div id="students-stat" className="single-stat-container">
                                 <div className="single-stat" ref="studentsStatRef">
                                     <CountUp start={ 0 }
@@ -48,7 +48,7 @@ export default class StatsBar extends Component {
                             </div>
                         </div>
                         <div className="sub-divider"></div>
-                        <div className="pure-u-1">
+                        <div className="pure-u-1 pure-u-lg-1-6">
                             <div id="employers-stat" className="single-stat-container">
                                 <div className="single-stat">
                                     <CountUp start={0}
@@ -61,7 +61,7 @@ export default class StatsBar extends Component {
                             </div>
                         </div>
                         <div className="sub-divider"></div>
-                        <div className="pure-u-1">
+                        <div className="pure-u-1 pure-u-lg-1-6">
                             <div id="jobs-stat" className="single-stat-container">
                                 <div className="single-stat">
                                     <CountUp start={0}

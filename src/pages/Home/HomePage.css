@@ -19,12 +19,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-}
-
-#homepage-component .welcome-msg-container {
-    display: flex;
-    flex-direction: column;
+    padding: 30px 0 10px 0;
 }
 
 #homepage-component .welcome-msg {
@@ -36,12 +31,7 @@
 }
 
 #homepage-component .read-more-btn {
-    background-color: white;
-    border: 1px solid #2194d3;
-    border-radius: 5px;
-    color: #2194d3;
-    box-shadow: 2px 2px 4px 0px #7c7c7c;
-    padding: 4px 20px;
+    width: 120px;
     margin: 20px;
 }
 

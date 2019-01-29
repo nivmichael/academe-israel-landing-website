@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from './../../components/Footer/Footer';
 import './HomePage.css';
 import './HomePageResponsive.css';
 
@@ -122,10 +123,13 @@ export default class HomePage extends Component {
                     </div>
                     <div className="pure-u-1">
                         <div style={{ textAlign: 'center' }}>
-                            <button className="pure-button read-more-btn" onClick={ this.onToggleAdvantages }>
+                            <button className="pure-button academe-button-outline read-more-btn" onClick={ this.onToggleAdvantages }>
                                 { this.state.isAdvantagesHidden ? 'קראו עוד' : 'סגור' }
                             </button>
                         </div>
+                    </div>
+                    <div className="pure-u-1 footer-container">
+                        <Footer></Footer>
                     </div>
                 </div>
             </div>

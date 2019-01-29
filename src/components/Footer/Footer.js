@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Footer.css';
 import './FooterResponsive.css';
 
-import academeLogoSmall from './../../images/logos/academe/academe-logo-only-30x30.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
 
@@ -27,7 +26,7 @@ const phantomStyle = {
   width: "100%"
 };
 
-const footerText = 'רשת גיוס הסטודנטים והבוגרים הגדולה בישראל';
+const footerText = 'רשת גיוס הסטודנטים והבוגרים המתקדמת והגדולה בישראל';
 
 export default class Footer extends Component {
 
@@ -42,10 +41,10 @@ export default class Footer extends Component {
 
     render() {
         return (
-            <div id="footer-component" className="container">
+            <div id="footer-component">
                 <div className="pure-g">
-                    <div className="pure-u-1">
-                        <div className="pure-u-1 social">
+                    <div className="pure-u-1 container">
+                        <div className="pure-u-1 pure-u-lg-1-6 social">
                             <div>
                                 <FontAwesomeIcon icon={ ['fab', 'instagram'] } id="instagram" className="icon" onClick={ () => this.onSocialClicked('instagram') } />
                             </div>

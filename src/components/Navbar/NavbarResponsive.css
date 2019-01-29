@@ -3,11 +3,7 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-    #page-main-title-component .message {
-        font-size: 1.5em;
-        color: white;
-        margin-top: 15px;
-    }
+
 }
 
 /*
@@ -31,9 +27,13 @@
     ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
-    #page-main-title-component .message {
-        font-size: 1.7em;
-        color: white;
-        margin-top: 15px;
+    #navbar-component .hamburger-container {
+        display: none;
+    }
+
+    #navbar-component .navigation-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 }

@@ -21,18 +21,28 @@
     margin: 0.3em 0;
 }
 
+#single-advantage-box-component .box.text-with-padding > p {
+    padding: 0 30px;
+}
+
+/* ======== HELPER CLASSES ======== */
+
 #single-advantage-box-component .no-title {
-    display: none;
+    display: none!important;
 }
 
 #single-advantage-box-component .no-background {
-    background-color: white;
+    background-color: white!important;
 }
 
 #single-advantage-box-component .no-shadow {
-    box-shadow: none;
+    box-shadow: none!important;
 }
 
-#single-advantage-box-component .box.text-with-padding > p {
-    padding: 0 30px;
+#single-advantage-box-component .box-sm {
+    min-height: 200px!important;
+}
+
+#single-advantage-box-component.additional-padding {
+    padding: 0;
 }

@@ -89,22 +89,38 @@ const advantagesResources = {
     }
 }
 
+const CONST_EMPLOYER_CONTAINER  = 'EMPLOYER_CONTAINER';
+const CONST_EMPLOYER_BOX        = 'EMPLOYER_BOX';
+
 export default class SingleAdvantageBox extends Component {
 
     /**
      * Toggles between classes that change the style of the component when displaying for employers
      *
-     * @param employer_only_flag - if employer dedicated
+     * @param {Boolean} employer_only_flag - if employer dedicated
+     * @param {String} element_type - type of element that classes will be attached to
+     * @returns {String} string that contains proper class names
      */
-    isEmployerType = (employer_only_flag) => {
-        return employer_only_flag ? ' no-background no-shadow text-with-padding' : '';
+    isEmployerType = (employer_only_flag, element_type) => {
+        let class_list = '';
+
+        if(employer_only_flag) {
+            if(element_type == CONST_EMPLOYER_CONTAINER) { class_list = ' pure-u-lg-1-4'; }
+            else if(element_type == CONST_EMPLOYER_BOX) { class_list = ' no-background no-shadow text-with-padding box-sm'; }
+        }
+        else {
+            if(element_type == CONST_EMPLOYER_CONTAINER) { class_list = ' pure-u-lg-1-3 additional-padding'; }
+        }
+
+        // return employer_only_flag ? ' no-background no-shadow text-with-padding box-sm' : '';
+        return class_list;
     }
 
     render() {
         return (
-            <div id="single-advantage-box-component" className="pure-u-1 pure-u-md-1-2">
+            <div id="single-advantage-box-component" className={ 'pure-u-1 pure-u-md-1-2' + this.isEmployerType(this.props.employerOnly, CONST_EMPLOYER_CONTAINER) }>
                 <div className="pure-u-1">
-                    <div className={ 'box' + this.isEmployerType(this.props.employerOnly) }>
+                    <div className={ 'box' + this.isEmployerType(this.props.employerOnly, CONST_EMPLOYER_BOX) }>
                         <img className="pure-img"
                             src={ advantagesResources[this.props.advantage].src }
                             alt={ advantagesResources[this.props.advantage].alt }>

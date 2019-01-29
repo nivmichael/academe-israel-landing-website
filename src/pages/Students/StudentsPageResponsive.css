@@ -30,8 +30,22 @@
     ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
+    #students-page-component .universities-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 10px 0 20px 0;
+        padding: 0px 260px;
+    }
+
     #students-page-component .universities-container img {
         flex: auto;
         margin: 5px 15px;
+    }
+
+    #students-page-component .students-container {
+        height: 493px;
     }
 }

@@ -8,7 +8,7 @@
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     #statsbar-component .single-stat-container:not(#jobs-stat) {
@@ -24,7 +24,7 @@
         position: absolute;
         top: 10px;
         align-self: center;
-        height: 2px;
+        height: 1px;
         background-color: #2194d3;
         width: 50%;
     }
@@ -36,4 +36,65 @@
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
+}
+
+/*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/*
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+    #statsbar-component .stats-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    #statsbar-component .single-stat-container:not(#jobs-stat) {
+        border-left: 2px solid grey;
+    }
+
+    #statsbar-component .sub-divider {
+        display: none;
+    }
+
+    #statsbar-component .main-divider {
+        display: flex;
+        position: absolute;
+        top: 12px;
+        align-self: center;
+        height: 1px;
+        background-color: #2194d3;
+        width: 20%;
+    }
+
+    #statsbar-component .single-stat-container .single-stat {
+        font-size: 3em;
+    }
+
+    #statsbar-component .single-stat-container .single-stat-title {
+        font-size: 1.3em;
+        color: grey;
+    }
+
+    #statsbar-component .main-divider-title {
+        display: flex;
+        align-self: center;
+        border: 1px solid #2194d3;
+        border-radius: 3px;
+        color: #2194d3;
+        padding: 0 15px;
+        font-size: 1.2em;
+        background: white;
+        z-index: 1;
+    }
 }

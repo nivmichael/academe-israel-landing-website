@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
+import Footer from './../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { CONST_UNIVERSITY_BASE_URL } from './../../constants';
 
@@ -45,7 +46,6 @@ export default class StudentsPage extends Component {
     onUniversityClicked = (e) => {
         e.preventDefault();
         let university = e.target.alt;
-        console.log('clicked university -> ', university);
     }
 
     /**
@@ -74,20 +74,25 @@ export default class StudentsPage extends Component {
                     <div className="pure-u-1">
                         <PageMainTitle titleType="students"></PageMainTitle>
                     </div>
-                    <div className="pure-u-1">
-                        <div className="sub-title">
-                            <div>עוד לא נרשמתם?</div>
-                            <div>מאיזו אוניברסיטה או מכללה אתם?</div>
-                            <div id="chevron"><FontAwesomeIcon icon="chevron-down"></FontAwesomeIcon></div>
+                    <div className="pure-u-1 students-container">
+                        <div className="pure-u-1">
+                            <div className="sub-title">
+                                <div>עוד לא נרשמתם?</div>
+                                <div>מאיזו אוניברסיטה או מכללה אתם?</div>
+                                <div id="chevron"><FontAwesomeIcon icon="chevron-down"></FontAwesomeIcon></div>
+                            </div>
+                        </div>
+                        <div className="pure-u-1">
+                            <div className="universities-container">
+                                { this.renserUniversitiesList(universitiesList) }
+                            </div>
+                        </div>
+                        <div className="pure-u-1 other-button-container">
+                            <button className="pure-button academe-button-outline">אחר</button>
                         </div>
                     </div>
-                    <div className="pure-u-1">
-                        <div className="universities-container">
-                            { this.renserUniversitiesList(universitiesList) }
-                        </div>
-                    </div>
-                    <div className="pure-u-1 other-button-container">
-                        <button className="pure-button academe-button-outline">אחר</button>
+                    <div className="pure-u-1 footer-container">
+                        <Footer></Footer>
                     </div>
                 </div>
             </div>
