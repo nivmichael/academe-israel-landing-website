@@ -10,6 +10,7 @@ import { faChevronDown, faPlus, faMinus } from '@fortawesome/free-solid-svg-icon
 // styles
 import 'purecss/build/pure.css';
 import 'purecss/build/grids-responsive.css'; // (?)
+import './opensanshebrew.css';
 import './index.css';
 import './global.css';
 
