@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import './Footer.css';
 import './FooterResponsive.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+/* ======== icons ======== */
 import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
-
+import facebookIcon from './../../images/icons/facebook-icon-70x70.png';
+import instagramIcon from './../../images/icons/instagram-icon-70x70.png';
 
 const footerStyle = {
   backgroundColor: "#4C4C4C",
@@ -46,10 +47,10 @@ export default class Footer extends Component {
                     <div className="pure-u-1 container">
                         <div className="pure-u-1 pure-u-lg-1-6 social">
                             <div>
-                                <FontAwesomeIcon icon={ ['fab', 'instagram'] } id="instagram" className="icon" onClick={ () => this.onSocialClicked('instagram') } />
+                                <img id="instagram" className="pure-img icon" src={ instagramIcon } onClick={ () => this.onSocialClicked('instagram') } />
                             </div>
                             <div>
-                                <FontAwesomeIcon icon={ ['fab', 'facebook'] } id="facebook" className="icon" onClick={ () => this.onSocialClicked('facebook') } />
+                                <img id="facebook" className="pure-img icon" src={ facebookIcon } onClick={ () => this.onSocialClicked('facebook') } />
                             </div>
                         </div>
                         <div className="pure-u-1 footer-text">
@@ -65,3 +66,11 @@ export default class Footer extends Component {
         );
     }
 }
+
+
+// <div>
+//     <FontAwesomeIcon icon={ ['fab', 'instagram'] } id="instagram" className="icon" onClick={ () => this.onSocialClicked('instagram') } />
+// </div>
+// <div>
+//     <FontAwesomeIcon icon={ ['fab', 'facebook'] } id="facebook" className="icon" onClick={ () => this.onSocialClicked('facebook') } />
+// </div>

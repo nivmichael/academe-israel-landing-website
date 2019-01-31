@@ -1,4 +1,13 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+
+import {
+    CONST_API_BASE_URL,
+    CONST_DEV_API_BASE_URL,
+    CONST_API_BASE_PARAM,
+    CONST_API_ACTION_PARAM
+} from './../../constants';
+
 import Footer from './../../components/Footer/Footer';
 import './HomePage.css';
 import './HomePageResponsive.css';
@@ -39,14 +48,44 @@ const universitiesList = {
 
 const advantagesList = ['central_arena', 'grounded', 'market_and_share', 'expenses_and_time', 'everybody_there'];
 
-
 export default class HomePage extends Component {
     constructor () {
         super();
 
         this.state = {
-            isAdvantagesHidden: true
+            isAdvantagesHidden: true,
+            systemStats: {
+                jobseekers: 0,
+                companies: 0,
+                jobs: 0
+            }
         }
+    }
+
+    componentDidMount () {
+        this.CancelToken = axios.CancelToken;
+        this.source = this.CancelToken.source();
+
+        let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'getSystemStats';
+
+        axios.get(url, { cancelToken: this.source.token })
+            .then((response) => {
+                if (axios.isCancel(response)) {
+                    console.log('Request canceled', response);
+                }
+                else if (response.data) {
+                    let systemStats = { ...response.data };
+                    this.setState({ ...this.state, systemStats });
+                }
+            })
+            .catch((error) => {
+                console.log('error -> ', error);
+            });
+    }
+
+    componentWillUnmount () {
+        console.log('unmounted');
+        this.source.cancel('Component Unmounted');
     }
 
     /**
@@ -57,7 +96,7 @@ export default class HomePage extends Component {
         let isAdvantagesHidden  = this.state.isAdvantagesHidden;
         // flip flag
         isAdvantagesHidden = !isAdvantagesHidden;
-        this.setState({ ...this.state, isAdvantagesHidden });
+        this.setState({ ...this.state, isAdvantagesHidden }, () => console.log(this.state));
     }
 
     /**
@@ -102,7 +141,7 @@ export default class HomePage extends Component {
                 <div className="pure-g">
                     <div className="pure-u-1">
                         <MainIntro></MainIntro>
-                        <StatsBar></StatsBar>
+                        <StatsBar systemStats={ this.state.systemStats }></StatsBar>
                     </div>
                     <div className="pure-u-1">
                         <div className="universities-container">

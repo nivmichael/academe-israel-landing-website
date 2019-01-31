@@ -19,7 +19,15 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #navbar-component .hamburger-container {
+        display: none;
+    }
 
+    #navbar-component .navigation-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 /*

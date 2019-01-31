@@ -22,6 +22,9 @@ import mlaLogo from './../../images/logos/universities/mla-uni-200x75.png';
 import wgalilLogo from './../../images/logos/universities/west-galil-uni-200x75.png';
 import yvcLogo from './../../images/logos/universities/emek-izrael-uni-200x75.png';
 
+/* ========= icons ========= */
+import chevronDownIcon from '../../images/icons/chevron-down-icon-100x74.png';
+
 const universitiesList = {
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
@@ -86,7 +89,7 @@ export default class StudentsPage extends Component {
             )
         });
 
-        list.push(<button className="pure-button academe-button-outline shadowless" key="colleges-btn">אחר</button>);
+        list.push(<button className="pure-button academe-button-outline shadowless" key="other-colleges-btn">אחר</button>);
 
         return list;
     }
@@ -103,7 +106,9 @@ export default class StudentsPage extends Component {
                             <div className="sub-title">
                                 <div>עוד לא נרשמתם?</div>
                                 <div>מאיזו אוניברסיטה או מכללה אתם?</div>
-                                <div id="chevron"><FontAwesomeIcon icon="chevron-down"></FontAwesomeIcon></div>
+                                <div id="chevron">
+                                    <img className="pure-img" src={ chevronDownIcon } alt="chevron-down-icon"></img>
+                                </div>
                             </div>
                         </div>
                         <div className="pure-u-1 pure-u-md-1 pure-u-lg-1">
@@ -124,6 +129,7 @@ export default class StudentsPage extends Component {
     }
 }
 
+// <div id="chevron"><FontAwesomeIcon icon="chevron-down"></FontAwesomeIcon></div>
 
 // <div className="pure-u-1 other-button-container">
 //     <button className="pure-button academe-button-outline shadowless">אחר</button>

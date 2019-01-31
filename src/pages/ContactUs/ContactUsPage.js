@@ -1,10 +1,22 @@
 import React, { Component } from 'react';
-import LaddaButton, { XS, EXPAND_LEFT } from 'react-ladda'
+import axios from 'axios';
+import LaddaButton, { XS, EXPAND_LEFT } from 'react-ladda';
+import Loader from 'react-loader-spinner';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 // styles
 import './ContactUsPage.css';
 import './ContactUsPageResponsive.css';
+
+import {
+    CONST_DEV_API_BASE_URL,
+    CONST_API_BASE_PARAM,
+    CONST_API_ACTION_PARAM,
+    CONST_RESPONSE_SUCCESS,
+    CONST_RESPONSE_FAIL
+} from './../../constants';
 
 
 export default class ContactUsPage extends Component {
@@ -17,6 +29,20 @@ export default class ContactUsPage extends Component {
                 subject: '',
                 message: ''
             }
+        }
+    }
+
+    /**
+     * Displays Notification bubble
+     * @param {String} type - SUCCESS/FAIL
+     */
+    notify = (type) => {
+        console.log(`display ${type} notification!`);
+        if (type == CONST_RESPONSE_SUCCESS) {
+            toast.success("טופס פנייה נשלח בהצלחה", { position: toast.POSITION.BOTTOM_CENTER });
+        }
+        else if (type == CONST_RESPONSE_FAIL) {
+            toast.error("שליחת טופס פנייה נכשל", { position: toast.POSITION.BOTTOM_CENTER });
         }
     }
 
@@ -38,6 +64,40 @@ export default class ContactUsPage extends Component {
         if(prop != null && value != null) {
             contactMessage[prop] = value;
             this.setState({ ...this.state, contactMessage }, () => { console.log(this.state); });
+        }
+    }
+
+    /**
+     * Service Method
+     * Submits the given contact form to the server
+     * @param {Event}  e - event
+     */
+    onSubmitForm = (e) => {
+        e.preventDefault();
+
+        if (this.state.contactMessage.subject != '' &&
+            this.state.contactMessage.fromEmail != '' && this.state.contactMessage.message != '') {
+                this.refs.contactFormButtonContainerRef.classList.add('show-spinner');
+
+                let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'employerContactForm';
+                let params  = new URLSearchParams();
+
+                params.append('Content-Type', 'application/x-www-form-urlencoded');
+                params.append('contactSubject', this.state.contactMessage.subject);
+                params.append('contactEmail', this.state.contactMessage.fromEmail);
+                params.append('contactMessage', this.state.contactMessage.message);
+
+                axios.post(url, params).then((response) => {
+                    this.refs.contactFormButtonContainerRef.classList.remove('show-spinner');
+                    if (response.data.status == CONST_RESPONSE_SUCCESS) {
+                        this.notify(CONST_RESPONSE_SUCCESS);
+                        console.log('onSubmitForm:response:response (success) -> ', response.data);
+                    }
+                }).catch((error) => {
+                    this.refs.contactFormButtonContainerRef.classList.remove('show-spinner');
+                    this.notify(CONST_RESPONSE_FAIL);
+                    console.log('error -> ', error);
+                });
         }
     }
 
@@ -70,7 +130,11 @@ export default class ContactUsPage extends Component {
 
                                     <textarea id="message" placeholder="גוף הפנייה*" rows="10" onChange={ this.handleContactMessageFields }></textarea>
 
-                                    <button type="submit" className="pure-button academe-button-full margin-md">שלח/י פנייה</button>
+                                    <div className="button-container" ref="contactFormButtonContainerRef">
+                                        <button className="pure-button academe-button-full margin-md" onClick={ this.onSubmitForm }>שלח/י פנייה</button>
+                                        <span id="contact-form-loading-spinner"><Loader type="Oval" color="#2194d3" height="30" width="30" /></span>
+                                    </div>
+                                    <ToastContainer autoClose={2500} rtl />
                                 </fieldset>
                             </form>
                         </div>

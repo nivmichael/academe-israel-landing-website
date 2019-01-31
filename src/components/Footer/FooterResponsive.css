@@ -14,8 +14,8 @@
     }
 
     #footer-component .social .icon {
-        color: white;
-        font-size: 3em;
+        width: 40px;
+        cursor: pointer;
     }
 
     #footer-component .logo-container .academe-logo {
@@ -43,7 +43,51 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #footer-component .container {
+        display: flex;
+        flex-direction: row;
+        background-color: #4C4C4C;
+        padding: 20px 10px;
+    }
 
+    #footer-component .social > div {
+        padding: 0 15px;
+    }
+
+    #footer-component .social .icon {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    #footer-component .footer-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 0px;
+        padding-left: 100px;     /* this prop is centering the text, find another way tho */
+    }
+
+    #footer-component .footer-text .text {
+        display: flex;
+        align-self: center;
+        color: white;
+        font-weight: 400;
+        font-size: 1.2em;
+        border-left: 1px solid white;
+        padding-left: 20px;
+    }
+
+    #footer-component .logo-container .academe-logo {
+        width: 30px;
+    }
+
+    #footer-component .logo-container .title {
+        margin-left: 10px;
+        margin-right: 20px;
+        font-weight: 400;
+        font-size: 1.2em;
+        color: white;
+    }
 }
 
 /*
@@ -59,9 +103,13 @@
         margin-top: 60px;
     }
 
+    #footer-component .social > div {
+        padding: 0 30px;
+    }
+
     #footer-component .social .icon {
-        color: white;
-        font-size: 3em;
+        width: 60px;
+        cursor: pointer;
     }
 
     #footer-component .footer-text {

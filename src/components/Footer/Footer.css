@@ -3,7 +3,7 @@
     flex-direction: column;
     background-color: #4C4C4C;
     padding: 30px 20px;
-    margin-top: 60px;
+    /* margin-top: 60px; */
 }
 
 #footer-component .social {
@@ -13,14 +13,14 @@
     align-items: center;
 }
 #footer-component .social > div {
-    padding: 0 30px;
+    padding: 0 15px;
 }
 #footer-component .social > div:first-of-type {
     border-left: 1px solid white;
 }
 #footer-component .social .icon {
-    color: white;
-    font-size: 2.5em;
+    width: 30px;
+    cursor: pointer;
 }
 
 #footer-component .footer-text {
@@ -44,10 +44,6 @@
     display: flex;
     align-items: center;
     padding-right: 10px;
-    /* text-align: left; */
-    /* flex-direction: row; */
-    /* justify-content: flex-end; */
-    /* padding: 5px 5px; */
 }
 
 #footer-component .logo-container .academe-logo {

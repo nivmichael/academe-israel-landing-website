@@ -15,8 +15,14 @@
     color: #2194d3;
 }
 #students-page-component .sub-title div#chevron {
-    font-size: 3em;
-    color: #2194d3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0 5px 0;
+}
+
+#students-page-component .sub-title div#chevron img {
+    width: 50px;
 }
 
 #students-page-component .universities-container,
@@ -42,6 +48,7 @@
 
 #students-page-component .colleges-container button {
     width: 120px;
+    color: black;
 }
 
 #students-page-component img.uni-icon {

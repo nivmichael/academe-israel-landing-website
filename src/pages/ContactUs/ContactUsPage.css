@@ -47,3 +47,16 @@
 #contact-us-page-component .margin-md {
     margin: 15px;
 }
+
+#contact-us-page-component .contact-form .button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#contact-us-page-component .contact-form .button-container #contact-form-loading-spinner {
+    display: none;
+}
+#contact-us-page-component .contact-form .button-container.show-spinner #contact-form-loading-spinner {
+    display: inline-block;
+}

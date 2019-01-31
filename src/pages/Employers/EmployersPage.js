@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Loader from 'react-loader-spinner';
+import axios from 'axios';
+
+/* ========== import constants ========= */
+import {
+    CONST_API_BASE_URL,
+    CONST_DEV_API_BASE_URL,
+    CONST_API_BASE_PARAM,
+    CONST_API_ACTION_PARAM,
+    CONST_RESPONSE_SUCCESS,
+    CONST_RESPONSE_FAIL
+} from './../../constants';
 
 /* ========== import components ========= */
 import PageMainTitle from './../../components/PageMainTitle/PageMainTitle';
@@ -122,7 +134,8 @@ export default class EmployersPage extends Component {
 
         this.state = {
             isCompaniesListExpanded: false,
-            employerEmail: ''
+            employerEmail: '',
+            employerId: ''
         }
 
         this.inputLabelValues = { email: 'הכנס את האימייל שלך', phone: 'הכנס את מספר הטלפון שלך' };
@@ -138,11 +151,39 @@ export default class EmployersPage extends Component {
         // let regex = new RegExp('^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$');
         // if (regex.test(employerEmail))
 
-        this.setState({ ...this.state, employerEmail }, () => { console.log(this.state); });
+        this.setState({ ...this.state, employerEmail });
     }
 
-    onSubmitForm = () => {
-        // submit form through service
+    /**
+     * Service Method
+     * Submits the given email to the server to check if the employer is present in the system
+     * @param {Event}  e - event
+     */
+    onSubmitForm = (e) => {
+        e.preventDefault();
+        let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'checkEmployerByEmail';
+        let params  = new URLSearchParams();
+
+        params.append('Content-Type', 'application/x-www-form-urlencoded');
+        params.append('email', this.state.employerEmail);
+
+        if (this.state.employerEmail != '') {
+            this.refs.publishJobButtonContainerRef.classList.add('show-spinner');
+            axios.post(url, params).then((response) => {
+                this.refs.publishJobButtonContainerRef.classList.remove('show-spinner');
+                if (response.data.status == CONST_RESPONSE_SUCCESS) {
+                    console.log('onSubmitForm:response:employerId (success) -> ', response.data.employerId);
+                    let employerId = response.data.employerId;
+                    this.setState({ ...this.state, employerId }, () => { console.log(this.state); });
+                }
+                else if (response.data.status == CONST_RESPONSE_FAIL) {
+                    console.log('onSubmitForm:response (failed) -> ', response.data);
+                }
+            }).catch((error) => {
+                this.refs.publishJobButtonContainerRef.classList.remove('show-spinner');
+                console.log('error -> ', error);
+            });
+        }
     }
 
     /**
@@ -247,7 +288,10 @@ export default class EmployersPage extends Component {
                                 <fieldset>
                                     <div className="form-title">לפרסום משרה</div>
                                     <input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="floating-label" placeholder="הכנס את האימייל שלך"></input>
-                                    <button type="submit" className="pure-button academe-button-full continue-button">המשך</button>
+                                    <div className="button-container" ref="publishJobButtonContainerRef">
+                                        <button className="pure-button academe-button-full continue-button" onClick={ this.onSubmitForm }>המשך</button>
+                                        <span id="publish-job-loading-spinner"><Loader type="Oval" color="#2194d3" height="30" width="30" /></span>
+                                    </div>
                                 </fieldset>
                             </form>
                         </div>

@@ -13,6 +13,17 @@
         color: #2194d3;
     }
 
+    #students-page-component .sub-title div#chevron {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 5px 0;
+    }
+
+    #students-page-component .sub-title div#chevron img {
+        width: 60px;
+    }
+
     #students-page-component .universities-container .icon-container {
         margin: 5px 30px;
     }
@@ -39,7 +50,9 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
-
+    #students-page-component .colleges-container button {
+        width: 100px;
+    }
 }
 
 /*
@@ -59,6 +72,17 @@
         font-size: 2.1em;
         font-weight: bold;
         color: #2194d3;
+    }
+
+    #students-page-component .sub-title div#chevron {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 45px 0 30px 0;
+    }
+
+    #students-page-component .sub-title div#chevron img {
+        width: 75px;
     }
 
     #students-page-component .universities-container {
