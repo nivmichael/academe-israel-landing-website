@@ -53,13 +53,27 @@
     box-shadow: none;
 }
 
-.academe-input {
+*:focus {
+    outline: none!important;
+}
+
+input[type="text"].academe-input,
+input[type="email"].academe-input,
+input[type="password"].academe-input,
+input[type="number"].academe-input,
+textarea.academe-input {
     border: none;
     border-bottom: 1px solid;
     border-radius: 0;
     box-shadow: none;
     border-bottom-color: #2194d3;
+    transition: box-shadow linear 0.2s;
 }
-.academe-input:focus {
-    border-bottom: 2px solid;
+input[type="text"].academe-input:focus,
+input[type="email"].academe-input:focus,
+input[type="password"].academe-input:focus,
+input[type="number"].academe-input:focus,
+textarea.academe-input:focus {
+    box-shadow: 0px 1px 0px #2194d3;
+    border-bottom-color: #2194d3;
 }

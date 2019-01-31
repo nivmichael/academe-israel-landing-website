@@ -18,25 +18,26 @@ import StatsBar from './../../components/StatsBar/StatsBar';
 import SingleAdvantageBox from './../../components/SingleAdvantageBox/SingleAdvantageBox';
 
 /* ========= universities logos ========= */
-import tauLogo from './../../images/logos/universities/tel-aviv-uni-200x75.png';
-import bguLogo from './../../images/logos/universities/ben-gurion-uni-220x83.png';
-import technionLogo from './../../images/logos/universities/technion-uni-200x75.png';
-import openuLogo from './../../images/logos/universities/open-uni-200x75.png';
-import haifaLogo from './../../images/logos/universities/haifa-uni-200x75.png';
-import telHaiLogo from './../../images/logos/universities/tel-hai-uni-200x75.png';
-import sceLogo from './../../images/logos/universities/sce-uni-200x75.png';
-import sapirLogo from './../../images/logos/universities/sapir-uni-200x75.png';
-import ashLogo from './../../images/logos/universities/ashkelon-uni-200x75.png';
-import mlaLogo from './../../images/logos/universities/mla-uni-200x75.png';
-import wgalilLogo from './../../images/logos/universities/west-galil-uni-200x75.png';
-import yvcLogo from './../../images/logos/universities/emek-izrael-uni-200x75.png';
+import tauLogo from './../../images/logos/universities/tel-aviv-uni-250x125.png';
+import bguLogo from './../../images/logos/universities/ben-gurion-uni-250x87.png';
+import haifaLogo from './../../images/logos/universities/haifa-uni-250x122.png';
+import technionLogo from './../../images/logos/universities/technion-uni-250x87.png';
+/* ========= colleges logos ========= */
+import openuLogo from './../../images/logos/colleges/open-uni-200x75.png';
+import telHaiLogo from './../../images/logos/colleges/tel-hai-uni-200x75.png';
+import sceLogo from './../../images/logos/colleges/sce-uni-200x75.png';
+import sapirLogo from './../../images/logos/colleges/sapir-uni-200x75.png';
+import ashLogo from './../../images/logos/colleges/ashkelon-uni-200x75.png';
+import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
+import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
+import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
 
 const universitiesList = {
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
     'technion'  : technionLogo,
-    'openu'     : openuLogo,
     'haifa'     : haifaLogo,
+    'openu'     : openuLogo,
     'telHai'    : telHaiLogo,
     'sce'       : sceLogo,
     'sapir'     : sapirLogo,
@@ -84,8 +85,7 @@ export default class HomePage extends Component {
     }
 
     componentWillUnmount () {
-        console.log('unmounted');
-        this.source.cancel('Component Unmounted');
+        this.source.cancel('Unmounted');
     }
 
     /**

@@ -10,7 +10,10 @@ import {
     CONST_API_BASE_PARAM,
     CONST_API_ACTION_PARAM,
     CONST_RESPONSE_SUCCESS,
-    CONST_RESPONSE_FAIL
+    CONST_RESPONSE_FAIL,
+    CONST_SITE_ID_LIST,
+    CONST_UNIVERSITY_FULL_URL,
+    CONST_UNIVERSITY_BASE_URL
 } from './../../constants';
 
 /* ========== import components ========= */
@@ -135,7 +138,10 @@ export default class EmployersPage extends Component {
         this.state = {
             isCompaniesListExpanded: false,
             employerEmail: '',
-            employerId: ''
+            employerData: {
+                id: '',
+                siteId: ''
+            }
         }
 
         this.inputLabelValues = { email: 'הכנס את האימייל שלך', phone: 'הכנס את מספר הטלפון שלך' };
@@ -164,26 +170,42 @@ export default class EmployersPage extends Component {
         let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'checkEmployerByEmail';
         let params  = new URLSearchParams();
 
+        if (this.refs.redirectLinkContainerRef) { this.refs.redirectLinkContainerRef.classList.remove('expend-results'); }
+        if (this.refs.noResultsContainerRef) { this.refs.noResultsContainerRef.classList.remove('expend-results'); }
+
         params.append('Content-Type', 'application/x-www-form-urlencoded');
         params.append('email', this.state.employerEmail);
 
         if (this.state.employerEmail != '') {
             this.refs.publishJobButtonContainerRef.classList.add('show-spinner');
+
             axios.post(url, params).then((response) => {
                 this.refs.publishJobButtonContainerRef.classList.remove('show-spinner');
+
                 if (response.data.status == CONST_RESPONSE_SUCCESS) {
-                    console.log('onSubmitForm:response:employerId (success) -> ', response.data.employerId);
-                    let employerId = response.data.employerId;
-                    this.setState({ ...this.state, employerId }, () => { console.log(this.state); });
+                    let employerData = { id: response.data.employerId, siteId: response.data.siteId };
+                    this.setState({ ...this.state, employerData }, () => { console.log(this.state); });
+                    this.refs.redirectLinkContainerRef.classList.add('expend-results');
                 }
                 else if (response.data.status == CONST_RESPONSE_FAIL) {
-                    console.log('onSubmitForm:response (failed) -> ', response.data);
+                    this.resetEmployerData();
+                    this.refs.noResultsContainerRef.classList.add('expend-results');
                 }
             }).catch((error) => {
                 this.refs.publishJobButtonContainerRef.classList.remove('show-spinner');
+                // this.refs.noResultsContainerRef.classList.add('expend-results');
+                this.resetEmployerData();
                 console.log('error -> ', error);
             });
         }
+    }
+
+    /**
+     * Resets the employerData property in the state
+     */
+    resetEmployerData = () => {
+        let employerData = { id: '', siteId: '' };
+        this.setState({ ...this.state, employerData });
     }
 
     /**
@@ -221,6 +243,29 @@ export default class EmployersPage extends Component {
      */
     onCompaniesListCollapse = () => {
         this.refs.hiringCompaniesListRef.classList.remove('expanded');
+    }
+
+    /**
+     * Redirects the user to the academe system
+     */
+    onAcademeLinkClicked = (e) => {
+        e.preventDefault();
+        let elemId  = e.target.id;
+        let url     = false;
+
+        console.log('onAcademeLinkClicked -> ', elemId);
+
+        if (elemId == 'academe-link') {
+            let site_name   = CONST_SITE_ID_LIST[this.state.employerData.siteId];
+            url             = CONST_UNIVERSITY_FULL_URL;
+            url             = url.replace('${site_name}', site_name);
+        }
+        else if (elemId == 'signup-link') {
+            url = CONST_UNIVERSITY_BASE_URL + 'into.acade-me.co.il';
+        }
+
+        // redirect to composed url
+        if (url !== false) { window.open(url, "_blank"); }
     }
 
     /**
@@ -287,13 +332,20 @@ export default class EmployersPage extends Component {
                             <form className="pure-form pure-form-stacked">
                                 <fieldset>
                                     <div className="form-title">לפרסום משרה</div>
-                                    <input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="floating-label" placeholder="הכנס את האימייל שלך"></input>
+                                    <input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="academe-input" placeholder="הכנס את האימייל שלך"></input>
                                     <div className="button-container" ref="publishJobButtonContainerRef">
                                         <button className="pure-button academe-button-full continue-button" onClick={ this.onSubmitForm }>המשך</button>
                                         <span id="publish-job-loading-spinner"><Loader type="Oval" color="#2194d3" height="30" width="30" /></span>
                                     </div>
                                 </fieldset>
                             </form>
+                        </div>
+                        <div className="redirect-link-container" ref="redirectLinkContainerRef">
+                            <div id="academe-link" onClick={ this.onAcademeLinkClicked }>לחץ כאן כדי לעבור למערכת</div>
+                        </div>
+                        <div className="no-results-container" ref="noResultsContainerRef">
+                            <div id="no-results">לא נמצאו תוצאות.</div>
+                            <div id="signup-link" onClick={ this.onAcademeLinkClicked }>להרשמות, לחץ כאן</div>
                         </div>
                     </div>
                     <div className="pure-u-1">

@@ -124,11 +124,11 @@ export default class ContactUsPage extends Component {
                         <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
                             <form className="pure-form pure-form-stacked contact-form">
                                 <fieldset>
-                                    <input id="subject" placeholder="נושא הפנייה*" onChange={ this.handleContactMessageFields } />
+                                    <input id="subject" type="text" placeholder="נושא הפנייה*" className="academe-input" onChange={ this.handleContactMessageFields } />
 
-                                    <input id="fromEmail" type="email" placeholder="אימייל חזרה*" onChange={ this.handleContactMessageFields } />
+                                    <input id="fromEmail" type="email" placeholder="אימייל חזרה*" className="academe-input" onChange={ this.handleContactMessageFields } />
 
-                                    <textarea id="message" placeholder="גוף הפנייה*" rows="10" onChange={ this.handleContactMessageFields }></textarea>
+                                    <textarea id="message" placeholder="גוף הפנייה*" className="academe-input" rows="10" onChange={ this.handleContactMessageFields }></textarea>
 
                                     <div className="button-container" ref="contactFormButtonContainerRef">
                                         <button className="pure-button academe-button-full margin-md" onClick={ this.onSubmitForm }>שלח/י פנייה</button>
