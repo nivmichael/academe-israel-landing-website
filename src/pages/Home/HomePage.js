@@ -67,7 +67,7 @@ export default class HomePage extends Component {
         this.CancelToken = axios.CancelToken;
         this.source = this.CancelToken.source();
 
-        let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'getSystemStats';
+        let url     = CONST_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'getSystemStats';
 
         axios.get(url, { cancelToken: this.source.token })
             .then((response) => {
