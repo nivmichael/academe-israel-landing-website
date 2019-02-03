@@ -43,8 +43,14 @@
     align-items: center;
     background-color: #F9B24A;
     padding: 30px 0;
+
+    overflow: hidden;
+    height: auto;
+    max-height: 2200px;
+    transition: max-height linear 2s;
 }
 
-#homepage-component .hidden {
-    display: none;
+#homepage-component .advantages-list-container.hidden {
+    /* display: none; */
+    max-height: 0px;
 }

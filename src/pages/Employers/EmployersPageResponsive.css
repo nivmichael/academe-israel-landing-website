@@ -14,6 +14,22 @@
         padding: 3px;
         font-size: 1.1em;
     }
+
+    #employers-page-component .hiring-companies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+        max-height: 500px;
+        transition: max-height ease-in .2s;
+    }
+    #employers-page-component .hiring-companies-list.expanded .hiring-companies {
+        max-height: 2200px;
+    }
 }
 
 /*
@@ -29,7 +45,29 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #employers-page-component .hiring-companies-list .title {
+        display: block;
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+        padding: 3px;
+        font-size: 1.1em;
+    }
 
+    #employers-page-component .hiring-companies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+        max-height: 530px;
+        transition: max-height ease-in .2s;
+    }
+    #employers-page-component .hiring-companies-list.expanded .hiring-companies {
+        max-height: 1480px;
+    }
 }
 
 /*
@@ -47,6 +85,22 @@
         margin-bottom: 10px;
         padding: 3px;
         font-size: 1.2em;
+    }
+
+    #employers-page-component .hiring-companies {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        height: auto;
+        max-height: 300px;
+        transition: max-height ease-in .2s;
+    }
+    #employers-page-component .hiring-companies-list.expanded .hiring-companies {
+        max-height: 900px;
     }
 
     #employers-page-component .redirect-link-container,

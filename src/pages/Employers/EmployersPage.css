@@ -33,8 +33,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
     height: auto;
-    transition: height linear 2s;
+    max-height: 1720px;
+    transition: max-height ease-in .5s;
 }
 
 #employers-page-component .hiring-companies-list .title {
@@ -70,11 +72,14 @@
     margin: 30px 50px 60px;
 }
 
-#employers-page-component .company-img-container.collapsed {
+/* #employers-page-component .company-img-container.collapsed {
     display: none;
-}
+} */
 #employers-page-component .hiring-companies-list.expanded .company-img-container {
     display: block;
+}
+#employers-page-component .hiring-companies-list.expanded .hiring-companies {
+    max-height: 5070px;
 }
 
 #employers-page-component .continue-button {
@@ -96,4 +101,35 @@
 }
 #employers-page-component .publish-job-form-container .button-container.show-spinner #publish-job-loading-spinner {
     display: inline-block;
+}
+
+#employers-page-component .redirect-link-container,
+#employers-page-component .no-results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 0;
+    font-size: 1.1em;
+    overflow: hidden;
+    max-height: 0;
+    height: auto;
+    transition: max-height ease-out 0.3s;
+}
+#employers-page-component .expend-results.redirect-link-container {
+    max-height: 20px;
+}
+#employers-page-component .expend-results.no-results-container {
+    max-height: 50px;
+}
+
+#employers-page-component .redirect-link-container #academe-link,
+#employers-page-component .no-results-container #signup-link {
+    color: #2194d3;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#employers-page-component .no-results-container #no-results {
+    color: #ca3c3c;
 }

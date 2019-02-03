@@ -4,7 +4,8 @@
 */
 @media (min-width: 768px) and (max-width: 1024px) {
     #main-intro-component .academe-logo-container img {
-        width: 100px;
+        width: 120px;
+        height: 150px;
     }
 
     #main-intro-component .message {
@@ -47,6 +48,7 @@
 
     #main-intro-component .academe-logo-container img {
         width: auto;
+        height: auto;
     }
 
     #main-intro-component .message {

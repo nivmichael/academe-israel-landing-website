@@ -7,26 +7,6 @@ import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30
 import facebookIcon from './../../images/icons/facebook-icon-70x70.png';
 import instagramIcon from './../../images/icons/instagram-icon-70x70.png';
 
-const footerStyle = {
-  backgroundColor: "#4C4C4C",
-  fontSize: "20px",
-  color: "white",
-  textAlign: "center",
-  padding: "20px",
-  position: "fixed",
-  left: "0",
-  bottom: "0",
-  height: "60px",
-  width: "100%"
-};
-
-const phantomStyle = {
-  display: "block",
-  padding: "20px",
-  height: "60px",
-  width: "100%"
-};
-
 const footerText = 'רשת גיוס הסטודנטים והבוגרים המתקדמת והגדולה בישראל';
 
 export default class Footer extends Component {
@@ -38,6 +18,16 @@ export default class Footer extends Component {
      */
     onSocialClicked = (icon) => {
         // console.log(`clicked on ${icon} icon`);
+        // let url = false;
+        // if (icon === 'facebook') {
+        //      compose facebook url
+        // }
+        // else if (icon === 'instagram') {
+        //      compose instagram url
+        // }
+        //
+        // redirect to composed url
+        // if (url !== false) { window.open(url, "_blank"); }
     }
 
     render() {
