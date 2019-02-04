@@ -59,7 +59,7 @@
         overflow: hidden;
         height: auto;
         max-height: 1600px;
-        transition: max-height ease-in 2s;
+        transition: max-height ease-in .2s;
     }
 
     #homepage-component .advantages-list-container.hidden {
@@ -107,7 +107,7 @@
         overflow: hidden;
         height: auto;
         max-height: 1200px;
-        transition: max-height ease-in 2s;
+        transition: max-height ease-in .2s;
     }
 
     #homepage-component .advantages-list-container.hidden {
