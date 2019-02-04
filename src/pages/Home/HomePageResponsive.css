@@ -38,7 +38,33 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #homepage-component .universities-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 100px;
+    }
 
+    #homepage-component .advantages-list-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        background-color: #F9B24A;
+        padding: 30px 100px;
+
+        overflow: hidden;
+        height: auto;
+        max-height: 1600px;
+        transition: max-height ease-in 2s;
+    }
+
+    #homepage-component .advantages-list-container.hidden {
+        max-height: 0px;
+    }
 }
 
 /*

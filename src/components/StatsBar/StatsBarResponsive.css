@@ -53,7 +53,41 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #statsbar-component .stats-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+    }
 
+    #statsbar-component .single-stat-container:not(#jobs-stat) {
+        border-left: 1px solid black;
+    }
+
+    #statsbar-component .sub-divider {
+        display: none;
+    }
+
+    #statsbar-component .main-divider {
+        display: flex;
+        position: absolute;
+        top: 12px;
+        align-self: center;
+        height: 1px;
+        background-color: #2194d3;
+        width: 30%;
+    }
+
+    #statsbar-component .single-stat-container .single-stat {
+        font-size: 3.5em;
+        font-weight: 300;
+    }
+
+    #statsbar-component .single-stat-container .single-stat-title {
+        font-size: 1.5em;
+        font-weight: 300;
+    }
 }
 
 /*
