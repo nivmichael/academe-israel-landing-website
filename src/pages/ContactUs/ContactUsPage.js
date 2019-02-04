@@ -11,7 +11,7 @@ import './ContactUsPage.css';
 import './ContactUsPageResponsive.css';
 
 import {
-    CONST_DEV_API_BASE_URL,
+    CONST_API_BASE_URL,
     CONST_API_BASE_PARAM,
     CONST_API_ACTION_PARAM,
     CONST_RESPONSE_SUCCESS,
@@ -79,7 +79,7 @@ export default class ContactUsPage extends Component {
             this.state.contactMessage.fromEmail != '' && this.state.contactMessage.message != '') {
                 this.refs.contactFormButtonContainerRef.classList.add('show-spinner');
 
-                let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'employerContactForm';
+                let url     = CONST_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'employerContactForm';
                 let params  = new URLSearchParams();
 
                 params.append('Content-Type', 'application/x-www-form-urlencoded');

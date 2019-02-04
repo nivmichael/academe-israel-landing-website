@@ -167,7 +167,7 @@ export default class EmployersPage extends Component {
      */
     onSubmitForm = (e) => {
         e.preventDefault();
-        let url     = CONST_DEV_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'checkEmployerByEmail';
+        let url     = CONST_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'checkEmployerByEmail';
         let params  = new URLSearchParams();
 
         if (this.refs.redirectLinkContainerRef) { this.refs.redirectLinkContainerRef.classList.remove('expend-results'); }
