@@ -61,7 +61,7 @@
 */
 @media (min-width: 1281px) {
     #students-page-component .students-container {
-        height: 570px;
+        /*height: 570px;*/
     }
 
     #students-page-component .sub-title div {
@@ -115,6 +115,7 @@
 
     #students-page-component .colleges-container button {
         width: 120px;
+        margin-top:20px ;
     }
 
     /* #students-page-component .other-button-container button {

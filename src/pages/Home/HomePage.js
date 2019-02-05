@@ -36,8 +36,12 @@ const universitiesList = {
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
     'technion'  : technionLogo,
-    'haifa'     : haifaLogo,
     'openu'     : openuLogo,
+    'haifa'     : haifaLogo,
+
+}
+
+const collggesList = {
     'telHai'    : telHaiLogo,
     'sce'       : sceLogo,
     'sapir'     : sapirLogo,
@@ -111,7 +115,7 @@ export default class HomePage extends Component {
         Object.keys(uni_list).map((uni_key) => {
             list.push(
                 <div className="single-university-container" key={uni_key}>
-                    <img className="pure-img" src={uni_list[uni_key]} alt={uni_key}></img>
+                    <img className="uni-img" src={uni_list[uni_key]} alt={uni_key}></img>
                 </div>
             );
         });
@@ -146,6 +150,11 @@ export default class HomePage extends Component {
                     <div className="pure-u-1">
                         <div className="universities-container">
                             { this.renderUniversitiesList(universitiesList) }
+                        </div>
+                    </div>
+                    <div className="pure-u-1">
+                        <div className="collages-container">
+                        { this.renderUniversitiesList(collggesList) }
                         </div>
                     </div>
                     <div className="pure-u-1">
