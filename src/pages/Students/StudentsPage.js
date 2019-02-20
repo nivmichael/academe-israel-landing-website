@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import OwlCarousel from 'react-owl-carousel2';
+// import OwlCarousel from 'react-owl-carousel2';
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
