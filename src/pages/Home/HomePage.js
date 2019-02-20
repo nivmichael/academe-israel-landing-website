@@ -68,6 +68,8 @@ export default class HomePage extends Component {
     }
 
     componentDidMount () {
+        document.addEventListener('scroll', this.onTrackScrolling);
+
         this.CancelToken = axios.CancelToken;
         this.source = this.CancelToken.source();
 
@@ -89,6 +91,8 @@ export default class HomePage extends Component {
     }
 
     componentWillUnmount () {
+        document.removeEventListener('scroll', this.onTrackScrolling);
+
         this.source.cancel('Unmounted');
     }
 
@@ -101,6 +105,38 @@ export default class HomePage extends Component {
         // flip flag
         isAdvantagesHidden = !isAdvantagesHidden;
         this.setState({ ...this.state, isAdvantagesHidden }, () => console.log(this.state));
+    }
+
+    /**
+     * Checks if the scrolling action reached a certain point in the DOM
+     *
+     * @param {Element|null} el - wrappedElement
+     * @return {Boolean} - did the scroll reached bottom of the element
+     */
+    isBottom(el) {
+        return el.getBoundingClientRect().bottom <= window.innerHeight;
+    }
+
+    /**
+     * Tracks the scrolling action and reacting accordingly
+     */
+    onTrackScrolling = () => {
+        // const wrappedElement = document.getElementById('read-more-btn-container');
+        const wrappedElement = document.querySelector('#slide-in-container .title');
+
+        if (this.isBottom(wrappedElement)) {
+            this.onScrollingEnableSlideIn();
+            document.removeEventListener('scroll', this.onTrackScrolling);
+        }
+    };
+
+    onScrollingEnableSlideIn = () => {
+        if(this.refs.studentsSliderRef && this.refs.employersSliderRef) {
+            this.refs.studentsSliderRef.classList.remove('not-visible');
+            this.refs.studentsSliderRef.classList.add('slide-in-right');
+            this.refs.employersSliderRef.classList.remove('not-visible');
+            this.refs.employersSliderRef.classList.add('slide-in-left');
+        }
     }
 
     /**
@@ -142,7 +178,7 @@ export default class HomePage extends Component {
     render() {
         return (
             <div id="homepage-component">
-                <div className="pure-g">
+                <div id="main-section-home" className="pure-g">
                     <div className="pure-u-1">
                         <MainIntro></MainIntro>
                         <StatsBar systemStats={ this.state.systemStats }></StatsBar>
@@ -169,11 +205,18 @@ export default class HomePage extends Component {
                             { this.renderAdvantagesList(advantagesList) }
                         </div>
                     </div>
-                    <div className="pure-u-1">
+                    <div id="read-more-btn-container" className="pure-u-1">
                         <div style={{ textAlign: 'center' }}>
                             <button className="pure-button academe-button-outline read-more-btn" onClick={ this.onToggleAdvantages }>
                                 { this.state.isAdvantagesHidden ? 'קראו עוד' : 'סגור' }
                             </button>
+                        </div>
+                    </div>
+                    <div id="slide-in-container" className="pure-u-1">
+                        <div className="title">AcadeME - זירת שיתוף וקידום המשרות בין המוסדות האקדמיים המובילים בישראל</div>
+                        <div className="sliding-rect-container">
+                            <div id="students" className="not-visible" ref="studentsSliderRef"></div>
+                            <div id="employers" className="not-visible" ref="employersSliderRef"></div>
                         </div>
                     </div>
                     <div className="pure-u-1 footer-container">
@@ -184,3 +227,7 @@ export default class HomePage extends Component {
         );
     }
 }
+
+
+// <div id="students" className="pure-u-1 pure-u-md-1-2 not-visible" ref="studentsSliderRef"></div>
+// <div id="employers" className="pure-u-1 pure-u-md-1-2 not-visible" ref="employersSliderRef"></div>

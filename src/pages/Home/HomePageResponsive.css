@@ -114,4 +114,17 @@
     #homepage-component .advantages-list-container.hidden {
         max-height: 0px;
     }
+
+    #homepage-component #slide-in-container .sliding-rect-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #homepage-component #slide-in-container .title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.6em;
+        padding: 0 10px 20px 0;
+    }
 }
