@@ -125,7 +125,7 @@ export default class StudentsPage extends Component {
                     <div className="pure-u-1 students-container">
                         <div className="pure-u-1">
                             <div className="sub-title">
-                                <div>עוד לא נרשמתם?</div>
+                                <div>עוד לא נרשמתם לAcadeME?</div>
                                 <div>מאיזו אוניברסיטה או מכללה אתם?</div>
                                 <div id="chevron">
                                     <img className="pure-img" src={ chevronDownIcon } alt="chevron-down-icon"></img>

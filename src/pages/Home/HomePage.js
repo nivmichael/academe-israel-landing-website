@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { NavLink } from 'react-router-dom'
 
 import {
     CONST_API_BASE_URL,
@@ -31,6 +32,9 @@ import ashLogo from './../../images/logos/colleges/ashkelon-uni-200x75.png';
 import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
 import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
 import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
+/* ========= sliding rects ========= */
+import slidingEmployers from './../../images/icons/sliding-employers.png';
+import slidingStudents from './../../images/icons/sliding-students.png';
 
 const universitiesList = {
     'tau'       : tauLogo,
@@ -215,8 +219,22 @@ export default class HomePage extends Component {
                     <div id="slide-in-container" className="pure-u-1">
                         <div className="title">AcadeME - זירת שיתוף וקידום המשרות בין המוסדות האקדמיים המובילים בישראל</div>
                         <div className="sliding-rect-container">
-                            <div id="students" className="not-visible" ref="studentsSliderRef"></div>
-                            <div id="employers" className="not-visible" ref="employersSliderRef"></div>
+                            <div id="students" className="not-visible sliding-rect-container-inner" ref="studentsSliderRef">
+                                <div className="sliding-rect-container-inner-icon-students">
+                                    <NavLink to="/students" className="no-text">
+                                        <img className="sliding-rect-container-inner-icon" src={ slidingStudents } />
+                                        <div>סטודנטים / בוגרים</div>
+                                    </NavLink>
+                                </div>
+                            </div>
+                            <div id="employers" className="not-visible sliding-rect-container-inner" ref="employersSliderRef">
+                                <div className="sliding-rect-container-inner-icon-employers">
+                                    <NavLink to="/employers" className="no-text">
+                                        <img className="sliding-rect-container-inner-icon" src={ slidingEmployers } />
+                                        <div>מעסיקים</div>
+                                    </NavLink>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="pure-u-1 footer-container">

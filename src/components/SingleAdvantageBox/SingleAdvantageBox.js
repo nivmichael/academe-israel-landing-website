@@ -108,7 +108,7 @@ export default class SingleAdvantageBox extends Component {
                         <h1 className={ (advantagesResources[this.props.advantage].title === false) ? 'no-title' : '' }>
                             { advantagesResources[this.props.advantage].title }
                         </h1>
-                        <p className={ this.props.advantage == 'market_variety' ? 'pre-wrap-text' : '' }>
+                        <p className={ this.props.advantage == 'market_variety' ? 'pre-wrap-text bold_text' : '' }>
                             { advantagesResources[this.props.advantage].text }
                         </p>
                     </div>

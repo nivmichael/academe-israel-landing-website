@@ -65,6 +65,7 @@
     background-color: #d6d6d6;
     padding: 30px 0;
     margin-top: 30px;
+    overflow-x: hidden;
 }
 
 #homepage-component #slide-in-container .sliding-rect-container {
@@ -80,33 +81,59 @@
     padding: 0 10px 20px 0;
 }
 
-#homepage-component #slide-in-container .sliding-rect-container div {
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
     display: flex;
     height: 300px;
     margin: 10px 0;
     box-shadow: 0px 2px 10px 0px #454545;
-    transition: box-shadow linear 0.2s;
+    transition: box-shadow linear 0.1s;
 }
-#homepage-component #slide-in-container .sliding-rect-container div:hover {
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner:hover {
     box-shadow: 0px 4px 10px 2px #454545;
 }
 
-#homepage-component #slide-in-container .sliding-rect-container div#employers {
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner#employers {
     background-color: #FAB047;
     display: block;
-    width: 49%;
+    width: 100%;
     margin-right: 2%;
 }
-#homepage-component #slide-in-container .sliding-rect-container div#students {
+
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner#students {
     background-color: #2194D3;
     display: block;
-    width: 49%;
+    width: 100%;
 }
 
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon-students {
+    position: relative;
+    top: 30%;
+    text-align: center;
+    font-size: 1.6em;
+    color: #FFFFFF;
+}
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon-students a {
+    color: #FFFFFF ;
+}
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon-employers {
+    position: relative;
+    top: 30%;
+    text-align: center;
+    font-size: 1.6em;
+    color: #000000;
+}
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon-employers a {
+    color: #000000 ;
+}
+#homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon {
+    width: 10%;
+}
 .not-visible {
     visibility: hidden;
 }
-
+.no-text {
+    text-decoration: none;
+}
 .slide-in-right {
     -webkit-animation-name: slide-in-right;
     animation-name: slide-in-right;

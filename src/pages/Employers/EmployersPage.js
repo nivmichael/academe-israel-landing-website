@@ -351,7 +351,7 @@ export default class EmployersPage extends Component {
                     <div className="pure-u-1">
                         <div className="hiring-companies-list-container">
                             <div className="hiring-companies-list" ref="hiringCompaniesListRef">
-                                <div className="title">חברות המגייסות באמצעות מערכת AcadeME</div>
+                                <div className="title">מקצת חברות המגייסות באמצעות מערכת AcadeME</div>
                                 <div className="hiring-companies">
                                     { this.renderCompaniesList(companiesList) }
                                     { this.renderCompaniesList(companiesCollapsedList, 'collapsed') }

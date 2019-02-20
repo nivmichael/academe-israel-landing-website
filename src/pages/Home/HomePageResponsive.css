@@ -21,6 +21,9 @@
         background-color: #F9B24A;
         padding: 30px 0;
     }
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
+        width: 49%;
+    }
 
 
 }
@@ -64,6 +67,9 @@
 
     #homepage-component .advantages-list-container.hidden {
         max-height: 0px;
+    }
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
+        width: 49%;
     }
 }
 
@@ -126,5 +132,8 @@
         text-align: center;
         font-size: 1.6em;
         padding: 0 10px 20px 0;
+    }
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
+        width: 49%;
     }
 }
