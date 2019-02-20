@@ -12,7 +12,7 @@ const pageMainTitleResourcesList = {
     students        : { class: 'students-color',    icon: StudentsIcon,     alt: 'סטודנטים-בוגרים',    title: 'סטודנטים / בוגרים' },
     employers       : { class: 'employers-color',   icon: EmployersIcon,    alt: 'מעסיקים',             title: 'מעסיקים' },
     about_us        : { class: 'about-us-color',    icon: null,             alt: 'אודות',               title: 'אודות' },
-    contact_us      : { class: 'contact-us-color',  icon: ContactUsIcon,    alt: 'צור קשר',             title: 'טופס פנייה - אקדמי' },
+    contact_us      : { class: 'contact-us-color',  icon: ContactUsIcon,    alt: 'צור קשר',             title: 'צרו קשר' },
     faq             : { class: 'faq-color',         icon: null,             alt: 'שאלות ותשובות',       title: 'שאלות ותשובות' },
     default_class   : { class: 'default-color',     icon: null,             alt: '',                     title: '' }
 };

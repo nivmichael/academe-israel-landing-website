@@ -3,7 +3,8 @@ import './Footer.css';
 import './FooterResponsive.css';
 
 /* ======== icons ======== */
-import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
+// import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
+import mainAcademeLogo from  '../../images/logos/academe/academe-logo-horizontal-153x35.png';
 import facebookIcon from './../../images/icons/facebook-icon-70x70.png';
 import instagramIcon from './../../images/icons/instagram-icon-70x70.png';
 
@@ -17,17 +18,12 @@ export default class Footer extends Component {
      * @param {String} icon - which social network icon the user has clicked
      */
     onSocialClicked = (icon) => {
-        // console.log(`clicked on ${icon} icon`);
-        // let url = false;
-        // if (icon === 'facebook') {
-        //      compose facebook url
-        // }
-        // else if (icon === 'instagram') {
-        //      compose instagram url
-        // }
-        //
-        // redirect to composed url
-        // if (url !== false) { window.open(url, "_blank"); }
+        let url = false;
+
+        if (icon === 'facebook') { url = 'https://www.facebook.com/joinacademe/'; }
+        else if (icon === 'instagram') { url = 'https://www.instagram.com/academe_wanted/'; }
+
+        if (url !== false) { window.open(url, "_blank"); }
     }
 
     render() {
@@ -46,7 +42,6 @@ export default class Footer extends Component {
                         <div className="pure-u-1 footer-text">
                             <span className="text">{ footerText }</span>
                             <span className="logo-container">
-                                <div className="title">AcadeME</div>
                                 <img className="pure-img academe-logo" src={ mainAcademeLogo } alt="academe-logo"></img>
                             </span>
                         </div>
@@ -57,10 +52,7 @@ export default class Footer extends Component {
     }
 }
 
-
-// <div>
-//     <FontAwesomeIcon icon={ ['fab', 'instagram'] } id="instagram" className="icon" onClick={ () => this.onSocialClicked('instagram') } />
-// </div>
-// <div>
-//     <FontAwesomeIcon icon={ ['fab', 'facebook'] } id="facebook" className="icon" onClick={ () => this.onSocialClicked('facebook') } />
-// </div>
+// <span className="logo-container">
+//     <div className="title">AcadeME</div>
+//     <img className="pure-img academe-logo" src={ mainAcademeLogo } alt="academe-logo"></img>
+// </span>

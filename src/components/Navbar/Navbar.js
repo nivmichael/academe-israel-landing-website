@@ -6,7 +6,8 @@ import './Navbar.css';
 import './NavbarResponsive.css';
 
 /* ======== IMPORT IMAGES ======== */
-import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
+// import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
+import mainAcademeLogo from  '../../images/logos/academe/academe-logo-horizontal-109x25.png';
 
 /* ======== IMPORT COMPONENTS ======== */
 import HamburgerMenu from '../HamburgerMenu/HamburgerMenu';
@@ -44,7 +45,6 @@ export default class Navbar extends Component {
                     </div>
                     <div className="pure-u-1-3">
                         <div className="logo-container">
-                            <div className="title">AcadeME</div>
                             <img className="pure-img" src={mainAcademeLogo} alt="academe-logo"></img>
                         </div>
                     </div>
@@ -54,6 +54,12 @@ export default class Navbar extends Component {
         );
     }
 }
+
+
+// <div className="logo-container">
+//     <div className="title">AcadeME</div>
+//     <img className="pure-img" src={mainAcademeLogo} alt="academe-logo"></img>
+// </div>
 
 // <li className="pure-menu-item">
 //     <NavLink to="/faq" activeClassName="active-link">שאלות תשובות</NavLink>

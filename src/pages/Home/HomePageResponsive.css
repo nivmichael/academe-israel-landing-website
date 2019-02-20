@@ -24,7 +24,9 @@
     #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
         width: 49%;
     }
-
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon {
+        width: 15%;
+    }
 
 }
 
@@ -68,8 +70,24 @@
     #homepage-component .advantages-list-container.hidden {
         max-height: 0px;
     }
+
+    #homepage-component #slide-in-container .sliding-rect-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner#employers {
+        background-color: #FAB047;
+        display: block;
+        width: 100%;
+        margin-right: 2%;
+    }
+
     #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
         width: 49%;
+    }
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon {
+        width: 15%;
     }
 }
 
@@ -126,6 +144,13 @@
         flex-direction: row;
     }
 
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner#employers {
+        background-color: #FAB047;
+        display: block;
+        width: 100%;
+        margin-right: 2%;
+    }
+
     #homepage-component #slide-in-container .title {
         display: flex;
         justify-content: center;
@@ -135,5 +160,8 @@
     }
     #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner {
         width: 49%;
+    }
+    #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon {
+        width: 10%;
     }
 }

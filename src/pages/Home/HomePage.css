@@ -96,7 +96,6 @@
     background-color: #FAB047;
     display: block;
     width: 100%;
-    margin-right: 2%;
 }
 
 #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner#students {
@@ -123,10 +122,10 @@
     color: #000000;
 }
 #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon-employers a {
-    color: #000000 ;
+    color: #000000;
 }
 #homepage-component #slide-in-container .sliding-rect-container .sliding-rect-container-inner .sliding-rect-container-inner-icon {
-    width: 10%;
+    width: 30%;
 }
 .not-visible {
     visibility: hidden;

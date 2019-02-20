@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import OwlCarousel from 'react-owl-carousel2';
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,8 +15,8 @@ import bguLogo from './../../images/logos/universities/ben-gurion-uni-200x75.png
 import haifaLogo from './../../images/logos/universities/haifa-uni-200x75.png';
 import technionLogo from './../../images/logos/universities/technion-uni-200x75.png';
 import openuLogo from './../../images/logos/colleges/open-uni-200x75.png';
-/* ========= colleges logos ========= */
 
+/* ========= colleges logos ========= */
 import telHaiLogo from './../../images/logos/colleges/tel-hai-uni-200x75.png';
 import sceLogo from './../../images/logos/colleges/sce-uni-200x75.png';
 import sapirLogo from './../../images/logos/colleges/sapir-uni-200x75.png';
@@ -31,11 +32,11 @@ const universitiesList = {
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
     'materials.technion': technionLogo,
-    'haifa'     : haifaLogo
+    'haifa'     : haifaLogo,
+    'openu'     : openuLogo
 };
 
 const collegesList = {
-    'openu'     : openuLogo,
     'telhai'    : telHaiLogo,
     'yvc'       : yvcLogo,
     'sapir'     : sapirLogo,
@@ -44,6 +45,13 @@ const collegesList = {
     'sce'       : sceLogo,
     'wgalil'    : wgalilLogo
 };
+
+const owlCarouselOptions = {
+    items: 5,
+    nav: true,
+    rewind: true,
+    autoplay: false
+}
 
 export default class StudentsPage extends Component {
 
@@ -110,7 +118,7 @@ export default class StudentsPage extends Component {
         });
 
         // added 'alt' attribute to the button for consistant logic both for images and this button
-        list.push(<button id="into" className="pure-button academe-button-outline shadowless" key="into" onClick={ this.onUniversityClicked }>אחר</button>);
+        // list.push(<button id="into" className="pure-button academe-button-outline shadowless" key="into" onClick={ this.onUniversityClicked }>אחר</button>);
 
         return list;
     }
@@ -125,7 +133,7 @@ export default class StudentsPage extends Component {
                     <div className="pure-u-1 students-container">
                         <div className="pure-u-1">
                             <div className="sub-title">
-                                <div>עוד לא נרשמתם לAcadeME?</div>
+                                <div>עוד לא נרשמתם ל- AcadeME?</div>
                                 <div>מאיזו אוניברסיטה או מכללה אתם?</div>
                                 <div id="chevron">
                                     <img className="pure-img" src={ chevronDownIcon } alt="chevron-down-icon"></img>
@@ -134,10 +142,12 @@ export default class StudentsPage extends Component {
                         </div>
                         <div className="pure-u-1 pure-u-md-1 pure-u-lg-1">
                             <div className="universities-container">
-                                { this.renderUniversitiesList(universitiesList) }
-                            </div>
-                            <div className="colleges-container">
-                                { this.renderCollegesList(collegesList) }
+                                <div className="universities-container">
+                                    { this.renderUniversitiesList(universitiesList) }
+                                </div>
+                                <div className="colleges-container">
+                                    { this.renderCollegesList(collegesList) }
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -150,8 +160,4 @@ export default class StudentsPage extends Component {
     }
 }
 
-// <div id="chevron"><FontAwesomeIcon icon="chevron-down"></FontAwesomeIcon></div>
-
-// <div className="pure-u-1 other-button-container">
-//     <button className="pure-button academe-button-outline shadowless">אחר</button>
-// </div>
+// <div>עוד לא נרשמתם לAcadeME?</div>

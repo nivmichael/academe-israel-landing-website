@@ -16,13 +16,18 @@
 
 #contact-us-page-component .form-container .title-container .title {
     font-size: 1.2em;
+    /* font-weight: bold; */
+}
+#contact-us-page-component .form-container .title-container .title span:first-of-type {
+    font-size: 1.3em;
     font-weight: bold;
+    color: #2194d3;
 }
 
 #contact-us-page-component .form-container .title-container .divider {
     height: 1px;
     background-color: #2194d3;
-    width: 60%;
+    width: 80%;
 }
 
 /* #contact-us-page-component .page-title {
@@ -34,9 +39,17 @@
 
 #contact-us-page-component .contact-form {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 15px;
+}
+
+#contact-us-page-component .contact-form .fieldset-title {
+    padding: 5px 10px;
+    background-color: #2194d3;
+    color: white;
 }
 
 #contact-us-page-component .contact-form textarea {

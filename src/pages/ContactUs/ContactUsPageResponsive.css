@@ -59,7 +59,7 @@
     ##Screen = B/w 1024px to 1366px
 */
 @media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
-    
+
 }
 
 /*
@@ -118,7 +118,8 @@
         justify-content: center;
         align-items: center;
         padding: 30px;
-        height: 338px;
+        margin-top: 60px;
+        /* height: 338px; */
     }
 
     #contact-us-page-component .form-container .title-container {
@@ -132,16 +133,32 @@
     #contact-us-page-component .form-container .title-container .title {
         font-size: 1.3em;
         font-weight: 400;
-        border-right: 2px solid #2194d3;
         padding-right: 15px;
+        text-align: end;
     }
 
     #contact-us-page-component .form-container .title-container .divider {
         display: none;
     }
 
+    #contact-us-page-component .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 15px 60px;
+        border-right: 2px solid #2194d3;
+    }
+
+    #contact-us-page-component .contact-form .fieldset-title {
+        padding: 5px;
+        background-color: #2194d3;
+        color: white;
+    }
+
     #contact-us-page-component .contact-form fieldset {
-        width: 300px;
+        /* width: 300px; */
+        width: 100%;
     }
     #contact-us-page-component .contact-form input {
         width: 100%;

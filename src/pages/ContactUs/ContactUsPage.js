@@ -25,8 +25,10 @@ export default class ContactUsPage extends Component {
 
         this.state = {
             contactMessage: {
+                companyName: '',
+                fullName: '',
+                position: '',
                 fromEmail: '',
-                subject: '',
                 message: ''
             }
         }
@@ -37,7 +39,6 @@ export default class ContactUsPage extends Component {
      * @param {String} type - SUCCESS/FAIL
      */
     notify = (type) => {
-        console.log(`display ${type} notification!`);
         if (type == CONST_RESPONSE_SUCCESS) {
             toast.success("טופס פנייה נשלח בהצלחה", { position: toast.POSITION.BOTTOM_CENTER });
         }
@@ -53,18 +54,28 @@ export default class ContactUsPage extends Component {
      */
     handleContactMessageFields = (e) => {
         e.preventDefault();
-        let prop            = null;
-        let value           = null;
+        let required_prop   = null;
+        let required_value  = null;
+        let prop   = '';
+        let value  = '';
         let contactMessage  = { ...this.state.contactMessage };     // get contactMessage object from state first
 
-        if(e.target.id.indexOf([ 'subject', 'fromEmail', 'message' ])) { prop = e.target.id; }
-
-        value = e.target.value;
-
-        if(prop != null && value != null) {
-            contactMessage[prop] = value;
-            this.setState({ ...this.state, contactMessage }, () => { console.log(this.state); });
+        if(e.target.id.indexOf([ 'fromEmail', 'message' ])) {
+            required_prop   = e.target.id;
+            required_value  = e.target.value;
         }
+        else if(e.target.id.indexOf([ 'companyName', 'fullName', 'position' ])) {
+            prop   = e.target.id;
+            value  = e.target.value;
+        }
+
+        // store regular inputs
+        if(prop != '' && value != '') { contactMessage[prop] = value; }
+        // store required inputs
+        if(required_prop != null && required_value != null) { contactMessage[required_prop] = required_value; }
+
+        // save to state
+        this.setState({ ...this.state, contactMessage }, () => { console.log(this.state); });
     }
 
     /**
@@ -83,7 +94,12 @@ export default class ContactUsPage extends Component {
                 let params  = new URLSearchParams();
 
                 params.append('Content-Type', 'application/x-www-form-urlencoded');
-                params.append('contactSubject', this.state.contactMessage.subject);
+                // New params START
+                params.append('contactCompanyName', this.state.contactMessage.companyName);
+                params.append('contactFullName', this.state.contactMessage.fullName);
+                params.append('contactPosition', this.state.contactMessage.position);
+                // New params END
+                // params.append('contactSubject', this.state.contactMessage.subject);
                 params.append('contactEmail', this.state.contactMessage.fromEmail);
                 params.append('contactMessage', this.state.contactMessage.message);
 
@@ -112,19 +128,26 @@ export default class ContactUsPage extends Component {
                         <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
                             <div className="title-container">
                                 <div className="title">
-                                    מלאו בבקשה
+                                    <span>AcadeME</span>
                                     <br />
-                                    את טופס הפנייה
+                                    החשמונאים 84 תל אביב
                                     <br />
-                                    ונחזור אלכים בהקדם
+                                    072-246-6848
+                                    <br />
+                                    info@acade-me.co.il
                                 </div>
                                 <div className="divider"></div>
                             </div>
                         </div>
-                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
+                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
                             <form className="pure-form pure-form-stacked contact-form">
+                                <div className="fieldset-title">מלאו בבקשה את טופס הפנייה ונחזור אליכם בהקדם</div>
                                 <fieldset>
-                                    <input id="subject" type="text" placeholder="נושא הפנייה*" className="academe-input" onChange={ this.handleContactMessageFields } />
+                                    <input id="companyName" type="text" placeholder="שם החברה" className="academe-input" onChange={ this.handleContactMessageFields } />
+
+                                    <input id="fullName" type="text" placeholder="שם פרטי ומשפחה" className="academe-input" onChange={ this.handleContactMessageFields } />
+
+                                    <input id="position" type="text" placeholder="תפקיד" className="academe-input" onChange={ this.handleContactMessageFields } />
 
                                     <input id="fromEmail" type="email" placeholder="אימייל חזרה*" className="academe-input" onChange={ this.handleContactMessageFields } />
 
