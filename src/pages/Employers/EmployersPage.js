@@ -315,6 +315,10 @@ export default class EmployersPage extends Component {
         return <FontAwesomeIcon icon={ is_expanded ? 'minus' : 'plus' } size="2x"></FontAwesomeIcon>;
     }
 
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+
     render() {
         return (
             <div id="employers-page-component">

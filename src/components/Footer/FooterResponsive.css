@@ -124,8 +124,7 @@
         display: flex;
         align-self: center;
         color: white;
-        font-weight: 400;
-        font-size: 1.4em;
+        font-size: 1.2em;
         border-left: 1px solid white;
         padding-left: 20px;
     }
