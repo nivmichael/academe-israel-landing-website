@@ -4,7 +4,7 @@ import './FooterResponsive.css';
 
 /* ======== icons ======== */
 // import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
-import mainAcademeLogo from  '../../images/logos/academe/academe-logo-horizontal-153x35.png';
+import mainAcademeLogoWhite from  '../../images/logos/academe/academe-logo-horizontal-153x35.png';
 import facebookIcon from './../../images/icons/facebook-icon-70x70.png';
 import instagramIcon from './../../images/icons/instagram-icon-70x70.png';
 
@@ -42,7 +42,7 @@ export default class Footer extends Component {
                         <div className="pure-u-1 footer-text">
                             <span className="text">{ footerText }</span>
                             <span className="logo-container">
-                                <img className="pure-img academe-logo" src={ mainAcademeLogo } alt="academe-logo"></img>
+                                <img className="pure-img academe-logo" src={ mainAcademeLogoWhite } alt="academe-logo"></img>
                             </span>
                         </div>
                     </div>

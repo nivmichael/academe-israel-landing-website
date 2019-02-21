@@ -181,7 +181,9 @@ export default class StudentsPage extends Component {
 
         return list;
     }
-
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
     render() {
         return (
             <div id="students-page-component">

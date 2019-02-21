@@ -45,7 +45,9 @@ export default class Navbar extends Component {
                     </div>
                     <div className="pure-u-1-3">
                         <div className="logo-container">
-                            <img className="pure-img" src={mainAcademeLogo} alt="academe-logo"></img>
+                            <NavLink to="/home" activeClassName="active-link">
+                                <img className="pure-img" src={mainAcademeLogo} alt="academe-logo"></img>
+                            </NavLink>
                         </div>
                     </div>
                 </div>
