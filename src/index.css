@@ -1,6 +1,9 @@
 * {
     font-family: -apple-system, BlinkMacSystemFont, "Open Sans Hebrew" !important;
     outline: none;
+
+    min-height: 0;
+    min-width: 0;
 }
 
 body {

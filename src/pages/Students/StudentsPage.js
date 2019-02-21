@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import OwlCarousel from 'react-owl-carousel2';
+import Slider from "react-slick";
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +8,9 @@ import { CONST_UNIVERSITY_BASE_URL, CONST_UNIVERSITY_FULL_URL } from './../../co
 /* =========== component style ========== */
 import './StudentsPage.css';
 import './StudentsPageResponsive.css';
+/* ========= slick-slider style ========= */
+import './../../../node_modules/slick-carousel/slick/slick.css';
+import './../../../node_modules/slick-carousel/slick/slick-theme.css';
 
 /* ========= universities logos ========= */
 import tauLogo from './../../images/logos/universities/tel-aviv-uni-200x75.png';
@@ -26,17 +29,17 @@ import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png'
 import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
 
 /* ========= icons ========= */
-import chevronDownIcon from '../../images/icons/chevron-down-icon-100x74.png';
+import chevronDownIcon from '../../images/icons/chevron-down-icon-130x68.png';
+import chevronRightIcon from '../../images/icons/chevron-right-icon-blue-75x136.png';
+import chevronLeftIcon from '../../images/icons/chevron-left-icon-blue-75x136.png'
 
 const universitiesList = {
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
     'materials.technion': technionLogo,
     'haifa'     : haifaLogo,
-    'openu'     : openuLogo
-};
-
-const collegesList = {
+    'openu'     : openuLogo,
+    // testing
     'telhai'    : telHaiLogo,
     'yvc'       : yvcLogo,
     'sapir'     : sapirLogo,
@@ -46,11 +49,67 @@ const collegesList = {
     'wgalil'    : wgalilLogo
 };
 
-const owlCarouselOptions = {
-    items: 5,
-    nav: true,
-    rewind: true,
-    autoplay: false
+// const collegesList = {
+//     'telhai'    : telHaiLogo,
+//     'yvc'       : yvcLogo,
+//     'sapir'     : sapirLogo,
+//     'ash'       : ashLogo,
+//     'mla'       : mlaLogo,
+//     'sce'       : sceLogo,
+//     'wgalil'    : wgalilLogo
+// };
+
+const slickSliderOptions = {
+    dots: true,
+    infinite: true,
+    arrows: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    initialSlide: 1,
+    rtl: true,
+    nextArrow: <AcademeCustomNextArrow imageSrc={ chevronRightIcon } />,
+    prevArrow: <AcademeCustomPrevArrow imageSrc={ chevronLeftIcon } />,
+    responsive: [
+        {
+            breakpoint: 320,
+            settings: {
+                dots: false,
+                infinite: true,
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                initialSlide: 1,
+                touchMove: true,
+                rtl: true
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                dots: true,
+                arrows: true,
+                infinite: true,
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 1,
+                touchMove: true,
+                rtl: true
+            }
+        },
+        {
+            breakpoint: 1025,
+            settings: {
+                dots: true,
+                arrows: true,
+                infinite: true,
+                slidesToShow: 5,
+                slidesToScroll: 5,
+                initialSlide: 1,
+                touchMove: true,
+                rtl: true
+            }
+        }
+    ]
 }
 
 export default class StudentsPage extends Component {
@@ -142,12 +201,9 @@ export default class StudentsPage extends Component {
                         </div>
                         <div className="pure-u-1 pure-u-md-1 pure-u-lg-1">
                             <div className="universities-container">
-                                <div className="universities-container">
+                                <Slider {...slickSliderOptions} ref="universitiesSliderRef">
                                     { this.renderUniversitiesList(universitiesList) }
-                                </div>
-                                <div className="colleges-container">
-                                    { this.renderCollegesList(collegesList) }
-                                </div>
+                                </Slider>
                             </div>
                         </div>
                     </div>
@@ -160,4 +216,33 @@ export default class StudentsPage extends Component {
     }
 }
 
+function AcademeCustomNextArrow(props) {
+    const { className, style, imageSrc, onClick } = props;
+    return (
+        <img src={imageSrc}
+            className={className + ' academe-custom-slider-arrow right'}
+            style={{ ...style, display: "block" }}
+            onClick={onClick}>
+        </img>
+    );
+}
+
+function AcademeCustomPrevArrow(props) {
+    const { className, style, imageSrc, onClick } = props;
+    return (
+        <img src={imageSrc}
+            className={className + ' academe-custom-slider-arrow left'}
+            style={{ ...style, display: "block" }}
+            onClick={onClick}>
+        </img>
+    );
+}
+
 // <div>עוד לא נרשמתם לAcadeME?</div>
+//
+// <div className="universities-container">
+//     { this.renderUniversitiesList(universitiesList) }
+// </div>
+// <div className="colleges-container">
+//     { this.renderCollegesList(collegesList) }
+// </div>
