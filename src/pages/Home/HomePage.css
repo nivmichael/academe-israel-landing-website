@@ -9,11 +9,14 @@
     padding:0 6%;
 }
 
+
 #homepage-component .single-university-container {
     display: flex;
     margin: 10px 0;
 }
-
+#homepage-component .universities-container .single-university-container {
+    margin: 10px 17px;
+}
 #homepage-component .welcome-msg-container {
     display: flex;
     flex-direction: column;

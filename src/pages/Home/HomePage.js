@@ -55,7 +55,7 @@ const collggesList = {
     'yvc'       : yvcLogo
 }
 
-const advantagesList = ['central_arena', 'grounded', 'market_and_share', 'expenses_and_time', 'everybody_there'];
+const advantagesList = ['central_arena', 'grounded', 'market_and_share', 'expenses_and_time', 'everybody_there', 'beyond_cv'];
 
 export default class HomePage extends Component {
     constructor () {
