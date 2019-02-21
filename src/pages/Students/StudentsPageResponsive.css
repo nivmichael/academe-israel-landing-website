@@ -3,6 +3,10 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+    #students-page-component .students-container {
+        height: 622px;
+    }
+
     #students-page-component .sub-title div {
         font-size: 2.5em;
         font-weight: bold;
@@ -17,11 +21,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 30px 0 5px 0;
+        margin: 50px 0 30px 0;
     }
 
     #students-page-component .sub-title div#chevron img {
-        width: 60px;
+        width: 75px;
+    }
+
+    #students-page-component .universities-container {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin: 30px 80px;
+        padding: 80px 60px;
     }
 
     #students-page-component .universities-container .icon-container {
@@ -34,6 +45,18 @@
 
     #students-page-component .colleges-container button {
         width: 120px;
+    }
+
+    /* Slick Carousel Arrows Style */
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow {
+        width: 30px;
+        height: 60px;
+    }
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.right {
+        right: -90px;
+    }
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.left {
+        left: -90px;
     }
 }
 
@@ -50,8 +73,31 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #students-page-component .students-container {
+        height: 430px;
+    }
+
     #students-page-component .colleges-container button {
         width: 100px;
+    }
+
+    #students-page-component .universities-container {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin: 20px 80px;
+        padding: 50px;
+    }
+
+    /* Slick Carousel Arrows Style */
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow {
+        width: 25px;
+        height: 50px;
+    }
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.right {
+        right: -70px;
+    }
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.left {
+        left: -70px;
     }
 }
 
@@ -61,7 +107,7 @@
 */
 @media (min-width: 1281px) {
     #students-page-component .students-container {
-        /*height: 570px;*/
+        height: 590px;
     }
 
     #students-page-component .sub-title div {
@@ -82,17 +128,20 @@
     }
 
     #students-page-component .sub-title div#chevron img {
-        width: 75px;
+        width: 100px;
     }
 
     #students-page-component .universities-container {
-        display: flex;
+        /* display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
-        margin: 10px 0 20px 0;
-        padding: 0px 80px;
+        padding: 0px 80px; */
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        margin: 20px 160px;
+        padding: 80px;
     }
 
     #students-page-component .colleges-container {
@@ -113,9 +162,26 @@
         margin: 5px 45px;
     }
 
+    #students-page-component img.uni-icon {
+        width: 250px;
+        cursor: pointer;
+    }
+
     #students-page-component .colleges-container button {
         width: 120px;
-        margin-top:20px ;
+        margin-top: 20px;
+    }
+
+    /* Slick Carousel Arrows Style */
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow {
+        width: 40px;
+        height: 70px;
+    }
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.right {
+        right: -70px;
+    }
+    #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.left {
+        left: -70px;
     }
 
     /* #students-page-component .other-button-container button {

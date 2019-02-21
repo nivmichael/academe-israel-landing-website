@@ -1,4 +1,6 @@
-#students-page-component {}
+#students-page-component .students-container {
+    height: 380px;
+}
 
 #students-page-component .sub-title {
     text-align: center;
@@ -27,12 +29,15 @@
 
 #students-page-component .universities-container,
 #students-page-component .colleges-container {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    margin: 10px 0 20px 0;
+    flex-wrap: wrap; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 40px;
+    padding: 10px;
 }
 
 /* #students-page-component .universities-container img,
@@ -65,6 +70,22 @@
     width: 100px;
 }
 
+/* Slick Carousel Arrows Style */
+#students-page-component .universities-container .slick-slider .academe-custom-slider-arrow {
+    width: 15px;
+    height: 25px;
+}
+#students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.right {
+    right: -40px;
+}
+#students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.left {
+    left: -40px;
+}
+#students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.disabled,
+#students-page-component .universities-container .slick-slider .academe-custom-slider-arrow.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
 
 
 /* #students-page-component .sub-title div#chevron {
