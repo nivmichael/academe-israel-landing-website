@@ -64,8 +64,8 @@ const slickSliderOptions = {
     infinite: true,
     arrows: true,
     slidesToShow: 5,
-    slidesToScroll: 5,
-    initialSlide: 1,
+    slidesToScroll: 2,
+    initialSlide: 9,
     rtl: true,
     nextArrow: <AcademeCustomNextArrow imageSrc={ chevronRightIcon } />,
     prevArrow: <AcademeCustomPrevArrow imageSrc={ chevronLeftIcon } />,
@@ -91,7 +91,7 @@ const slickSliderOptions = {
                 infinite: true,
                 slidesToShow: 2,
                 slidesToScroll: 2,
-                initialSlide: 1,
+                initialSlide: 3,
                 touchMove: true,
                 rtl: true
             }
@@ -104,12 +104,13 @@ const slickSliderOptions = {
                 infinite: true,
                 slidesToShow: 5,
                 slidesToScroll: 5,
-                initialSlide: 1,
+                initialSlide: 3,
                 touchMove: true,
                 rtl: true
             }
         }
     ]
+
 }
 
 export default class StudentsPage extends Component {
@@ -151,7 +152,7 @@ export default class StudentsPage extends Component {
 
         list = Object.keys(universities_list).map((uni_key) => {
             return (
-                <div className="icon-container" key={uni_key} onClick={ this.onUniversityClicked }>
+                <div className="icon-container" key={uni_key} onDoubleClick={ this.onUniversityClicked }>
                     <img id={uni_key} className="pure-img uni-icon" src={universities_list[uni_key]} alt={uni_key}></img>
                 </div>
             )
@@ -170,7 +171,7 @@ export default class StudentsPage extends Component {
 
         list = Object.keys(colleges_list).map((clg_key) => {
             return (
-                <div className="icon-container" key={clg_key} onClick={ this.onUniversityClicked }>
+                <div className="icon-container" key={clg_key} onDoubleClick={ this.onUniversityClicked }>
                     <img className="pure-img uni-icon" src={colleges_list[clg_key]} alt={clg_key}></img>
                 </div>
             )

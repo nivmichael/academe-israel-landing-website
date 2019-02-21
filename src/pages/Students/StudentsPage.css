@@ -86,7 +86,9 @@
     pointer-events: none;
     opacity: 0.5;
 }
-
+.slick-dots {
+    display: none!important;
+}
 
 /* #students-page-component .sub-title div#chevron {
     font-size: 3em;
