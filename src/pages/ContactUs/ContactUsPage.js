@@ -132,7 +132,7 @@ export default class ContactUsPage extends Component {
                                     <br />
                                     החשמונאים 84 תל אביב
                                     <br />
-                                    072-246-6848
+                                    03-648-4808
                                     <br />
                                     info@acade-me.co.il
                                 </div>

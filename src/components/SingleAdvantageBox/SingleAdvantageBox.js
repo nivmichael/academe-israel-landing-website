@@ -8,6 +8,7 @@ import flagIcon from '../../images/icons/flag-100x100.png';
 import rocketIcon from '../../images/icons/rocket-100x100.png';
 import eyeIcon from '../../images/icons/eye-100x100.png';
 import pieIcon from '../../images/icons/pie-100x100.png';
+import starIcon from '../../images/icons/star-100x100.png';
 import globeIcon from '../../images/icons/globe-100x100.png';
 import checkIcon from '../../images/icons/check-100x100.png';
 import lookingGlassIcon from '../../images/icons/looking-glass-100x100.png';
@@ -45,7 +46,7 @@ const advantagesResources = {
         text: 'AcadeME  במהלך 4 שנות פעילותה הפכה למערכת הפופולארית ביותר בקרב המעסיקים והחברות בישראל אשר משתמשים ומגייסים דרכה באופן קבוע סטודנטים ובוגרים לעבודה.  מבין 10,000 החברות והמעסיקים המשתמשים במערכת AcadeME, ניתן למצוא את כל החברות הגדולות במשק מכל התחומים והמגזרים, גופי ומשרדי ממשלה וכל החברות הבינלאומיות הגדולות הפועלות בישראל.'
     },
     beyond_cv: {
-        src: pieIcon,
+        src: starIcon,
         alt: 'מעבר לקורות חיים',
         title:'מעבר לקורות חיים',
         text: 'מערכת AcadeME מאפשרת לסטודנטים והבוגרים ליצור לעצמם פרופיל      דיגיטלי מפורט ועשיר במערכת, הכולל את האפשרות להעלות ולצרף            מסמכים, גיליונות ציונים, וידאו, תמונות, תיק עבודות, קישורים לרשתות        חברתיות, קורות חיים ועוד.        בעזרת מערכת AcadeME המתקדמת לא מפספסים שום הזדמנות.    AcadeME היא מערכת דינמית העובדת בשביל המועמדים בצורה אוטומטיתויודעת להתאים, לאתר וליידע אותם על ההזדמנויות החדשות והרבות.'    },
