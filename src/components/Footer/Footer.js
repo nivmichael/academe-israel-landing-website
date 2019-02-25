@@ -4,7 +4,7 @@ import './FooterResponsive.css';
 
 /* ======== icons ======== */
 // import mainAcademeLogo from  '../../images/logos/academe/academe-logo-only-30x30.png';
-import mainAcademeLogoWhite from  '../../images/logos/academe/academe-logo-horizontal-153x35.png';
+import mainAcademeLogoWhite from  '../../images/logos/academe/academe-logo-horizontal-white-153x34.png';
 import facebookIcon from './../../images/icons/facebook-icon-70x70.png';
 import instagramIcon from './../../images/icons/instagram-icon-70x70.png';
 

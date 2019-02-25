@@ -125,7 +125,7 @@ export default class ContactUsPage extends Component {
                         <PageMainTitle titleType="contact_us"></PageMainTitle>
                     </div>
                     <div className="pure-u-1 pure-md-1-2 form-container">
-                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-6">
+                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
                             <div className="title-container">
                                 <div className="title">
                                     <span>AcadeME</span>
@@ -139,7 +139,7 @@ export default class ContactUsPage extends Component {
                                 <div className="divider"></div>
                             </div>
                         </div>
-                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-4">
+                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
                             <form className="pure-form pure-form-stacked contact-form">
                                 <div className="fieldset-title">מלאו בבקשה את טופס הפנייה ונחזור אליכם בהקדם</div>
                                 <fieldset>

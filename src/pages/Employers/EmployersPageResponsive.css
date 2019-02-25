@@ -3,6 +3,10 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
+    #employers-page-component .publish-job-form-container {
+        display: flex;
+    }
+
     #employers-page-component .advantages-container {
         padding: 0 80px;
     }
@@ -37,7 +41,9 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
+    #employers-page-component .publish-job-form-container {
+        display: flex;
+    }
 }
 
 /*
@@ -45,6 +51,10 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    #employers-page-component .publish-job-form-container {
+        display: flex;
+    }
+
     #employers-page-component .hiring-companies-list .title {
         display: block;
         border-bottom: 1px solid black;
@@ -75,6 +85,10 @@
     ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
+    #employers-page-component .publish-job-form-container {
+        display: flex;
+    }
+
     #employers-page-component .advantages-container {
         padding: 0 250px;
     }

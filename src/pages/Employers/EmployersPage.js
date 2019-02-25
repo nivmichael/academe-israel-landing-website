@@ -261,7 +261,7 @@ export default class EmployersPage extends Component {
             url             = url.replace('${site_name}', site_name);
         }
         else if (elemId == 'signup-link') {
-            url = CONST_UNIVERSITY_BASE_URL + 'into.acade-me.co.il';
+            url = CONST_UNIVERSITY_BASE_URL + 'into.acade-me.co.il/register?type=employer';
         }
 
         // redirect to composed url

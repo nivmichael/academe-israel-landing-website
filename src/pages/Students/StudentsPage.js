@@ -127,7 +127,7 @@ export default class StudentsPage extends Component {
 
         if (university && university != '') {
             if (university == 'haifa') {
-                url = false;
+                url = CONST_UNIVERSITY_BASE_URL + 'haifa.acade-me.co.il';
             }
             else if (university == 'into') {
                 url = CONST_UNIVERSITY_BASE_URL + 'into.acade-me.co.il';
@@ -152,7 +152,7 @@ export default class StudentsPage extends Component {
 
         list = Object.keys(universities_list).map((uni_key) => {
             return (
-                <div className="icon-container" key={uni_key} onDoubleClick={ this.onUniversityClicked }>
+                <div className="icon-container" key={uni_key} onClick={ this.onUniversityClicked }>
                     <img id={uni_key} className="pure-img uni-icon" src={universities_list[uni_key]} alt={uni_key}></img>
                 </div>
             )
@@ -171,7 +171,7 @@ export default class StudentsPage extends Component {
 
         list = Object.keys(colleges_list).map((clg_key) => {
             return (
-                <div className="icon-container" key={clg_key} onDoubleClick={ this.onUniversityClicked }>
+                <div className="icon-container" key={clg_key} onClick={ this.onUniversityClicked }>
                     <img className="pure-img uni-icon" src={colleges_list[clg_key]} alt={clg_key}></img>
                 </div>
             )

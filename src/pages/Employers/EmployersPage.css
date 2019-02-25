@@ -1,9 +1,9 @@
 #employers-page-component .publish-job-form-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: none;
 }
 
 #employers-page-component .publish-job-form-container .form-title {

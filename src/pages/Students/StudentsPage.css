@@ -21,6 +21,8 @@
     justify-content: center;
     align-items: center;
     margin: 25px 0 5px 0;
+    position: relative;
+    top: 41px;
 }
 
 #students-page-component .sub-title div#chevron img {
