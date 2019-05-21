@@ -24,6 +24,8 @@ import bguLogo from './../../images/logos/universities/ben-gurion-uni-200x75.png
 import haifaLogo from './../../images/logos/universities/haifa-uni-200x75.png';
 import technionLogo from './../../images/logos/universities/technion-uni-200x75.png';
 import openuLogo from './../../images/logos/colleges/open-uni-200x75.png';
+import biuLogo from './../../images/logos/universities/bar-ilan-uni-200x75.png';
+
 /* ========= colleges logos ========= */
 import telHaiLogo from './../../images/logos/colleges/tel-hai-uni-200x75.png';
 import sceLogo from './../../images/logos/colleges/sce-uni-200x75.png';
@@ -32,6 +34,7 @@ import ashLogo from './../../images/logos/colleges/ashkelon-uni-200x75.png';
 import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
 import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
 import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
+
 /* ========= sliding rects ========= */
 import slidingEmployers from './../../images/icons/sliding-employers.png';
 import slidingStudents from './../../images/icons/sliding-students.png';
@@ -42,10 +45,10 @@ const universitiesList = {
     'technion'  : technionLogo,
     'openu'     : openuLogo,
     'haifa'     : haifaLogo,
-
+    'biu'       : biuLogo
 }
 
-const collggesList = {
+const collegesList = {
     'telHai'    : telHaiLogo,
     'sce'       : sceLogo,
     'sapir'     : sapirLogo,
@@ -194,7 +197,7 @@ export default class HomePage extends Component {
                     </div>
                     <div className="pure-u-1">
                         <div className="collages-container">
-                        { this.renderUniversitiesList(collggesList) }
+                        { this.renderUniversitiesList(collegesList) }
                         </div>
                     </div>
                     <div className="pure-u-1">

@@ -62,7 +62,7 @@
     #single-advantage-box-component .box {
         display: flex;
         flex-direction: column;
-        justify-content: end;
+        justify-content: flex-end;
         align-items: center;
         border-radius: 3px;
         padding: 18px 20px 0px 20px;
