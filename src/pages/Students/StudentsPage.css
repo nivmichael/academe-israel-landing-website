@@ -63,6 +63,12 @@
     cursor: pointer;
 }
 
+#students-page-component img.into-sys-icon {
+    width: 200px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
 #students-page-component .other-button-container {
     display: flex;
     margin: 10px 0 30px;

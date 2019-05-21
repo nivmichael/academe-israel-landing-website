@@ -29,6 +29,9 @@ import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
 import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
 import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
 
+/* ========= into system logo ========= */
+import intoLogo from './../../images/logos/universities/into-logo-209x65.png';
+
 /* ========= icons ========= */
 import chevronDownIcon from '../../images/icons/chevron-down-icon-130x68.png';
 import chevronRightIcon from '../../images/icons/chevron-right-icon-blue-75x136.png';
@@ -48,7 +51,8 @@ const universitiesList = {
     'ash'       : ashLogo,
     'mla'       : mlaLogo,
     'sce'       : sceLogo,
-    'wgalil'    : wgalilLogo
+    'wgalil'    : wgalilLogo,
+    'into'      : intoLogo
 };
 
 // const collegesList = {
@@ -154,7 +158,7 @@ export default class StudentsPage extends Component {
         list = Object.keys(universities_list).map((uni_key) => {
             return (
                 <div className="icon-container" key={uni_key} onClick={ this.onUniversityClicked }>
-                    <img id={uni_key} className="pure-img uni-icon" src={universities_list[uni_key]} alt={uni_key}></img>
+                    <img id={uni_key} className={'pure-img uni-icon' + (uni_key == 'into' ? ' into-sys-icon' : '')} src={universities_list[uni_key]} alt={uni_key}></img>
                 </div>
             )
         });

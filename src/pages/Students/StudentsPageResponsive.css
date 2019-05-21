@@ -47,6 +47,12 @@
         width: 120px;
     }
 
+    #students-page-component img.into-sys-icon {
+        width: 85px;
+        margin-top: 5px;
+        margin-left: 0;
+    }
+
     /* Slick Carousel Arrows Style */
     #students-page-component .universities-container .slick-slider .academe-custom-slider-arrow {
         width: 30px;
@@ -86,6 +92,12 @@
         border-bottom: 1px solid black;
         margin: 20px 80px;
         padding: 50px;
+    }
+
+    #students-page-component img.into-sys-icon {
+        width: 125px;
+        margin-top: 8px;
+        margin-left: 0;
     }
 
     /* Slick Carousel Arrows Style */
@@ -167,6 +179,12 @@
     #students-page-component img.uni-icon {
         width: 250px;
         cursor: pointer;
+    }
+
+    #students-page-component img.into-sys-icon {
+        width: 200px;
+        margin-top: 15px;
+        margin-left: 15px;
     }
 
     #students-page-component .colleges-container button {
