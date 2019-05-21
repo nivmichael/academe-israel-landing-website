@@ -140,7 +140,7 @@ export default class StudentsPage extends Component {
         }
 
         // redirect to composed url
-        if (url !== false) { window.open(url, "_blank"); }
+        if (url !== false) { window.open(url, "_blank"); }//
     }
 
     /**
