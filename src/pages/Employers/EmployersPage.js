@@ -13,6 +13,7 @@ import {
     CONST_RESPONSE_FAIL,
     CONST_SITE_ID_LIST,
     CONST_UNIVERSITY_FULL_URL,
+    CONST_UNIVERSITY_FULL_URL_AC,
     CONST_UNIVERSITY_BASE_URL
 } from './../../constants';
 
@@ -257,7 +258,12 @@ export default class EmployersPage extends Component {
 
         if (elemId == 'academe-link') {
             let site_name   = CONST_SITE_ID_LIST[this.state.employerData.siteId];
-            url             = CONST_UNIVERSITY_FULL_URL;
+            if(this.state.employerData.siteId == 14 || this.state.employerData.siteId == 16 || this.state.employerData.siteId == 18 || this.state.employerData.siteId == 19) {
+                url             = CONST_UNIVERSITY_FULL_URL_AC;
+            } else {
+                url             = CONST_UNIVERSITY_FULL_URL;
+            }
+
             url             = url.replace('${site_name}', site_name);
         }
         else if (elemId == 'signup-link') {

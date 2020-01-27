@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CONST_UNIVERSITY_BASE_URL, CONST_UNIVERSITY_FULL_URL } from './../../constants';
+import { CONST_UNIVERSITY_BASE_URL, CONST_UNIVERSITY_FULL_URL, CONST_UNIVERSITY_FULL_URL_AC } from './../../constants';
 
 /* =========== component style ========== */
 import './StudentsPage.css';
