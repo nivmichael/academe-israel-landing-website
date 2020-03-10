@@ -79,6 +79,9 @@
 .bm-item:last-of-type {
     border-bottom: none;
 }
+.bm-item.is-bold {
+  font-weight: bold;
+}
 
 /* Styling of overlay */
 .bm-overlay {

@@ -1,0 +1,122 @@
+.center {
+    text-align: center;
+}
+
+.title-container.refer {
+    height: 50px !important;
+    margin-bottom: 150px;
+    border-bottom: 25px solid #dedede;
+}
+.title-container.refer .page-logo-container {
+    display: none !important;
+}
+
+.user-type-select-button {
+    display: inline-block;
+    width: 300px;
+    padding: 10px 0;
+    color: #2194d3;
+    font-size: 22px;
+    border: 1px solid;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.user-type-select-button:hover, .user-type-select-button.is-active {
+    color: #fff;
+    background-color: #2194d3;
+    border-color: #2194d3;
+}
+
+.separator {
+    margin: 0 30px;
+    font-size: 30px;
+    font-weight: lighter;
+}
+.separator::before, .separator::after {
+    content: '';
+    display: inline-block;
+    width: 62px;
+    height: 45px;
+    margin-left: 15px;
+    vertical-align: middle;
+    background: url('../../images/icons/blue-arrow.png');
+}
+.separator::after {
+    margin-right: 15px;
+    margin-left: auto;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+#user-email-check {
+    margin-top: 50px;
+}
+#user-email-check input {
+    width: 400px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#refer-page-component h1 {
+    margin: -60px 0 0;
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+#refer-page-component .arrow-separator {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 40px 0;
+    background: #2194d3;
+    border-radius: 50%;
+    line-height: 73px;
+}
+#refer-page-component .arrow-separator img {
+    width: 35px;
+}
+
+#refer-page-component .icon-container {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+}
+#refer-page-component .is-colleges {
+    margin-top: 15px;
+}
+#refer-page-component .is-colleges .icon-container {
+    margin: 0 -10px;
+}
+#refer-page-component .is-colleges .icon-container img {
+    width: 80%;
+    margin: auto;
+}
+
+#refer-page-component .into-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 5px 80px;
+    border: 1px solid;
+    border-radius: 5px;
+    color: #2194d3;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+#refer-page-component #user-email-check .button-container #check-email-loading-spinner {
+    display: none;
+    margin: 0 15px -5px 0;
+    vertical-align: middle;
+}
+#refer-page-component #user-email-check .button-container.show-spinner #check-email-loading-spinner {
+    display: inline-block;
+}
+
+#refer-page-component #footer-component .container {
+    margin-top: 150px;
+}

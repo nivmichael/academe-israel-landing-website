@@ -1,0 +1,18 @@
+/*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (max-width: 850px) {
+    .user-type-select-button {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .separator::before, .separator::after {
+        content: unset;
+    }
+
+    #refer-page-component .is-colleges .icon-container img {
+        width: 65%;
+    }
+}

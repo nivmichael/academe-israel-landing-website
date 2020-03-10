@@ -8,6 +8,7 @@ import HomePage from './../Home/HomePage';
 import ContactUsPage from './../ContactUs/ContactUsPage';
 import StudentsPage from './../Students/StudentsPage';
 import EmployersPage from './../Employers/EmployersPage';
+import ReferPage from './../Refer/ReferPage';
 
 import './App.css';
 
@@ -26,6 +27,8 @@ class App extends Component {
                       <Route path="/students" component={ StudentsPage } />
                       <Route path="/employers" component={ EmployersPage } />
                       <Route path="/contact-us" component={ ContactUsPage } />
+                      <Route path="/login" component={ ReferPage } />
+                      <Route path="/register" component={ ReferPage } />
                   </AnimatedSwitch>
               </div>
               <div className="pure-u-1 footer-container">

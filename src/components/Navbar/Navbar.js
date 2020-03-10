@@ -39,6 +39,12 @@ export default class Navbar extends Component {
                                 <li className="pure-menu-item">
                                     <NavLink to="/contact-us" activeClassName="active-link">צור קשר</NavLink>
                                 </li>
+                                <li className="pure-menu-item is-bold">
+                                    <NavLink to="/login" activeClassName="active-link">התחבר</NavLink>
+                                </li>
+                                <li className="pure-menu-item is-bold">
+                                    <NavLink to="/register" activeClassName="active-link">הירשם</NavLink>
+                                </li>
                             </ul>
                         </div>
 

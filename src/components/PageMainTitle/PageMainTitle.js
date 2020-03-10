@@ -14,6 +14,7 @@ const pageMainTitleResourcesList = {
     about_us        : { class: 'about-us-color',    icon: null,             alt: 'אודות',               title: 'אודות' },
     contact_us      : { class: 'contact-us-color',  icon: ContactUsIcon,    alt: 'צור קשר',             title: 'צרו קשר' },
     faq             : { class: 'faq-color',         icon: null,             alt: 'שאלות ותשובות',       title: 'שאלות ותשובות' },
+    refer           : { class: 'refer',             icon: null,             alt: '',                     title: '' },
     default_class   : { class: 'default-color',     icon: null,             alt: '',                     title: '' }
 };
 
