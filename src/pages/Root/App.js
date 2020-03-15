@@ -31,9 +31,9 @@ class App extends Component {
                       <Route path="/register" component={ ReferPage } />
                   </AnimatedSwitch>
               </div>
-              <div className="pure-u-1 footer-container">
-
-              </div>
+              {/* <div className="pure-u-1 footer-container">
+                <Footer></Footer>
+              </div> */}
           </div>
       </div>
     );

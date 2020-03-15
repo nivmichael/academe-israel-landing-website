@@ -1,11 +1,16 @@
-#root-app {
+html, body, #root, #root-app {
+    height: 100%;
+}
+
+#root-app > div {
     display: flex;
-    flex-direction: column;
-    /* height: 100%; */
+    flex-flow: column;
+    height: 100%;
 }
 
 #root-app .body-container {
     flex: 1 0 auto;
+    height: calc(100% - 53px);
 }
 
 #root-app .header-container {
@@ -13,11 +18,12 @@
     width: 100%;
 }
 #root-app .footer-container {
-    /* flex: none; */
+    flex-shrink: 0;
 }
 
 .switch-wrapper {
     position: relative;
+    height: 100%;
 }
 
 .switch-wrapper > div {
@@ -26,5 +32,18 @@
     bottom: 0px;
     right: 0px;
     left: 0px;
-    z-index: -1;
+    /* z-index: -1; */
+}
+.switch-wrapper > div:first-child:not(:only-child) {
+    overflow: hidden;
+    height: 0;
+}
+
+.switch-wrapper > div > div, .switch-wrapper > div > div > .pure-g {
+    height: 100%;
+    flex-flow: column;
+}
+
+.switch-wrapper > div > div, .switch-wrapper > div > div > .pure-g > div:not(:last-child) {
+    flex: 1 0 auto;
 }
