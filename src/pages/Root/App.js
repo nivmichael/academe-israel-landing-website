@@ -9,8 +9,11 @@ import ContactUsPage from './../ContactUs/ContactUsPage';
 import StudentsPage from './../Students/StudentsPage';
 import EmployersPage from './../Employers/EmployersPage';
 import ReferPage from './../Refer/ReferPage';
-
+import { hotjar } from 'react-hotjar';
 import './App.css';
+
+hotjar.initialize('1730941', 6);
+
 
 class App extends Component {
   render() {

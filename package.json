@@ -13,6 +13,7 @@
     "react-burger-menu": "^2.6.1",
     "react-countup": "^4.0.0",
     "react-dom": "^16.7.0",
+    "react-hotjar": "^2.2.0",
     "react-ladda": "^6.0.0",
     "react-loader-spinner": "^2.3.0",
     "react-pure": "^0.3.1",
