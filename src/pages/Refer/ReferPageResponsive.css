@@ -15,4 +15,7 @@
     #refer-page-component .is-colleges .icon-container img {
         width: 65%;
     }
+    #refer-page-component .type-select-button-employer, .separator.general {
+        display: none;
+    }
 }

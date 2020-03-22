@@ -219,8 +219,8 @@ export default class ReferPagePage extends Component {
                         {this.state.selectedUserType != 'job-seeker' &&
                             <div>
                                 <a className={'user-type-select-button' + (this.state.selectedUserType == 'job-seeker' ? ' is-active' : '')} onClick={() => {this.setState({selectedUserType: 'job-seeker', checkedUser: false})}}>מחפש/ת עבודה</a>
-                                <span className="separator">או</span>
-                                <a className={'user-type-select-button' + (this.state.selectedUserType == 'employer' ? ' is-active' : '')} onClick={() => {this.setState({selectedUserType: 'employer', checkedUser: false})}}>מעסיק</a>
+                                <span className="separator general">או</span>
+                                <a className={'user-type-select-button type-select-button-employer' + (this.state.selectedUserType == 'employer' ? ' is-active' : '')} onClick={() => {this.setState({selectedUserType: 'employer', checkedUser: false})}}>מעסיק</a>
                             </div>
                         }
 

@@ -27,7 +27,7 @@
     border-color: #2194d3;
 }
 
-.separator {
+#refer-page-component .separator {
     margin: 0 30px;
     font-size: 30px;
     font-weight: lighter;
