@@ -130,7 +130,7 @@ export default class ContactUsPage extends Component {
                                 <div className="title">
                                     <span>AcadeME</span>
                                     <br />
-                                    החשמונאים 84 תל אביב
+                                    ראול ולנברג 6 תל אביב
                                     <br />
                                     03-648-4808
                                     <br />
@@ -139,7 +139,7 @@ export default class ContactUsPage extends Component {
                                 <div className="divider"></div>
                             </div>
                         </div>
-                        <div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
+                        {/*<div className="pure-u-1 pure-u-md-1-3 pure-u-lg-1-3">
                             <form className="pure-form pure-form-stacked contact-form">
                                 <div className="fieldset-title">מלאו בבקשה את טופס הפנייה ונחזור אליכם בהקדם</div>
                                 <fieldset>
@@ -160,7 +160,7 @@ export default class ContactUsPage extends Component {
                                     <ToastContainer autoClose={2500} rtl />
                                 </fieldset>
                             </form>
-                        </div>
+                        </div>*/}
                     </div>
                     <div className="pure-u-1 footer-container">
                         <Footer></Footer>

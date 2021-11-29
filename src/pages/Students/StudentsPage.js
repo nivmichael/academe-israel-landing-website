@@ -47,7 +47,7 @@ const universitiesList = {
     // testing
     'telhai'    : telHaiLogo,
     'yvc'       : yvcLogo,
-    'sapir'     : sapirLogo,
+    'jobsapir'  : sapirLogo,
     'ash'       : ashLogo,
     'mla'       : mlaLogo,
     'sce'       : sceLogo,

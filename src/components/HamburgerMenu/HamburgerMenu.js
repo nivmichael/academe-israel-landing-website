@@ -47,8 +47,8 @@ export default class HamburgerMenu extends Component {
                     <Link to="/students" onClick={ this.closeMenu }>סטודנטים / בוגרים</Link>
                     <Link to="/employers" onClick={ this.closeMenu }>מעסיקים</Link>
                     <Link to="/contact-us" onClick={ this.closeMenu }>צור קשר</Link>
-                    <Link to="/login" className="is-bold" onClick={ this.closeMenu }>התחבר</Link>
-                    <Link to="/register" className="is-bold" onClick={ this.closeMenu }>הירשם</Link>
+                {/*<Link to="/login" className="is-bold" onClick={ this.closeMenu }>התחבר</Link>
+                    <Link to="/register" className="is-bold" onClick={ this.closeMenu }>הירשם</Link>*/}
             </Menu>
         );
     }

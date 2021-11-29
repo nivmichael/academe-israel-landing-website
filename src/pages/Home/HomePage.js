@@ -67,9 +67,9 @@ export default class HomePage extends Component {
         this.state = {
             isAdvantagesHidden: true,
             systemStats: {
-                jobseekers: 0,
-                companies: 0,
-                jobs: 0
+                jobseekers: 200000,
+                companies: 14982,
+                jobs: 1825
             }
         }
     }
@@ -82,7 +82,7 @@ export default class HomePage extends Component {
 
         let url     = CONST_API_BASE_URL + '?' + CONST_API_BASE_PARAM + '&' + CONST_API_ACTION_PARAM + 'getSystemStats';
 
-        axios.get(url, { cancelToken: this.source.token })
+        /*axios.get(url, { cancelToken: this.source.token })
             .then((response) => {
                 if (axios.isCancel(response)) {
                     console.log('Request canceled', response);
@@ -94,7 +94,7 @@ export default class HomePage extends Component {
             })
             .catch((error) => {
                 console.log('error -> ', error);
-            });
+            });*/
     }
 
     componentWillUnmount () {
