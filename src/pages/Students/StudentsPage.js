@@ -27,7 +27,7 @@ import sapirLogo from './../../images/logos/colleges/sapir-uni-200x75.png';
 import ashLogo from './../../images/logos/colleges/ashkelon-uni-200x75.png';
 import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
 import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
-import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
+import ruppinLogo from './../../images/logos/colleges/ruppin-uni-200x75.png';
 
 /* ========= into system logo ========= */
 import intoLogo from './../../images/logos/universities/into-logo-209x65.png';
@@ -46,7 +46,7 @@ const universitiesList = {
     'biu'       : biuLogo,
     // testing
     'telhai'    : telHaiLogo,
-    'yvc'       : yvcLogo,
+    'ruppin'    : ruppinLogo,
     'jobsapir'  : sapirLogo,
     'ash'       : ashLogo,
     'mla'       : mlaLogo,
@@ -131,7 +131,7 @@ export default class StudentsPage extends Component {
         let university = e.target.id;
         let url        = false;
 
-        let special_url_universities = ['haifa', 'biu', 'into'];
+        let special_url_universities = ['haifa', 'biu', 'into', 'ruppin'];
 
         if (university && university != '') {
             if(special_url_universities.indexOf(university) != -1) {

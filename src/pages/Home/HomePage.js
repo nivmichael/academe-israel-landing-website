@@ -33,7 +33,7 @@ import sapirLogo from './../../images/logos/colleges/sapir-uni-200x75.png';
 import ashLogo from './../../images/logos/colleges/ashkelon-uni-200x75.png';
 import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
 import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
-import yvcLogo from './../../images/logos/colleges/emek-izrael-uni-200x75.png';
+import ruppinLogo from './../../images/logos/colleges/ruppin-uni-200x75.png';
 
 /* ========= sliding rects ========= */
 import slidingEmployers from './../../images/icons/sliding-employers.png';
@@ -55,7 +55,7 @@ const collegesList = {
     'ash'       : ashLogo,
     'mla'       : mlaLogo,
     'wgalil'    : wgalilLogo,
-    'yvc'       : yvcLogo
+    'ruppin'    : ruppinLogo
 }
 
 const advantagesList = ['central_arena', 'grounded', 'market_and_share', 'expenses_and_time', 'everybody_there', 'beyond_cv'];
