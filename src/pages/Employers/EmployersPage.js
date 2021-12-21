@@ -338,7 +338,7 @@ export default class EmployersPage extends Component {
                         </div>
                     </div>
                     <div className="pure-u-1">
-                        {/*<div className="publish-job-form-container">
+                        <div className="publish-job-form-container">
                             <form className="pure-form pure-form-stacked">
                                 <fieldset>
                                     <div className="form-title">לפרסום משרה</div>
@@ -349,7 +349,7 @@ export default class EmployersPage extends Component {
                                     </div>
                                 </fieldset>
                             </form>
-                        </div>*/}
+                        </div>
                         <div className="redirect-link-container" ref="redirectLinkContainerRef">
                             <div id="academe-link" onClick={ this.onAcademeLinkClicked }>לחץ כאן כדי לעבור למערכת</div>
                         </div>
