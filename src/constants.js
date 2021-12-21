@@ -1,4 +1,4 @@
-export const CONST_API_BASE_URL             = "https://secure.wanted.co.il/academe.wanted.co.il/rpc/academe-website-api.php";
+export const CONST_API_BASE_URL             = "https://acade-me.co.il/rpc/academe-website-api.php";
 export const CONST_DEV_API_BASE_URL         = "https://secure.wanted.co.il/dev.academe.wanted.co.il/cron-tasks/academe-website-api.php";
 
 export const CONST_API_BASE_PARAM           = "landingWebsiteApi=1";
