@@ -1,0 +1,41 @@
+#category-section.category-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 90%;
+	margin-bottom: 25px;
+    margin-top: 60px;
+}
+#category-section.category-container:not(:first-of-type) {
+	margin-top: 35px;
+}
+
+#category-section .category-title {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+#category-section .category-title .title {
+	font-size: 3em;
+	color: #3f3f3f;
+	padding-bottom: 25px;
+}
+
+#category-section .category-title .separator {
+	height: 1px;
+	background-color: #a3a3a3;
+	width: 50%;
+}
+
+#category-section .category-companies {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 35px;
+}

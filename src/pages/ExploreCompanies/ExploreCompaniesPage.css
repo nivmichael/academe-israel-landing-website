@@ -1,0 +1,11 @@
+#explore-companies-page-component .category-sections-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+#explore-companies-page-component .category-sections-loader {
+    text-align: center;
+}

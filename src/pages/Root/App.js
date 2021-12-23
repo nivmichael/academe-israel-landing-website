@@ -8,6 +8,7 @@ import HomePage from './../Home/HomePage';
 import ContactUsPage from './../ContactUs/ContactUsPage';
 import StudentsPage from './../Students/StudentsPage';
 import EmployersPage from './../Employers/EmployersPage';
+import ExploreCompaniesPage from './../ExploreCompanies/ExploreCompaniesPage';
 import ReferPage from './../Refer/ReferPage';
 import { hotjar } from 'react-hotjar';
 import './App.css';
@@ -29,6 +30,7 @@ class App extends Component {
                       <Route path="/home" component={ HomePage } />
                       <Route path="/students" component={ StudentsPage } />
                       <Route path="/employers" component={ EmployersPage } />
+                      <Route path="/explore-companies" component={ ExploreCompaniesPage } />
                       <Route path="/contact-us" component={ ContactUsPage } />
                       <Route path="/login" component={ ReferPage } />
                       <Route path="/register" component={ ReferPage } />

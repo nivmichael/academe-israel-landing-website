@@ -32,7 +32,8 @@
     font-size: 30px;
     font-weight: lighter;
 }
-.separator::before, .separator::after {
+#refer-page-component .separator::before,
+#refer-page-component .separator::after {
     content: '';
     display: inline-block;
     width: 62px;
@@ -41,7 +42,7 @@
     vertical-align: middle;
     background: url('../../images/icons/blue-arrow.png');
 }
-.separator::after {
+#refer-page-component .separator::after {
     margin-right: 15px;
     margin-left: auto;
     -moz-transform: scaleX(-1);

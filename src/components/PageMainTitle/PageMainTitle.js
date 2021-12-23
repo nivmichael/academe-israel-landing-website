@@ -6,6 +6,7 @@ import './PageMainTitleResponsive.css';
 import ContactUsIcon from '../../images/icons/page-title/contact-us-icon-white-192x192.png';
 import StudentsIcon from '../../images/icons/page-title/students-icon-white-192x192.png';
 import EmployersIcon from '../../images/icons/page-title/employers-icon-white-192x192.png';
+import CompaniesIcon from '../../images/icons/page-title/companies-icon-white-192x192.png';
 
 
 const pageMainTitleResourcesList = {
@@ -14,6 +15,7 @@ const pageMainTitleResourcesList = {
     about_us        : { class: 'about-us-color',    icon: null,             alt: 'אודות',               title: 'אודות' },
     contact_us      : { class: 'contact-us-color',  icon: ContactUsIcon,    alt: 'צור קשר',             title: 'צרו קשר' },
     faq             : { class: 'faq-color',         icon: null,             alt: 'שאלות ותשובות',       title: 'שאלות ותשובות' },
+    explore_companies : { class: 'students-color',  icon: CompaniesIcon,     alt: 'חברות מעניינות',      title: 'חברות מעניינות' },
     refer           : { class: 'refer',             icon: null,             alt: '',                     title: '' },
     default_class   : { class: 'default-color',     icon: null,             alt: '',                     title: '' }
 };

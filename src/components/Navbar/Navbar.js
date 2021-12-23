@@ -37,6 +37,9 @@ export default class Navbar extends Component {
                                     <NavLink to="/employers" activeClassName="active-link">מעסיקים</NavLink>
                                 </li>
                                 <li className="pure-menu-item">
+                                    <NavLink to="/explore-companies" activeClassName="active-link">חברות מעניינות</NavLink>
+                                </li>
+                                <li className="pure-menu-item">
                                     <NavLink to="/contact-us" activeClassName="active-link">צור קשר</NavLink>
                                 </li>
                                 {/*<li className="pure-menu-item is-bold">
