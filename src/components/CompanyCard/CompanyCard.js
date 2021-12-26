@@ -10,9 +10,10 @@ export default class CompanyCard extends Component {
     }
 
 
-    onCompanyCardClicked = (e) => {
+    onCompanyCardClicked = (e, sponsorshipId, companyId) => {
         e.preventDefault();
 
+        this.props.handleCompanyCardClicked(sponsorshipId, companyId);
     }
 
     componentDidMount () {
@@ -35,8 +36,7 @@ export default class CompanyCard extends Component {
                             { this.props.name }
                         </div>
                         <div id="company-details">
-                            {/*<button className="pure-button xsmall academe-button-full continue-button" onClick={ this.onCompanyCardClicked }>לפרטים נוספים</button>*/}
-                            <NavLink to="/explore-companies" activeClassName="active-link">לפרטים נוספים</NavLink>
+                            <button className="pure-button xsmall academe-button-full continue-button" onClick={ (e) => this.onCompanyCardClicked(e, this.props.sponsorshipId, this.props.companyId) }>לפרטים נוספים</button>
                         </div>
                     </div>
                     <div className="card-footer"></div>

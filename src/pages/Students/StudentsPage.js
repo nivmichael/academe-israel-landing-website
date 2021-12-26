@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import PageMainTitle from '../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { CONST_UNIVERSITY_BASE_URL, CONST_UNIVERSITY_FULL_URL, CONST_UNIVERSITY_FULL_URL_AC } from './../../constants';
+import { CONST_UNIVERSITY_BASE_URL, CONST_UNIVERSITY_FULL_URL, CONST_UNIVERSITY_FULL_URL_AC, CONST_SPECIAL_URL_UNIVERSITY } from './../../constants';
 
 /* =========== component style ========== */
 import './StudentsPage.css';
@@ -54,16 +54,6 @@ const universitiesList = {
     'wgalil'    : wgalilLogo,
     'into'      : intoLogo
 };
-
-// const collegesList = {
-//     'telhai'    : telHaiLogo,
-//     'yvc'       : yvcLogo,
-//     'sapir'     : sapirLogo,
-//     'ash'       : ashLogo,
-//     'mla'       : mlaLogo,
-//     'sce'       : sceLogo,
-//     'wgalil'    : wgalilLogo
-// };
 
 const slickSliderOptions = {
     dots: true,
@@ -131,10 +121,8 @@ export default class StudentsPage extends Component {
         let university = e.target.id;
         let url        = false;
 
-        let special_url_universities = ['haifa', 'biu', 'into', 'ruppin'];
-
         if (university && university != '') {
-            if(special_url_universities.indexOf(university) != -1) {
+            if(CONST_SPECIAL_URL_UNIVERSITY.indexOf(university) != -1) {
                 url = CONST_UNIVERSITY_BASE_URL + university + '.acade-me.co.il';
             }
             else {
@@ -144,7 +132,7 @@ export default class StudentsPage extends Component {
         }
 
         // redirect to composed url
-        if (url !== false) { window.open(url, "_blank"); }//
+        if (url !== false) { window.open(url, "_blank"); }
     }
 
     /**

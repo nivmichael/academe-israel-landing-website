@@ -8,6 +8,7 @@ export const CONST_UNIVERSITY_FULL_URL      = "https://secure.wanted.co.il/${sit
 export const CONST_UNIVERSITY_FULL_URL_AC   = "https://secure.wanted.co.il/${site_name}.acade-me.co.il/";
 export const CONST_UNIVERSITY_BASE_URL      = "https://secure.wanted.co.il/";
 export const CONST_UNIVERSITY_SUFFIX_URL    = ".wanted.co.il/";
+export const CONST_SPECIAL_URL_UNIVERSITY   = ['haifa', 'biu', 'into', 'ruppin'];
 
 export const CONST_RESPONSE_SUCCESS         = "SUCCESS";
 export const CONST_RESPONSE_FAIL            = "FAIL";

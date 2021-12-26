@@ -6,6 +6,7 @@ import PageMainTitle from './../../components/PageMainTitle/PageMainTitle';
 import Footer from './../../components/Footer/Footer';
 import CategorySection from './../../components/CategorySection/CategorySection';
 import CompanyCard from './../../components/CompanyCard/CompanyCard';
+import SitesModal from './../../components/SitesModal/SitesModal';
 
 /* =========== component style ========== */
 import './ExploreCompaniesPage.css';
@@ -24,50 +25,17 @@ import {
     CONST_UNIVERSITY_BASE_URL
 } from './../../constants';
 
-/* ========= universities logos ========= */
-import tauLogo from './../../images/logos/universities/tel-aviv-uni-200x75.png';
-import bguLogo from './../../images/logos/universities/ben-gurion-uni-200x75.png';
-import haifaLogo from './../../images/logos/universities/haifa-uni-200x75.png';
-import technionLogo from './../../images/logos/universities/technion-uni-200x75.png';
-import openuLogo from './../../images/logos/colleges/open-uni-200x75.png';
-import biuLogo from './../../images/logos/universities/bar-ilan-uni-200x75.png';
-
-/* ========= colleges logos ========= */
-import telHaiLogo from './../../images/logos/colleges/tel-hai-uni-200x75.png';
-import sceLogo from './../../images/logos/colleges/sce-uni-200x75.png';
-import sapirLogo from './../../images/logos/colleges/sapir-uni-200x75.png';
-import ashLogo from './../../images/logos/colleges/ashkelon-uni-200x75.png';
-import mlaLogo from './../../images/logos/colleges/mla-uni-200x75.png';
-import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png';
-import ruppinLogo from './../../images/logos/colleges/ruppin-uni-200x75.png';
-
-/* ========= into system logo ========= */
-import intoLogo from './../../images/logos/universities/into-logo-209x65.png';
-
-const sites = {
-    'tau'       : tauLogo,
-    'bgu'       : bguLogo,
-    'materials.technion': technionLogo,
-    'haifa'     : haifaLogo,
-    'openu'     : openuLogo,
-    'biu'       : biuLogo,
-    // testing
-    'telhai'    : telHaiLogo,
-    'ruppin'    : ruppinLogo,
-    'jobsapir'  : sapirLogo,
-    'ash'       : ashLogo,
-    'mla'       : mlaLogo,
-    'sce'       : sceLogo,
-    'wgalil'    : wgalilLogo,
-    'into'      : intoLogo
-};
-
 export default class ExploreCompaniesPage extends Component {
     constructor() {
         super();
 
         this.state = {
             isCategoriesReady: false,
+            isModalOpen: false,
+            selectedCompanyCard: {
+                sponsorshipId: null,
+                companyId: null
+            },
             categories: []
         }
     }
@@ -96,12 +64,40 @@ export default class ExploreCompaniesPage extends Component {
         });
     }
 
-    /**
-     * Keeps your state in sync
-     */
-    handleStateChange = () => {
 
+
+    /**
+     * Opens modal when company card is clicked
+     */
+    handleCompanyCardClickedModalOpen = (sponsorshipId, companyId) => {
+        console.log('EmploleCompanies.handleCompanyCardClickedOpenModal.ModalOpen -> ', sponsorshipId, companyId);
+        this.setState({ selectedCompanyCard: { sponsorshipId, companyId } }, () => {
+            this.showModal();
+        });
     }
+
+    /**
+     * Opens modal when company card is clicked
+     */
+    handleCompanyCardModalClose = () => {
+        console.log('EmploleCompanies.handleCompanyCardModalClose.ModalClose');
+        this.hideModal();
+        this.setState({ selectedCompanyCard: { sponsorshipId: null, companyId: null } });
+    }
+
+    /**
+     * Shows the Modal
+     */
+    showModal = () => {
+        this.setState({ isModalOpen: true });
+    };
+
+    /**
+     * Hides the Modal
+     */
+    hideModal = () => {
+        this.setState({ isModalOpen: false });
+    };
 
     renderCompanyCards = (companies) => {
         let companyCards = [];
@@ -115,6 +111,7 @@ export default class ExploreCompaniesPage extends Component {
                     logo={company.companyData.companyLogo}
                     cover={company.companyData.companyCover}
                     linkToCompany={company.companyData.viewLink}
+                    handleCompanyCardClicked={this.handleCompanyCardClickedModalOpen}
                     key={key}>
                 </CompanyCard>
              );
@@ -131,7 +128,6 @@ export default class ExploreCompaniesPage extends Component {
         let list = [];
 
         categories.map((category, key) => {
-            console.log('category -> ', category);
             list.push(
                 <CategorySection title={category.label} key={key}>
                      { this.renderCompanyCards(category.companies) }
@@ -152,6 +148,12 @@ export default class ExploreCompaniesPage extends Component {
         return (
             <div id="explore-companies-page-component">
                 <div className="pure-g">
+                    <SitesModal sponsorshipId={this.state.selectedCompanyCard.sponsorshipId}
+                                companyId={this.state.selectedCompanyCard.companyId}
+                                sites={this.sites}
+                                isOpen={this.state.isModalOpen}
+                                handleClose={this.handleCompanyCardModalClose} />
+
                     <div className="pure-u-1">
                         <PageMainTitle titleType="explore_companies"></PageMainTitle>
                     </div>
