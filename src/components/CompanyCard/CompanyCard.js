@@ -24,7 +24,7 @@ export default class CompanyCard extends Component {
     render() {
         return (
             <div id="company-card-main-container">
-                <div className="company-card">
+                <div className="company-card" onClick={ (e) => this.onCompanyCardClicked(e, this.props.sponsorshipId, this.props.companyId) }>
                     <div className="card-cover">
                         <img src={this.props.cover} alt="company-cover" />
                     </div>

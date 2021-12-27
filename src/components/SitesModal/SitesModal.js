@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import './SitesModal.css';
 
@@ -34,6 +34,7 @@ import {
 } from './../../constants';
 
 const sites = {
+    'into'      : intoLogo,
     'tau'       : tauLogo,
     'bgu'       : bguLogo,
     'materials.technion': technionLogo,
@@ -47,8 +48,7 @@ const sites = {
     'ash'       : ashLogo,
     'mla'       : mlaLogo,
     'sce'       : sceLogo,
-    'wgalil'    : wgalilLogo,
-    'into'      : intoLogo
+    'wgalil'    : wgalilLogo
 };
 
 export default class SitesModal extends Component {
@@ -56,6 +56,14 @@ export default class SitesModal extends Component {
         super();
     }
 
+
+    /**
+     * Formats Url of the sites links
+     *
+     * @param {string} siteName
+     *
+     * @return {string} formatted url
+     */
     formatSiteUrl = (siteName) => {
         let url = false;
 
@@ -76,26 +84,43 @@ export default class SitesModal extends Component {
         return url;
     }
 
+    /**
+     * Close modal
+     */
     onCloseClicked = (e) => {
         e.preventDefault();
 
         this.props.handleClose();
     }
 
+    /**
+     * Close modal when ESC key is pressed
+     */
     onEscKeyDown = (e) => {
         if (e.key !== 'Escape') {
             return;
         }
 
         this.props.handleClose();
-    };
+    }
 
+
+    /**
+     * Renders the links to sites
+     *
+     * @return {Array} array of html elements
+     */
     renderSitesList = () => {
+        if (typeof this.props.sites === 'undefined') {
+            return;
+        }
+
         return Object.keys(sites).map((siteName, key) => {
+            let [labelObj] = this.props.sites.filter( (_site) => { return _site.value === siteName; })
             return (
-                <div className="site-container">
-                    <a className="pure-button site-link" href={this.formatSiteUrl(siteName)} target="_blank" key={key}>
-                        { siteName }
+                <div className="site-container" key={key}>
+                    <a className="pure-button site-link" href={this.formatSiteUrl(siteName)} target="_blank">
+                        { labelObj.label }
                     </a>
                 </div>
             );
@@ -103,6 +128,7 @@ export default class SitesModal extends Component {
     }
 
     componentDidMount() {
+        /** Listen to ESC key pressed */
         window.addEventListener('keydown', this.onEscKeyDown, false);
     }
 

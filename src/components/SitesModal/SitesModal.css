@@ -93,7 +93,8 @@
 
 #modal-component .site-link {
     margin: 5px;
-    width: 250px;
+    font-weight: bold;
+    min-width: 400px;
     background: #fff;
     border: 1px solid #2194d3;
     border-radius: 4px;
