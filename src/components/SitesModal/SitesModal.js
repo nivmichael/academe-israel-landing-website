@@ -79,7 +79,7 @@ export default class SitesModal extends Component {
             url = url.replace('${site_name}', siteName);
         }
 
-        url = url + 'explore-compnaies/?view-company=' + this.props.companyId + '&sid=' + this.props.sponsorshipId;
+        url = url + 'explore-companies/?view-company=' + this.props.companyId + '&sid=' + this.props.sponsorshipId;
 
         return url;
     }
