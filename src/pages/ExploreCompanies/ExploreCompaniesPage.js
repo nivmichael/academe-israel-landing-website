@@ -145,7 +145,6 @@ export default class ExploreCompaniesPage extends Component {
                     name={company.companyData.companyName}
                     logo={company.companyData.companyLogo}
                     cover={company.companyData.companyCover}
-                    linkToCompany={company.companyData.viewLink}
                     handleCompanyCardClicked={this.handleCompanyCardClickedModalOpen}
                     key={key}>
                 </CompanyCard>
