@@ -22,7 +22,7 @@ import wgalilLogo from './../../images/logos/colleges/west-galil-uni-200x75.png'
 import ruppinLogo from './../../images/logos/colleges/ruppin-uni-200x75.png';
 
 /* ========= into system logo ========= */
-import intoLogo from './../../images/logos/universities/into-logo-209x65.png';
+import intoLogo from './../../images/logos/academe/academe-logo-horizontal-153x35.png';
 
 /* ========== import constants ========= */
 import {
@@ -141,11 +141,9 @@ export default class SitesModal extends Component {
             <div id="modal-component" className={ this.props.isOpen ? 'modal show' : ' modal hide' }>
                 <div className="modal-main-container">
                     <div className="pure-g">
-                        <div className="pure-u-1">
-                            <div className="header">
-                                <FontAwesomeIcon icon={faTimes} size="lg" className="close-btn" onClick={this.onCloseClicked} />
-                                <div className="title">בחרו את מוסד הלימודים</div>
-                            </div>
+                        <div className="header">
+                            <FontAwesomeIcon icon={faTimes} size="lg" className="close-btn" onClick={this.onCloseClicked} />
+                            <div className="title">בחרו את מוסד הלימודים</div>
                         </div>
                         <div className="pure-u-1">
                             <div className="body">
