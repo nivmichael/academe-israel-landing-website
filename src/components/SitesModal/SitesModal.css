@@ -97,7 +97,7 @@
     align-items: center;
 }
 
-#modal-component .site-link {
+#modal-component .site-container:not(.with-logo) .site-link {
     margin: 5px;
     font-weight: bold;
     min-width: 400px;
@@ -108,7 +108,43 @@
                 color linear 0.1s;
 }
 
-#modal-component .site-link:hover {
+#modal-component .site-container:not(.with-logo) .site-link:hover {
     background: #2194d3;
     color: #fff;
 }
+
+/**
+ * Styles for when Modal displaying sites with logos
+ */
+ #modal-component .body .inner .site-container.with-logo {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px;
+     border: 1px solid #2194d3;
+     margin: 8px 0px;
+     border-radius: 5px;
+     min-width: 500px;
+     min-height: 75px;
+     transition: box-shadow linear 0.2s;
+ }
+ #modal-component .body .inner .site-container.with-logo:hover {
+ 	cursor: pointer;
+ 	box-shadow: 3px 4px 4px 1px #b5b5b5;
+ }
+
+ #modal-component .body .inner .site-container.with-logo:hover .site-link {
+ 	background: #2194d3;
+     	color: #fff;
+ }
+
+ #modal-component .site-container.with-logo .site-link {
+     margin: 5px;
+     overflow-wrap: break-word;
+     white-space: normal;
+     font-weight: bold;
+     width: 250px;
+     background: #fff;
+     border-radius: 4px;
+     transition: background linear 0.2s, color linear 0.2s;
+ }

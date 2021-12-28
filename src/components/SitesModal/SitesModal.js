@@ -104,6 +104,18 @@ export default class SitesModal extends Component {
         this.props.handleClose();
     }
 
+    /**
+     * Opens the site link in new tab
+     *
+     * @param  {string} siteName
+     */
+    onSiteCardClicked = (e, siteName) => {
+        e.preventDefault();
+        let redirectUrl = this.formatSiteUrl(siteName);
+
+        if (redirectUrl !== false && redirectUrl !== '') { window.open(redirectUrl, "_blank"); }
+    }
+
 
     /**
      * Renders the links to sites
@@ -117,11 +129,26 @@ export default class SitesModal extends Component {
 
         return Object.keys(sites).map((siteName, key) => {
             let [labelObj] = this.props.sites.filter( (_site) => { return _site.value === siteName; })
+
             return (
-                <div className="site-container" key={key}>
-                    <a className="pure-button site-link" href={this.formatSiteUrl(siteName)} target="_blank">
-                        { labelObj.label }
-                    </a>
+                <div className={ this.props.withLogos ? 'site-container with-logo' : 'site-container' }
+                    onClick={ (e) => this.props.withLogos && this.onSiteCardClicked(e, siteName) } key={key}>
+                    {
+                        this.props.withLogos ?
+
+                        <div className="pure-button site-link">{ labelObj.label }</div>
+
+                        :
+
+                        <a className="pure-button site-link" href={this.formatSiteUrl(siteName)} target="_blank">
+                            { labelObj.label }
+                        </a>
+                    }
+                    {
+                        this.props.withLogos &&
+
+                        <img src={sites[siteName]} alt={ siteName.concat('-logo') } />
+                    }
                 </div>
             );
         });

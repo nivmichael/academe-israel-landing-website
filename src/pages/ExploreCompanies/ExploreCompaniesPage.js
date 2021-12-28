@@ -191,6 +191,7 @@ export default class ExploreCompaniesPage extends Component {
                                 companyId={this.state.selectedCompanyCard.companyId}
                                 sites={this.state.sites}
                                 isOpen={this.state.isModalOpen}
+                                withLogos={false}
                                 handleClose={this.handleCompanyCardModalClose} />
                     }
                     <div className="pure-u-1">
