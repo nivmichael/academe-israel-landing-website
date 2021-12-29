@@ -12,14 +12,14 @@ import './ReferPageResponsive.css';
 
 import {
     CONST_UNIVERSITY_BASE_URL,
-    CONST_UNIVERSITY_FULL_URL,
-
     CONST_API_BASE_URL,
     CONST_API_BASE_PARAM,
     CONST_API_ACTION_PARAM,
     CONST_RESPONSE_SUCCESS,
     CONST_RESPONSE_FAIL
 } from '../../constants';
+
+import { formatSiteUrlUtil } from './../../utils';
 
 /* ========= universities logos ========= */
 import tauLogo from './../../images/logos/universities/tel-aviv-uni-200x75.png';
@@ -82,17 +82,7 @@ export default class ReferPagePage extends Component {
         let university = e.target.id || e.target.parentNode.id;
         let url        = false;
 
-        let special_url_universities = ['haifa', 'biu', 'into'];
-
-        if (university && university != '') {
-            if(special_url_universities.indexOf(university) != -1) {
-                url = CONST_UNIVERSITY_BASE_URL + university + '.acade-me.co.il/';
-            }
-            else {
-                url = CONST_UNIVERSITY_FULL_URL;
-                url = url.replace('${site_name}', university);
-            }
-        }
+        url = formatSiteUrlUtil(university);
 
         // redirect the job-seeker to register with the inserted email
         if (this.state.jobSeekerType) url += 'register?type=job-seeker&sub_type=' + this.state.jobSeekerType;
@@ -175,15 +165,9 @@ export default class ReferPagePage extends Component {
                 if (response.data.status == CONST_RESPONSE_SUCCESS) {
                     let url                      = false;
                     let university               = response.data.siteName;
-                    let special_url_universities = ['haifa', 'biu', 'into'];
 
                     if (university) {
-                        if (special_url_universities.indexOf(university) != -1) {
-                            url = CONST_UNIVERSITY_BASE_URL + university + '.acade-me.co.il/';
-                        } else {
-                            url = CONST_UNIVERSITY_FULL_URL;
-                            url = url.replace('${site_name}', university);
-                        }
+                        url = formatSiteUrlUtil(university);
                     }
 
                     // redirect the job-seeker to register with the inserted email
@@ -192,8 +176,7 @@ export default class ReferPagePage extends Component {
 
                     // redirect to composed url
                     if (url !== false) { window.open(url, "_blank"); }
-                }
-                else if (response.data.status == CONST_RESPONSE_FAIL) {
+                } else if (response.data.status == CONST_RESPONSE_FAIL) {
                     this.setState({checkedUser: true});
 
                     if (this.state.selectedUserType == 'employer') {

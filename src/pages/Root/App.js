@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 
 import Navbar from './../../components/Navbar/Navbar';
-import Footer from './../../components/Footer/Footer';
 import HomePage from './../Home/HomePage';
 import ContactUsPage from './../ContactUs/ContactUsPage';
 import StudentsPage from './../Students/StudentsPage';
@@ -36,9 +35,6 @@ class App extends Component {
                       <Route path="/register" component={ ReferPage } />
                   </AnimatedSwitch>
               </div>
-              {/* <div className="pure-u-1 footer-container">
-                <Footer></Footer>
-              </div> */}
           </div>
       </div>
     );
@@ -46,5 +42,3 @@ class App extends Component {
 }
 
 export default App;
-
-// <Footer></Footer>

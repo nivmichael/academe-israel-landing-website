@@ -7,6 +7,7 @@ import Footer from './../../components/Footer/Footer';
 import CategorySection from './../../components/CategorySection/CategorySection';
 import CompanyCard from './../../components/CompanyCard/CompanyCard';
 import SitesModal from './../../components/SitesModal/SitesModal';
+import { formatExploreCompanyUrlUtil }  from './../../utils';
 
 /* =========== component style ========== */
 import './ExploreCompaniesPage.css';
@@ -17,8 +18,7 @@ import {
     CONST_API_BASE_URL,
     CONST_API_BASE_PARAM,
     CONST_API_ACTION_PARAM,
-    CONST_RESPONSE_SUCCESS,
-    CONST_RESPONSE_FAIL
+    CONST_RESPONSE_SUCCESS
 } from './../../constants';
 
 export default class ExploreCompaniesPage extends Component {
@@ -135,8 +135,6 @@ export default class ExploreCompaniesPage extends Component {
     * @return {Array} array of CompanyCard elements
     */
     renderCompanyCards = (companies) => {
-        let companyCards = [];
-
          return companies.map((company, key) => {
              return (
                  <CompanyCard

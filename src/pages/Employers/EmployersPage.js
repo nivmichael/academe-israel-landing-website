@@ -185,7 +185,7 @@ export default class EmployersPage extends Component {
 
                 if (response.data.status == CONST_RESPONSE_SUCCESS) {
                     let employerData = { id: response.data.employerId, siteId: response.data.siteId };
-                    this.setState({ ...this.state, employerData }, () => { console.log(this.state); });
+                    this.setState({ ...this.state, employerData });
                     this.refs.redirectLinkContainerRef.classList.add('expend-results');
                 }
                 else if (response.data.status == CONST_RESPONSE_FAIL) {

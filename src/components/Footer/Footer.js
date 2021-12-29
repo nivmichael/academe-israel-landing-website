@@ -33,10 +33,10 @@ export default class Footer extends Component {
                     <div className="pure-u-1 container">
                         <div className="pure-u-1 pure-u-lg-1-6 social">
                             <div>
-                                <img id="instagram" className="pure-img icon" src={ instagramIcon } onClick={ () => this.onSocialClicked('instagram') } />
+                                <img id="instagram" className="pure-img icon" src={ instagramIcon } onClick={ () => this.onSocialClicked('instagram') } alt="social-instagram" />
                             </div>
                             <div>
-                                <img id="facebook" className="pure-img icon" src={ facebookIcon } onClick={ () => this.onSocialClicked('facebook') } />
+                                <img id="facebook" className="pure-img icon" src={ facebookIcon } onClick={ () => this.onSocialClicked('facebook') } alt="social-facebook" />
                             </div>
                         </div>
                         <div className="pure-u-1 footer-text">

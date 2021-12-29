@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
 
 import './CompanyCard.css';
 import './CompanyCardResponsive.css';
 
 export default class CompanyCard extends Component {
-    constructor() {
-        super();
-    }
-
 
     onCompanyCardClicked = (e, sponsorshipId, companyId) => {
         e.preventDefault();

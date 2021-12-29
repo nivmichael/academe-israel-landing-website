@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { formatExploreCompanyUrlUtil }  from './../../utils';
 
 import './SitesModal.css';
 import './SitesModalResponsive.css';
@@ -27,15 +28,6 @@ import intoLogo from './../../images/logos/academe/academe-logo-horizontal-153x3
 
 import InstituteCard from './../InstituteCard/InstituteCard';
 
-/* ========== import constants ========= */
-import {
-    CONST_SITE_ID_LIST,
-    CONST_UNIVERSITY_FULL_URL,
-    CONST_UNIVERSITY_FULL_URL_AC,
-    CONST_UNIVERSITY_BASE_URL,
-    CONST_SPECIAL_URL_UNIVERSITY
-} from './../../constants';
-
 const sites = {
     'into'      : intoLogo,
     'tau'       : tauLogo,
@@ -55,38 +47,6 @@ const sites = {
 };
 
 export default class SitesModal extends Component {
-    constructor() {
-        super();
-    }
-
-
-    /**
-     * Formats Url of the sites links
-     *
-     * @param {string} siteName
-     *
-     * @return {string} formatted url
-     */
-    formatSiteUrl = (siteName) => {
-        let url = false;
-
-        if (typeof siteName !== 'string' || siteName === '') {
-            return false;
-        }
-
-        if(CONST_SPECIAL_URL_UNIVERSITY.indexOf(siteName) != -1) {
-            url = CONST_UNIVERSITY_BASE_URL + siteName + '.acade-me.co.il/';
-        }
-        else {
-            url = CONST_UNIVERSITY_FULL_URL;
-            url = url.replace('${site_name}', siteName);
-        }
-
-        url = url + 'explore-companies/?view-company=' + this.props.companyId + '&sid=' + this.props.sponsorshipId;
-
-        return url;
-    }
-
     /**
      * Close modal
      */
@@ -114,7 +74,7 @@ export default class SitesModal extends Component {
      */
     onSiteCardClicked = (e, siteName) => {
         e.preventDefault();
-        let redirectUrl = this.formatSiteUrl(siteName);
+        let redirectUrl = formatExploreCompanyUrlUtil(siteName, this.props.companyId, this.props.sponsorshipId);
 
         if (redirectUrl !== false && redirectUrl !== '') { window.open(redirectUrl, "_blank"); }
     }
@@ -137,7 +97,7 @@ export default class SitesModal extends Component {
                 <InstituteCard  withLogos={this.props.withLogos}
                                 name={siteName}
                                 label={labelObj.label}
-                                url={this.formatSiteUrl(siteName)}
+                                url={formatExploreCompanyUrlUtil(siteName, this.props.companyId, this.props.sponsorshipId)}
                                 logo={sites[siteName]}
                                 key={key}
                                 handleCardClick={this.onSiteCardClicked} />

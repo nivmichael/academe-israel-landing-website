@@ -14,7 +14,7 @@ export default function InstituteCard (props) {
 
                 :
 
-                <a className="pure-button site-link" href={props.url} target="_blank">
+                <a className="pure-button site-link" href={props.url} target="_blank" without rel="noopener noreferrer">
                     { props.label }
                 </a>
             }
