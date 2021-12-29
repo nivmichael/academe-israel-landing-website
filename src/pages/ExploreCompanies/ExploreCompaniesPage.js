@@ -21,6 +21,21 @@ import {
     CONST_RESPONSE_SUCCESS
 } from './../../constants';
 
+
+/**
+* ExploreCompaniesPage
+* State:
+*   isCategoriesReady - state of ajax call
+*   isModalOpen - state of sites modal
+*   onEnterModalOpen - determines if the sites modal will open as soon as the page loads
+*       or after a click on CompanyCard
+*   selectedSite - stores selected site name [ONLY] when `onEnterModalOpen` is TRUE
+*   selectedCompanyCard - stores selected company data
+*   categories - stores categories
+*   sites - stores sites
+*
+* @extends Component
+*/
 export default class ExploreCompaniesPage extends Component {
     constructor() {
         super();
@@ -28,6 +43,8 @@ export default class ExploreCompaniesPage extends Component {
         this.state = {
             isCategoriesReady: false,
             isModalOpen: false,
+            onEnterModalOpen: false,
+            selectedSite: null,
             selectedCompanyCard: {
                 sponsorshipId: null,
                 companyId: null
@@ -99,17 +116,47 @@ export default class ExploreCompaniesPage extends Component {
      * @param {number} companyId
      */
     handleCompanyCardClickedModalOpen = (sponsorshipId, companyId) => {
-        this.setState({ selectedCompanyCard: { sponsorshipId, companyId } }, () => {
-            this.showModal();
-        });
+        if (this.state.onEnterModalOpen === true && this.state.selectedSite !== null) {
+            let redirectUrl = formatExploreCompanyUrlUtil(this.state.selectedSite, companyId, sponsorshipId);
+
+            if (redirectUrl !== false && redirectUrl !== '') {
+                window.open(redirectUrl, "_blank");
+            }
+        } else {
+            this.setState({ selectedCompanyCard: { sponsorshipId, companyId } }, () => {
+                this.showModal();
+            });
+        }
     }
 
     /**
      * Closes modal
+     * Resets selectedCompanyCard
      */
     handleCompanyCardModalClose = () => {
         this.hideModal();
         this.setState({ selectedCompanyCard: { sponsorshipId: null, companyId: null } });
+    }
+
+
+    /**
+     * SiteCard click handler
+     * When `onEnterModalOpen` is TRUE - updates the state and closes the modal
+     * When `onEnterModalOpen` is FALSE - redirects to url (based on companyId and sponsorshipId)
+     *
+     * @param {string} siteName - selected site
+     * @param {number} companyId     selected company id
+     * @param {number} sponsorshipId selected company sponsorship id
+     */
+    handleSiteCardClicked = (siteName, companyId, sponsorshipId) => {
+        if (this.state.onEnterModalOpen) {
+            this.setState( { ...this.state, selectedSite: siteName }, () => {
+                this.hideModal();
+            });
+        } else {
+            let redirectUrl = formatExploreCompanyUrlUtil(siteName, companyId, sponsorshipId);
+            if (redirectUrl !== false && redirectUrl !== '') { window.open(redirectUrl, "_blank"); }
+        }
     }
 
     /**
@@ -171,6 +218,13 @@ export default class ExploreCompaniesPage extends Component {
         return list;
     }
 
+
+    /**
+     * onMount:
+     * fetch sites and categories
+     * update state with received data
+     * if `onEnterModalOpen` is TRUE show sites modal
+     */
     async componentDidMount() {
         window.scrollTo(0, 0);
         const [sitesResponse, categoriesResponse] = await Promise.all(
@@ -178,6 +232,10 @@ export default class ExploreCompaniesPage extends Component {
         );
 
         this.handleDataUpdated(sitesResponse, categoriesResponse);
+
+        if (this.state.onEnterModalOpen === true) {
+            this.showModal();
+        }
     }
 
     render() {
@@ -189,6 +247,8 @@ export default class ExploreCompaniesPage extends Component {
                                 companyId={this.state.selectedCompanyCard.companyId}
                                 sites={this.state.sites}
                                 isOpen={this.state.isModalOpen}
+                                onEnterModalOpen={this.state.onEnterModalOpen}
+                                handleSiteCardClicked={this.handleSiteCardClicked}
                                 withLogos={true}
                                 handleClose={this.handleCompanyCardModalClose} />
                     }

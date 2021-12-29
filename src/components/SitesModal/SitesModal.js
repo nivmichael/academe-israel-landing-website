@@ -74,9 +74,10 @@ export default class SitesModal extends Component {
      */
     onSiteCardClicked = (e, siteName) => {
         e.preventDefault();
-        let redirectUrl = formatExploreCompanyUrlUtil(siteName, this.props.companyId, this.props.sponsorshipId);
+        // let redirectUrl = formatExploreCompanyUrlUtil(siteName, this.props.companyId, this.props.sponsorshipId);
+        // if (redirectUrl !== false && redirectUrl !== '') { window.open(redirectUrl, "_blank"); }
 
-        if (redirectUrl !== false && redirectUrl !== '') { window.open(redirectUrl, "_blank"); }
+        this.props.handleSiteCardClicked(siteName, this.props.companyId, this.props.sponsorshipId);
     }
 
 
