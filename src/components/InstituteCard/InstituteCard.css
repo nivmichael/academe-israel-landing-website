@@ -1,0 +1,57 @@
+#institute-card.site-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#institute-card.site-container:not(.with-logo) .site-link {
+    margin: 5px;
+    font-weight: bold;
+    min-width: 400px;
+    background: #fff;
+    border: 1px solid #2194d3;
+    border-radius: 4px;
+    transition: background linear 0.1s,
+                color linear 0.1s;
+}
+
+#institute-card.site-container:not(.with-logo) .site-link:hover {
+    background: #2194d3;
+    color: #fff;
+}
+
+/**
+ * Styles for when Modal displaying sites with logos
+ */
+ #institute-card.site-container.with-logo {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 15px;
+     border: 1px solid #2194d3;
+     margin: 8px 0px;
+     border-radius: 5px;
+     min-width: 500px;
+     min-height: 75px;
+     transition: box-shadow linear 0.2s;
+ }
+ #institute-card.site-container.with-logo:hover {
+ 	cursor: pointer;
+ 	box-shadow: 3px 4px 4px 1px #b5b5b5;
+ }
+
+ #institute-card.site-container.with-logo:hover .site-link {
+ 	background: #2194d3;
+     	color: #fff;
+ }
+
+ #institute-card.site-container.with-logo .site-link {
+     margin: 5px;
+     overflow-wrap: break-word;
+     white-space: normal;
+     font-weight: bold;
+     width: 250px;
+     background: #fff;
+     border-radius: 4px;
+     transition: background linear 0.2s, color linear 0.2s;
+ }

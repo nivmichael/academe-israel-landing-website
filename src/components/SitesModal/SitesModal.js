@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import './SitesModal.css';
+import './SitesModalResponsive.css';
 
 /* ========= universities logos ========= */
 import tauLogo from './../../images/logos/universities/tel-aviv-uni-200x75.png';
@@ -23,6 +24,8 @@ import ruppinLogo from './../../images/logos/colleges/ruppin-uni-200x75.png';
 
 /* ========= into system logo ========= */
 import intoLogo from './../../images/logos/academe/academe-logo-horizontal-153x35.png';
+
+import InstituteCard from './../InstituteCard/InstituteCard';
 
 /* ========== import constants ========= */
 import {
@@ -131,25 +134,13 @@ export default class SitesModal extends Component {
             let [labelObj] = this.props.sites.filter( (_site) => { return _site.value === siteName; })
 
             return (
-                <div className={ this.props.withLogos ? 'site-container with-logo' : 'site-container' }
-                    onClick={ (e) => this.props.withLogos && this.onSiteCardClicked(e, siteName) } key={key}>
-                    {
-                        this.props.withLogos ?
-
-                        <div className="pure-button site-link">{ labelObj.label }</div>
-
-                        :
-
-                        <a className="pure-button site-link" href={this.formatSiteUrl(siteName)} target="_blank">
-                            { labelObj.label }
-                        </a>
-                    }
-                    {
-                        this.props.withLogos &&
-
-                        <img src={sites[siteName]} alt={ siteName.concat('-logo') } />
-                    }
-                </div>
+                <InstituteCard  withLogos={this.props.withLogos}
+                                name={siteName}
+                                label={labelObj.label}
+                                url={this.formatSiteUrl(siteName)}
+                                logo={sites[siteName]}
+                                key={key}
+                                handleCardClick={this.onSiteCardClicked} />
             );
         });
     }
