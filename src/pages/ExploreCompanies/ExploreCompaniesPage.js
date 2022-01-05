@@ -110,18 +110,28 @@ export default class ExploreCompaniesPage extends Component {
 
 
     /**
+     * Redirects to company page (opens in new tab)
+     */
+    redirectToCompanyPage = () => {
+        let redirectUrl = formatExploreCompanyUrlUtil(this.state.selectedSite, this.state.selectedCompanyCard.companyId, this.state.selectedCompanyCard.sponsorshipId);
+
+        if (redirectUrl !== false && redirectUrl !== '') {
+            window.open(redirectUrl, "_blank");
+        }
+    }
+
+
+    /**
      * Opens modal when company card is clicked
      *
      * @param {number} sponsorshipId
      * @param {number} companyId
      */
     handleCompanyCardClickedModalOpen = (sponsorshipId, companyId) => {
-        if (this.state.onEnterModalOpen === true && this.state.selectedSite !== null) {
-            let redirectUrl = formatExploreCompanyUrlUtil(this.state.selectedSite, companyId, sponsorshipId);
-
-            if (redirectUrl !== false && redirectUrl !== '') {
-                window.open(redirectUrl, "_blank");
-            }
+        if (this.state.selectedSite !== null) {
+            this.setState({ selectedCompanyCard: { sponsorshipId, companyId } }, () => {
+                this.redirectToCompanyPage();
+            });
         } else {
             this.setState({ selectedCompanyCard: { sponsorshipId, companyId } }, () => {
                 this.showModal();
@@ -154,8 +164,10 @@ export default class ExploreCompaniesPage extends Component {
                 this.hideModal();
             });
         } else {
-            let redirectUrl = formatExploreCompanyUrlUtil(siteName, companyId, sponsorshipId);
-            if (redirectUrl !== false && redirectUrl !== '') { window.open(redirectUrl, "_blank"); }
+            this.setState( { ...this.state, selectedSite: siteName }, () => {
+                this.redirectToCompanyPage();
+                this.hideModal();
+            });
         }
     }
 
