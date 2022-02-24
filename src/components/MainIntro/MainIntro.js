@@ -16,9 +16,9 @@ export default class MainIntro extends Component {
                                 <img className="pure-img" src={mainAcademeLogoBig} alt="academe-logo"></img>
                             </div>
                             <div className="message">
-                                רשת גיוס הסטודנטים והבוגרים
+                                רשת גיוס האקדמאים
                                 <br />
-                                המתקדמת והגדולה בישראל
+                                והסטודנטים של ישראל
                             </div>
                         </div>
                     </div>
