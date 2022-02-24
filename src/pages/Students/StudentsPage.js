@@ -49,7 +49,7 @@ const universitiesList = {
     'ruppin'    : ruppinLogo,
     'jobsapir'  : sapirLogo,
     'ash'       : ashLogo,
-    'mla'       : mlaLogo,
+    // 'mla'       : mlaLogo,
     'sce'       : sceLogo,
     'wgalil'    : wgalilLogo,
     'into'      : intoLogo

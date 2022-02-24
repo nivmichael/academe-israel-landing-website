@@ -53,7 +53,7 @@ const collegesList = {
     'sce'       : sceLogo,
     'sapir'     : sapirLogo,
     'ash'       : ashLogo,
-    'mla'       : mlaLogo,
+    // 'mla'       : mlaLogo,
     'wgalil'    : wgalilLogo,
     'ruppin'    : ruppinLogo
 }
