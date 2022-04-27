@@ -342,11 +342,17 @@ export default class EmployersPage extends Component {
                             <form className="pure-form pure-form-stacked">
                                 <fieldset>
                                     <div className="form-title">לפרסום משרה</div>
-                                    <input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="academe-input" placeholder="הכנס את האימייל שלך"></input>
+                                    <div className="button-container">
+                                        <a className="pure-button academe-button-full continue-button"
+                                            href="https://secure.wanted.co.il/into.acade-me.co.il"
+                                            target="_blank"
+                                            without rel="noopener noreferrer">לחץ כאן</a>
+                                    </div>
+                                    {/*<input id="publish-job-input-email" type="email" onChange={ this.handleEmployerEmail } className="academe-input" placeholder="הכנס את האימייל שלך"></input>
                                     <div className="button-container" ref="publishJobButtonContainerRef">
                                         <button className="pure-button academe-button-full continue-button" onClick={ this.onSubmitForm }>המשך</button>
                                         <span id="publish-job-loading-spinner"><Loader type="Oval" color="#2194d3" height="30" width="30" /></span>
-                                    </div>
+                                    </div>*/}
                                 </fieldset>
                             </form>
                         </div>
