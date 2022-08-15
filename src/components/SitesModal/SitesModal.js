@@ -94,6 +94,10 @@ export default class SitesModal extends Component {
         return Object.keys(sites).map((siteName, key) => {
             let [labelObj] = this.props.sites.filter( (_site) => { return _site.value === siteName; })
 
+            if (typeof labelObj === 'undefined') {
+                return;
+            }
+
             return (
                 <InstituteCard  withLogos={this.props.withLogos}
                                 name={siteName}
