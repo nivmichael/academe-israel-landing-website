@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import { AnimatedSwitch } from 'react-router-transition';
 
 import Navbar from './../../components/Navbar/Navbar';
@@ -31,8 +31,11 @@ class App extends Component {
                       <Route path="/employers" component={ EmployersPage } />
                       <Route path="/explore-companies" component={ ExploreCompaniesPage } />
                       <Route path="/contact-us" component={ ContactUsPage } />
-                      <Route path="/login" component={ ReferPage } />
-                      <Route path="/register" component={ ReferPage } />
+                      {/* <Route path="/login" component={ ReferPage } />
+                      <Route path="/register" component={ ReferPage } /> */} 
+
+                       {/* only match this when no other routes match */}
+                       <Route path="*"><Redirect to="/" /></Route>
                   </AnimatedSwitch>
               </div>
           </div>
