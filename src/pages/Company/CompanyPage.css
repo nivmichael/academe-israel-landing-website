@@ -1,0 +1,13 @@
+#company-page-component {}
+
+#company-page-component .company-page-loader {
+    text-align: center;
+}
+
+#company-page-component .company-page-main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
