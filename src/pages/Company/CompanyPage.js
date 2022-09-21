@@ -47,6 +47,9 @@ export default class CompanyPage extends Component {
             });
     }
 
+    /**
+     * Stop loading animation
+     */
     onLoadingStop () {
         let isLoading = false;
         this.setState({ ...this.state, isLoading });
