@@ -7,6 +7,7 @@ export default class CompanyCard extends Component {
 
     onCompanyCardClicked = (e, sponsorshipId, companyId) => {
         e.preventDefault();
+        e.stopPropagation();
 
         this.props.handleCompanyCardClicked(sponsorshipId, companyId);
     }

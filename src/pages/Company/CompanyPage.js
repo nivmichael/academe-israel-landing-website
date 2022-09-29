@@ -101,11 +101,21 @@ export default class CompanyPage extends Component {
                     <div className="pure-u-1">
                         {
                             this.state.isLoading === true
-                            ?
+                                &&
+                                <div className="company-page-loader" ref="mainContainerLoaderRef">
+                                    <Loader type="Oval" color="#2194d3" height="60" width="60"/>
+                                </div>
+                        }
+                        {
+                            ( this.state.isLoading === false && !this.state.company.id )
+                            &&
                             <div className="company-page-loader" ref="mainContainerLoaderRef">
-                                <Loader type="Oval" color="#2194d3" height="60" width="60" />
+                                <div><h3>חברה לא נמצאה.</h3></div>
                             </div>
-                            :
+                        }
+                        {
+                            ( this.state.isLoading === false && this.state.company.id )
+                            &&
                             <div className="company-page-main-container" ref="mainContainerRef">
                                 <div className="pure-u-1 section">
                                     <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.cover} alt="company-cover" />
