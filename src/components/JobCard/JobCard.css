@@ -1,10 +1,8 @@
 .job-card {
     display: flex;
     flex-direction: column;
-    /*position: relative;*/
-    /*float: right;*/
-    width: 32.5%;
-    margin: 0 1.25% 1.25% 0;
+    width: 21.3%;
+    margin: 1.25% 0.5%;
     padding: 5px 10px;
     border: 1px solid #dadada;
     border-radius: 5px;
@@ -15,9 +13,74 @@
     transition: box-shadow .2s, border-color .2s, margin .5s linear, opacity .5s;
 }
 
-.job-card .header{
+.job-card .header {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+}
+
+.job-card .header .info {
+    font-size: 0.6em;
+    color: #ababab;
+    text-shadow: 0 0 0 #ababab;
+}
+.job-card .header .info > span:first-child {
+    margin-left: 4px;
+}
+
+.job-card .body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.job-card .body .company-details,
+.job-card .body .job-details {
+    flex-direction: column;
+}
+.job-card .body .job-details {
+    width: 65%;
+}
+
+.job-card .body .company-details .logo {
+    flex: 1 1;
+    max-width: 125px;
+}
+
+.job-card .body .company-details .company-name {
+    margin: 5px 0;
+    line-height: 1em;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.job-card .body .job-details .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 4.7em;
+    overflow: hidden;
+    white-space: normal;
+}
+
+.job-card .body .job-details .details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.job-card .body .job-details .details .detail-container {
+    width: 49.5%;
+    margin-top: 5px;
+    line-height: 1em;
+    font-size: 0.9em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
