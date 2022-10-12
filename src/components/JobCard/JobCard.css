@@ -1,0 +1,23 @@
+.job-card {
+    display: flex;
+    flex-direction: column;
+    /*position: relative;*/
+    /*float: right;*/
+    width: 32.5%;
+    margin: 0 1.25% 1.25% 0;
+    padding: 5px 10px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-transition: box-shadow .2s, border-color .2s, margin .5s linear, opacity .5s;
+    transition: box-shadow .2s, border-color .2s, margin .5s linear, opacity .5s;
+}
+
+.job-card .header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
