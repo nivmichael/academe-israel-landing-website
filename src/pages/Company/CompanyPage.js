@@ -14,6 +14,7 @@ import Footer from "../../components/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
 import './CompanyPage.css';
 import './CompanyPageResponsive.css';
+import CompanySectionCard from "../../components/CompanySectionCard/CompanySectionCard";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -118,16 +119,16 @@ export default class CompanyPage extends Component {
                             &&
                             <div className="company-page-main-container" ref="mainContainerRef">
                                 <div className="pure-u-1 section">
-                                    <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.cover} alt="company-cover" />
+                                    <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.cover} alt="company-cover" />
                                 </div>
-                                <div className="pure-u-1 section headline">
+                                <div className="pure-u-1 section details">
                                     <div className="pure-u-1-5"></div>
                                     <div className="pure-u-1-5">
                                         <div className="company-logo-container">
-                                            <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.logo} alt="company-logo" />
+                                            <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.logo} alt="company-logo" />
                                         </div>
                                     </div>
-                                    <div className="pure-u-1-5 company-headline">
+                                    <div className="pure-u-1-5">
                                         <div>{ this.state.company.companyName }</div>
                                         <div>{ this.state.company.companyIndustry }</div>
                                     </div>
@@ -140,8 +141,21 @@ export default class CompanyPage extends Component {
                                     </div>
                                     <div className="pure-u-1-5"></div>
                                 </div>
-                                <div className="pure-u-1 section">
+                                <div className="pure-u-1 section headline">
+                                    { this.state.company.companyHeadline }
+                                </div>
+                                <div className="pure-u-1 section career">
+                                </div>
+                                <div className="pure-u-1 section cards">
+                                    {
+                                        Object.keys(this.state.company.sections).map( (sectionName, i) => {
+                                            if (sectionName === 'files') { return false }
 
+                                            return <CompanySectionCard isFullRow={ sectionName === 'youtube' } key={ i }>
+                                                <div>{ sectionName }</div>
+                                            </CompanySectionCard>
+                                        })
+                                    }
                                 </div>
                             </div>
                         }
