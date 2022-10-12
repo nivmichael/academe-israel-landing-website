@@ -15,6 +15,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './CompanyPage.css';
 import './CompanyPageResponsive.css';
 import CompanySectionCard from "../../components/CompanySectionCard/CompanySectionCard";
+import JobCard from "../../components/JobCard/JobCard";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -145,6 +146,14 @@ export default class CompanyPage extends Component {
                                     { this.state.company.companyHeadline }
                                 </div>
                                 <div className="pure-u-1 section career">
+                                    {
+                                        this.state.company.jobs.map((job) => {
+                                            return <JobCard data={ job }
+                                                            companyLogo={ this.state.company.sections.files.logo }
+                                                            companyName={ this.state.company.companyName }
+                                                            key={ job.jobId } />
+                                        })
+                                    }
                                 </div>
                                 <div className="pure-u-1 section cards">
                                     {
