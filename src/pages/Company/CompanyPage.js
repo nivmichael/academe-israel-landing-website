@@ -21,6 +21,16 @@ export default class CompanyPage extends Component {
     cancelToken;
     source;
 
+    cardLabels = {
+        'about': 'אודות/מי אנחנו',
+        'achievements': 'השגים',
+        'youtube': 'סרטונים',
+        'testimonials': 'עובדים מספרים',
+        'benefits': 'הטבות',
+        'facts': 'עובדות מעניינות',
+        'gallery': 'גלריית תמונות'
+    }
+
     constructor() {
         super();
 
@@ -156,15 +166,46 @@ export default class CompanyPage extends Component {
                                     }
                                 </div>
                                 <div className="pure-u-1 section cards">
-                                    {
-                                        Object.keys(this.state.company.sections).map( (sectionName, i) => {
-                                            if (sectionName === 'files') { return false }
-
-                                            return <CompanySectionCard isFullRow={ sectionName === 'youtube' } key={ i }>
-                                                <div>{ sectionName }</div>
-                                            </CompanySectionCard>
-                                        })
-                                    }
+                                    <CompanySectionCard id="about-us" title={this.cardLabels.about}>
+                                        <div className="about-us-container">
+                                            <div>{ this.state.company.companyDescription }</div>
+                                            {
+                                                this.state.company.sections.files.presentation &&
+                                                <div className="presentation-button-container">
+                                                    <a className="presentation-button"
+                                                       target="_blank"
+                                                       rel="noopener noreferrer"
+                                                       href={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.presentation}>מצגת חברה</a>
+                                                </div>
+                                            }
+                                        </div>
+                                    </CompanySectionCard>
+                                    <CompanySectionCard id="achievements" title={this.cardLabels.achievements}>
+                                        <div></div>
+                                    </CompanySectionCard>
+                                    <CompanySectionCard id="youtube" isFullRow={true} title={this.cardLabels.youtube}>
+                                        <div></div>
+                                    </CompanySectionCard>
+                                    <CompanySectionCard id="testimonials" title={this.cardLabels.testimonials}>
+                                        <div></div>
+                                    </CompanySectionCard>
+                                    <CompanySectionCard id="benefits" title={this.cardLabels.benefits}>
+                                        <div className="benefits-container">
+                                            {
+                                                Object.keys(this.state.company.sections.benefits).map( (i) => {
+                                                    return Object.keys(this.state.company.sections.benefits[i]).map( (key) => {
+                                                        return <div className="single-benefit">{this.state.company.sections.benefits[i][key]}</div>
+                                                    })
+                                                })
+                                            }
+                                        </div>
+                                    </CompanySectionCard>
+                                    <CompanySectionCard id="facts" title={this.cardLabels.facts}>
+                                        <div></div>
+                                    </CompanySectionCard>
+                                    <CompanySectionCard id="gallery" title={this.cardLabels.gallery}>
+                                        <div></div>
+                                    </CompanySectionCard>
                                 </div>
                             </div>
                         }
