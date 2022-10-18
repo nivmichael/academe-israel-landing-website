@@ -45,21 +45,3 @@
     text-align: center;
     font-size: 1.6em;
 }
-
-#company-section-card.section-card .body .benefits-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-}
-
-#company-section-card.section-card .body .benefits-container .single-benefit {
-    background: #E6E7E8;
-    border-radius: 5px;
-    text-align: right;
-    margin: 10px 0;
-    font-size: 19px;
-    padding: 5px 8px;
-    width: 100%;
-}

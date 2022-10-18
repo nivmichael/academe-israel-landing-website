@@ -17,6 +17,7 @@ import './CompanyPageResponsive.css';
 import CompanySectionCardBase from "../../components/CompanySectionCards/CompanySectionCardBase/CompanySectionCardBase";
 import JobCard from "../../components/JobCard/JobCard";
 import AboutUsCard from "../../components/CompanySectionCards/AboutUsCard/AboutUsCard";
+import BenefitsCard from "../../components/CompanySectionCards/BenefitsCard/BenefitsCard";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -180,15 +181,7 @@ export default class CompanyPage extends Component {
                                         <div></div>
                                     </CompanySectionCardBase>
                                     <CompanySectionCardBase id="benefits" title={this.cardLabels.benefits}>
-                                        <div className="benefits-container">
-                                            {
-                                                Object.keys(this.state.company.sections.benefits).map( (i) => {
-                                                    return Object.keys(this.state.company.sections.benefits[i]).map( (key) => {
-                                                        return <div className="single-benefit">{this.state.company.sections.benefits[i][key]}</div>
-                                                    })
-                                                })
-                                            }
-                                        </div>
+                                        <BenefitsCard benefits={this.state.company.sections.benefits}/>
                                     </CompanySectionCardBase>
                                     <CompanySectionCardBase id="facts" title={this.cardLabels.facts}>
                                         <div></div>
