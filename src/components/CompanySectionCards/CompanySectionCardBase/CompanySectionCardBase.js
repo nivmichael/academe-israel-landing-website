@@ -1,8 +1,8 @@
 import React from 'react';
-import './CompanySectionCard.css';
-import './CompanySectionCardResponsive.css';
+import './CompanySectionCardBase.css';
+import './CompanySectionCardBaseResponsive.css';
 
-export default function CompanySectionCard (props) {
+export default function CompanySectionCardBase (props) {
 
     function applyClassList () {
         const classList = ['section-card'];

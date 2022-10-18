@@ -14,7 +14,7 @@ import Footer from "../../components/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
 import './CompanyPage.css';
 import './CompanyPageResponsive.css';
-import CompanySectionCard from "../../components/CompanySectionCard/CompanySectionCard";
+import CompanySectionCardBase from "../../components/CompanySectionCards/CompanySectionCardBase/CompanySectionCardBase";
 import JobCard from "../../components/JobCard/JobCard";
 
 export default class CompanyPage extends Component {
@@ -166,7 +166,7 @@ export default class CompanyPage extends Component {
                                     }
                                 </div>
                                 <div className="pure-u-1 section cards">
-                                    <CompanySectionCard id="about-us" title={this.cardLabels.about}>
+                                    <CompanySectionCardBase id="about-us" title={this.cardLabels.about}>
                                         <div className="about-us-container">
                                             <div>{ this.state.company.companyDescription }</div>
                                             {
@@ -179,17 +179,17 @@ export default class CompanyPage extends Component {
                                                 </div>
                                             }
                                         </div>
-                                    </CompanySectionCard>
-                                    <CompanySectionCard id="achievements" title={this.cardLabels.achievements}>
+                                    </CompanySectionCardBase>
+                                    <CompanySectionCardBase id="achievements" title={this.cardLabels.achievements}>
                                         <div></div>
-                                    </CompanySectionCard>
-                                    <CompanySectionCard id="youtube" isFullRow={true} title={this.cardLabels.youtube}>
+                                    </CompanySectionCardBase>
+                                    <CompanySectionCardBase id="youtube" isFullRow={true} title={this.cardLabels.youtube}>
                                         <div></div>
-                                    </CompanySectionCard>
-                                    <CompanySectionCard id="testimonials" title={this.cardLabels.testimonials}>
+                                    </CompanySectionCardBase>
+                                    <CompanySectionCardBase id="testimonials" title={this.cardLabels.testimonials}>
                                         <div></div>
-                                    </CompanySectionCard>
-                                    <CompanySectionCard id="benefits" title={this.cardLabels.benefits}>
+                                    </CompanySectionCardBase>
+                                    <CompanySectionCardBase id="benefits" title={this.cardLabels.benefits}>
                                         <div className="benefits-container">
                                             {
                                                 Object.keys(this.state.company.sections.benefits).map( (i) => {
@@ -199,13 +199,13 @@ export default class CompanyPage extends Component {
                                                 })
                                             }
                                         </div>
-                                    </CompanySectionCard>
-                                    <CompanySectionCard id="facts" title={this.cardLabels.facts}>
+                                    </CompanySectionCardBase>
+                                    <CompanySectionCardBase id="facts" title={this.cardLabels.facts}>
                                         <div></div>
-                                    </CompanySectionCard>
-                                    <CompanySectionCard id="gallery" title={this.cardLabels.gallery}>
+                                    </CompanySectionCardBase>
+                                    <CompanySectionCardBase id="gallery" title={this.cardLabels.gallery}>
                                         <div></div>
-                                    </CompanySectionCard>
+                                    </CompanySectionCardBase>
                                 </div>
                             </div>
                         }
