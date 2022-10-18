@@ -16,6 +16,7 @@ import './CompanyPage.css';
 import './CompanyPageResponsive.css';
 import CompanySectionCardBase from "../../components/CompanySectionCards/CompanySectionCardBase/CompanySectionCardBase";
 import JobCard from "../../components/JobCard/JobCard";
+import AboutUsCard from "../../components/CompanySectionCards/AboutUsCard/AboutUsCard";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -167,18 +168,7 @@ export default class CompanyPage extends Component {
                                 </div>
                                 <div className="pure-u-1 section cards">
                                     <CompanySectionCardBase id="about-us" title={this.cardLabels.about}>
-                                        <div className="about-us-container">
-                                            <div>{ this.state.company.companyDescription }</div>
-                                            {
-                                                this.state.company.sections.files.presentation &&
-                                                <div className="presentation-button-container">
-                                                    <a className="presentation-button"
-                                                       target="_blank"
-                                                       rel="noopener noreferrer"
-                                                       href={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.presentation}>מצגת חברה</a>
-                                                </div>
-                                            }
-                                        </div>
+                                        <AboutUsCard description={ this.state.company.companyDescription } presentation={this.state.company.sections.files.presentation} />
                                     </CompanySectionCardBase>
                                     <CompanySectionCardBase id="achievements" title={this.cardLabels.achievements}>
                                         <div></div>

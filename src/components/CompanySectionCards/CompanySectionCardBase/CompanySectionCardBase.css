@@ -46,34 +46,6 @@
     font-size: 1.6em;
 }
 
-#company-section-card.section-card .body .about-us-container {
-    display: flex;
-    justify-content: center;
-}
-
-#company-section-card.section-card .body .about-us-container .presentation-button-container {
-    position: absolute;
-    bottom: 5px;
-}
-
-#company-section-card.section-card .body .about-us-container .presentation-button {
-    color: #58595B;
-    background-color: white;
-    font-size: 19px;
-    border: 1px solid #58595B;
-    padding: 3px 38px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: box-shadow ease-in 100ms;
-}
-
-#company-section-card.section-card .body .about-us-container .presentation-button:hover {
-    -webkit-box-shadow: 1px 1px 3px 1px #d1d3d5;
-    -moz-box-shadow: 1px 1px 3px 1px #d1d3d5;
-    box-shadow: 1px 1px 3px 1px #d1d3d5;
-}
-
 #company-section-card.section-card .body .benefits-container {
     display: flex;
     flex-direction: column;
