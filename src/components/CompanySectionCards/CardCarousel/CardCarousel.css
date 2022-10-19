@@ -10,8 +10,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: none;  /* hides the scrollbar on firefox */
     height: 35vh;
     width: 100%;
+    transition: transform 250ms ease-in-out;
+}
+.carousel-container .carousel::-webkit-scrollbar {  /* hides the scrollbar on chrome */
+    display: none;
 }
 
 .carousel-container .carousel .slide {
@@ -19,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex: 0 0 auto;
     width: 100%;
 }
 
