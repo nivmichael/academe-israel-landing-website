@@ -5,7 +5,7 @@ import './CompanySectionCardBaseResponsive.css';
 export default function CompanySectionCardBase (props) {
 
     function applyClassList () {
-        const classList = ['section-card'];
+        const classList = ['company-section-card', 'section-card'];
         if (props.isFullRow) {
             classList.push('full-row');
         } else if (props.isFullWidth) {
@@ -16,7 +16,7 @@ export default function CompanySectionCardBase (props) {
     }
 
     return (
-        <div id="company-section-card" className={ applyClassList() }>
+        <div className={ applyClassList() }>
             <div className="header">
                 <div className="title">{ props.title }</div>
             </div>

@@ -168,9 +168,9 @@ export default class CompanyPage extends Component {
                                     }
                                 </div>
                                 <div className="pure-u-1 section cards">
-                                    <CompanySectionCardBase id="about-us" title={this.cardLabels.about}>
-                                        <AboutUsCard description={ this.state.company.companyDescription } presentation={this.state.company.sections.files.presentation} />
-                                    </CompanySectionCardBase>
+                                    <AboutUsCard description={ this.state.company.companyDescription }
+                                                 presentation={this.state.company.sections.files.presentation} />
+
                                     <CompanySectionCardBase id="achievements" title={this.cardLabels.achievements}>
                                         <div></div>
                                     </CompanySectionCardBase>
@@ -180,9 +180,9 @@ export default class CompanyPage extends Component {
                                     <CompanySectionCardBase id="testimonials" title={this.cardLabels.testimonials}>
                                         <div></div>
                                     </CompanySectionCardBase>
-                                    <CompanySectionCardBase id="benefits" title={this.cardLabels.benefits}>
-                                        <BenefitsCard benefits={this.state.company.sections.benefits}/>
-                                    </CompanySectionCardBase>
+
+                                    <BenefitsCard benefits={this.state.company.sections.benefits} />
+
                                     <CompanySectionCardBase id="facts" title={this.cardLabels.facts}>
                                         <div></div>
                                     </CompanySectionCardBase>

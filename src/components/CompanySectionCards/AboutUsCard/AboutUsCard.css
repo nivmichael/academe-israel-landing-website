@@ -1,14 +1,24 @@
-#about-us-card-container {
+.about-us-card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    flex-direction: column;
 }
 
-#about-us-card-container .presentation-button-container {
+.about-us-card-container .description {
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-card-container .presentation-button-container {
     position: absolute;
     bottom: 5px;
 }
 
-#about-us-card-container .presentation-button {
+.about-us-card-container .presentation-button {
     color: #58595B;
     background-color: white;
     font-size: 19px;
@@ -20,7 +30,7 @@
     transition: box-shadow ease-in 100ms;
 }
 
-#about-us-card-container .presentation-button:hover {
+.about-us-card-container .presentation-button:hover {
     -webkit-box-shadow: 1px 1px 3px 1px #d1d3d5;
     -moz-box-shadow: 1px 1px 3px 1px #d1d3d5;
     box-shadow: 1px 1px 3px 1px #d1d3d5;
