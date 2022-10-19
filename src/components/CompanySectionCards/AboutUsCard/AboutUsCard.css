@@ -14,8 +14,7 @@
 }
 
 .about-us-card-container .presentation-button-container {
-    position: absolute;
-    bottom: 5px;
+    display: flex;
 }
 
 .about-us-card-container .presentation-button {
