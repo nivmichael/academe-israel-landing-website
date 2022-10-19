@@ -5,7 +5,7 @@ import CompanySectionCardBase from "../CompanySectionCardBase/CompanySectionCard
 
 export default class BenefitsCard extends Component {
 
-    cardTitle = '?????';
+    cardTitle = 'הטבות';
 
     render() {
         return (
@@ -14,7 +14,7 @@ export default class BenefitsCard extends Component {
                     {
                         Object.keys(this.props.benefits).map( (i) => {
                             return Object.keys(this.props.benefits[i]).map( (key) => {
-                                return <div className="single-benefit">{this.props.benefits[i][key]}</div>
+                                return <div className="single-benefit" key={key}>{this.props.benefits[i][key]}</div>
                             })
                         })
                     }
