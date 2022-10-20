@@ -11,6 +11,8 @@ export default class CardCarousel extends Component {
             totalSlides: props.totalSlides ? props.totalSlides : 0,
             currentSlide: 0
         }
+
+        this.navigateByNavdot = this.navigateByNavdot.bind(this);
     }
 
     nextSlide (e) {
@@ -63,9 +65,12 @@ export default class CardCarousel extends Component {
         return navdots;
     }
 
-    propertifySlides (slideElementsArray) {
-        return slideElementsArray.map( (slideElement, i) => {
-            return cloneElement(slideElement, { isActive: this.state.currentSlide === i })
+    propertifySlides (slides) {
+        return slides.map( (slideElement, i) => {
+            return cloneElement(slideElement, {
+                isActive: this.state.currentSlide === i,
+                positionModifier: this.state.currentSlide
+            })
         });
     }
 
