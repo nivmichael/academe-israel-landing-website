@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import './Navdot.css';
 
 export default function Navdot(props) {
     return (

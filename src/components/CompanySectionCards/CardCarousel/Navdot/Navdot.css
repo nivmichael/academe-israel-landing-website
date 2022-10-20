@@ -1,0 +1,21 @@
+.carousel-container .carousel-control .navdots-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 15px;
+    width: 100%;
+}
+.carousel-container .carousel-control .navdots-container .navdot {
+    display: flex;
+    border-radius: 50%;
+    border: 1px solid #a7a9ac;
+    background-color: white;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: background-color ease-in 125ms;
+}
+.carousel-container .carousel-control .navdots-container .navdot.active {
+    background-color: #2094d3;
+}
