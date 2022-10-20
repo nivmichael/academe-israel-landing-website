@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CompanySectionCardBase from "../CompanySectionCardBase/CompanySectionCardBase";
 import CardCarousel from "../CardCarousel/CardCarousel";
+import Slide from '../CardCarousel/Slide/Slide';
 import './AchievementsCard.css';
 import './AchievementsCardResponsive.css';
 
@@ -32,7 +33,13 @@ export default class AchievementsCard extends Component {
         return (
             <CompanySectionCardBase title={this.cardTitle}>
                 <div className="achievements-card-container">
-                    <CardCarousel slides={this.state.achievements} />
+                    <CardCarousel totalSlides={ this.state.achievements.length }>
+                        {
+                            this.state.achievements.map( (achievement, i) => {
+                                return <Slide key={i}>{ achievement }</Slide>
+                            })
+                        }
+                    </CardCarousel>
                 </div>
             </CompanySectionCardBase>
         )
