@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {cloneElement, Component} from 'react';
 import Navdot from "./Navdot/Navdot";
 import './CardCarousel.css';
 import './CardCarouselResponsive.css';
@@ -8,15 +8,9 @@ export default class CardCarousel extends Component {
         super(props);
 
         this.state = {
-            slides: Array.isArray(props.slides) ? props.slides : false,
-            totalSlides: props.slides ? props.slides.length : 0,
+            totalSlides: props.totalSlides ? props.totalSlides : 0,
             currentSlide: 0
         }
-
-        this.nextSlide = this.nextSlide.bind(this);
-        this.previousSlide = this.previousSlide.bind(this);
-        this.navigateByNavdot = this.navigateByNavdot.bind(this);
-        this.renderNavdots = this.renderNavdots.bind(this);
     }
 
     nextSlide (e) {
@@ -54,19 +48,25 @@ export default class CardCarousel extends Component {
         this.setState({ ...this.state, currentSlide });
     }
 
-    renderNavdots (slides) {
-        if (!slides) {
-            return false;
+    renderNavdots () {
+        let navdots = [];
+
+        for (let i = 0; i < this.state.totalSlides; i++) {
+            navdots.push(
+                <Navdot isActive={i === this.state.currentSlide}
+                                 onClickNavigate={this.navigateByNavdot}
+                                 slideIndex={i}
+                                 key={i} />
+            );
         }
 
-        return slides.map( (slide, i) => {
-            return (
-                <Navdot isActive={i === this.state.currentSlide}
-                        onClickNavigate={this.navigateByNavdot}
-                        slideIndex={i}
-                        key={i} />
-            )
-        })
+        return navdots;
+    }
+
+    propertifySlides (slideElementsArray) {
+        return slideElementsArray.map( (slideElement, i) => {
+            return cloneElement(slideElement, { isActive: this.state.currentSlide === i })
+        });
     }
 
     render() {
@@ -74,9 +74,8 @@ export default class CardCarousel extends Component {
             <div className="carousel-container">
                 <div className="carousel">
                     {
-                        this.state.slides.map( (slide, i) => {
-                            return <div key={i} className="slide">{ slide }</div>
-                        })
+                        /*  Slides go here */
+                        this.propertifySlides(this.props.children)
                     }
                 </div>
                 <div className="carousel-control">
@@ -85,9 +84,7 @@ export default class CardCarousel extends Component {
                                 onClick={ (e) => this.previousSlide(e) }>&lt;</button>
                     </div>
                     <div className="navdots-container">
-                        {
-                            this.renderNavdots(this.state.slides)
-                        }
+                        { this.renderNavdots() }
                     </div>
                     <div className="navarrow-container left">
                         <button className={ this.state.currentSlide === this.state.totalSlides-1 ? 'navarrow disabled' : 'navarrow' }
