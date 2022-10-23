@@ -14,7 +14,6 @@ import Footer from "../../components/Footer/Footer";
 import 'react-toastify/dist/ReactToastify.css';
 import './CompanyPage.css';
 import './CompanyPageResponsive.css';
-import CompanySectionCardBase from "../../components/CompanySectionCards/CompanySectionCardBase/CompanySectionCardBase";
 import JobCard from "../../components/JobCard/JobCard";
 import AboutUsCard from "../../components/CompanySectionCards/AboutUsCard/AboutUsCard";
 import BenefitsCard from "../../components/CompanySectionCards/BenefitsCard/BenefitsCard";
