@@ -1,0 +1,13 @@
+.videos-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.videos-card-container iframe {
+    width: 75%;
+    height: 300px;
+    border: 0;
+}
