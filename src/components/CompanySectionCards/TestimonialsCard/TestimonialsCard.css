@@ -1,0 +1,37 @@
+.testimonials-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.testimonials-card-container .testimonial-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #58595B;
+    font-size: 1em;
+}
+.testimonials-card-container .testimonial-row.empty:before {
+    content: '\0000a0';     /* non breaking space */
+}
+
+.testimonials-card-container .testimonial-row.file > img {
+    height: 12.8vh;
+    width: 6.25vw;
+    border-radius: 50%;
+    align-self: center;
+    object-fit: cover;
+    border: 1px solid #2194d3;
+}
+.testimonials-card-container .testimonial-row.name {
+    font-weight: bold;
+}
+.testimonials-card-container .testimonial-row.job-title {
+
+}
+.testimonials-card-container .testimonial-row.text {
+    height: 12vh;
+}
