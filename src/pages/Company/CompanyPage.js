@@ -28,16 +28,6 @@ export default class CompanyPage extends Component {
     cancelToken;
     source;
 
-    cardLabels = {
-        'about': 'אודות/מי אנחנו',
-        'achievements': 'השגים',
-        'youtube': 'סרטונים',
-        'testimonials': 'עובדים מספרים',
-        'benefits': 'הטבות',
-        'facts': 'עובדות מעניינות',
-        'gallery': 'גלריית תמונות'
-    }
-
     constructor() {
         super();
 
