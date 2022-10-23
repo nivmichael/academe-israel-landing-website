@@ -136,7 +136,7 @@ export default class CompanyPage extends Component {
                             ( this.state.isLoading === false && this.state.company.id )
                             &&
                             <div className="company-page-main-container" ref="mainContainerRef">
-                                <div className="pure-u-1 section">
+                                <div className="pure-u-1 section cover-container">
                                     <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.cover} alt="company-cover" />
                                 </div>
                                 <div className="pure-u-1 section details">

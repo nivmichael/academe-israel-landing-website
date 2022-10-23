@@ -27,6 +27,15 @@
     padding-bottom: 30px;
 }
 
+#company-page-component .company-page-main-container .section.cover-container {
+    overflow: hidden;
+    max-height: 48vh;
+}
+#company-page-component .company-page-main-container .section.cover-container > img {
+    width: 100%;
+    object-fit: cover;
+}
+
 #company-page-component .company-page-main-container .section.details {
     flex-direction: row;
     align-items: center;
