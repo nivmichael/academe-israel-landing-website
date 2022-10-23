@@ -22,6 +22,7 @@ import VideosCard from "../../components/CompanySectionCards/VideosCard/VideosCa
 import GalleryCard from "../../components/CompanySectionCards/GalleryCard/GalleryCard";
 import FactsCard from "../../components/CompanySectionCards/FactsCard/FactsCard";
 import TestimonialsCard from "../../components/CompanySectionCards/TestimonialsCard/TestimonialsCard";
+import SocialMediaButton from "../../components/SocialMediaButton/SocialMediaButton";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -140,11 +141,11 @@ export default class CompanyPage extends Component {
                                         <div>{ this.state.company.companyIndustry }</div>
                                     </div>
                                     <div className="pure-u-1-5 company-social-links-container">
-                                        <img className="pure-img" name="twitter" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/social-media/twitter_outline_light.png'} alt="company-social" />
-                                        <img className="pure-img" name="youtube" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/social-media/youtube_outline_light.png'} alt="company-social" />
-                                        <img className="pure-img" name="instagram" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/social-media/instagram_outline_light.png'} alt="company-social" />
-                                        <img className="pure-img" name="linkedin" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/social-media/linkedin_outline_light.png'} alt="company-social" />
-                                        <img className="pure-img" name="facebook" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/social-media/facebook_outline_light.png'} alt="company-social" />
+                                        <SocialMediaButton name="twitter" link={ this.state.company.sections.social[1].social_twitter } />
+                                        <SocialMediaButton name="youtube" link={ this.state.company.sections.social[1].social_youtube } />
+                                        <SocialMediaButton name="instagram" link={ this.state.company.sections.social[1].social_instagram } />
+                                        <SocialMediaButton name="facebook" link={ this.state.company.sections.social[1].social_facebook } />
+                                        <SocialMediaButton name="linkedin" link={ this.state.company.sections.social[1].social_linkedin } />
                                     </div>
                                     <div className="pure-u-1-5"></div>
                                 </div>
