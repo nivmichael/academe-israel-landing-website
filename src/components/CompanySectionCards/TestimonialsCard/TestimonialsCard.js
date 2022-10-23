@@ -16,8 +16,6 @@ export default class TestimonialsCard extends Component {
         this.state = {
             testimonials: this.onInitPrepareSlidesData(props.testimonials)
         }
-
-        console.log(this.state.testimonials)
     }
 
     onInitPrepareSlidesData (slides) {
