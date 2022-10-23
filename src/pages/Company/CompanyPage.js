@@ -19,6 +19,7 @@ import JobCard from "../../components/JobCard/JobCard";
 import AboutUsCard from "../../components/CompanySectionCards/AboutUsCard/AboutUsCard";
 import BenefitsCard from "../../components/CompanySectionCards/BenefitsCard/BenefitsCard";
 import AchievementsCard from "../../components/CompanySectionCards/AchievementsCard/AchievementsCard";
+import VideosCard from "../../components/CompanySectionCards/VideosCard/VideosCard";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -174,9 +175,8 @@ export default class CompanyPage extends Component {
 
                                     <AchievementsCard achievements={this.state.company.sections.achievements} />
 
-                                    <CompanySectionCardBase id="youtube" isFullRow={true} title={this.cardLabels.youtube}>
-                                        <div></div>
-                                    </CompanySectionCardBase>
+                                    <VideosCard videos={this.state.company.sections.youtube} />
+
                                     <CompanySectionCardBase id="testimonials" title={this.cardLabels.testimonials}>
                                         <div></div>
                                     </CompanySectionCardBase>
