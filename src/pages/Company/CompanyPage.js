@@ -20,6 +20,7 @@ import AboutUsCard from "../../components/CompanySectionCards/AboutUsCard/AboutU
 import BenefitsCard from "../../components/CompanySectionCards/BenefitsCard/BenefitsCard";
 import AchievementsCard from "../../components/CompanySectionCards/AchievementsCard/AchievementsCard";
 import VideosCard from "../../components/CompanySectionCards/VideosCard/VideosCard";
+import GalleryCard from "../../components/CompanySectionCards/GalleryCard/GalleryCard";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -186,9 +187,8 @@ export default class CompanyPage extends Component {
                                     <CompanySectionCardBase id="facts" title={this.cardLabels.facts}>
                                         <div></div>
                                     </CompanySectionCardBase>
-                                    <CompanySectionCardBase id="gallery" title={this.cardLabels.gallery}>
-                                        <div></div>
-                                    </CompanySectionCardBase>
+
+                                    <GalleryCard gallery={this.state.company.sections.files.gallery} />
                                 </div>
                             </div>
                         }
