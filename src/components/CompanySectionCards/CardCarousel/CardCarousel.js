@@ -2,6 +2,7 @@ import React, {cloneElement, Component} from 'react';
 import Navdot from "./Navdot/Navdot";
 import './CardCarousel.css';
 import './CardCarouselResponsive.css';
+import Controls from "./Controls/Controls";
 
 export default class CardCarousel extends Component {
     constructor(props) {
@@ -13,6 +14,8 @@ export default class CardCarousel extends Component {
         }
 
         this.navigateByNavdot = this.navigateByNavdot.bind(this);
+        this.previousSlide = this.previousSlide.bind(this);
+        this.nextSlide = this.nextSlide.bind(this);
     }
 
     nextSlide (e) {
@@ -83,19 +86,11 @@ export default class CardCarousel extends Component {
                         this.propertifySlides(this.props.children)
                     }
                 </div>
-                <div className="carousel-control">
-                    <div className="navarrow-container right">
-                        <button className={ this.state.currentSlide === 0 ? 'navarrow disabled' : 'navarrow' }
-                                onClick={ (e) => this.previousSlide(e) }>&lt;</button>
-                    </div>
-                    <div className="navdots-container">
-                        { this.renderNavdots() }
-                    </div>
-                    <div className="navarrow-container left">
-                        <button className={ this.state.currentSlide === this.state.totalSlides-1 ? 'navarrow disabled' : 'navarrow' }
-                                onClick={ (e) => this.nextSlide(e) }>&gt;</button>
-                    </div>
-                </div>
+                <Controls currentSlide={ this.state.currentSlide }
+                          totalSlides={ this.state.totalSlides }
+                          navigateByNavdot={ this.navigateByNavdot }
+                          previousSlide={ this.previousSlide }
+                          nextSlide={ this.nextSlide } />
             </div>
         )
     }
