@@ -1,0 +1,37 @@
+.carousel-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 4px 0 2px;
+}
+.carousel-control .navarrow-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 33%;
+}
+.carousel-control .navarrow-container.right {
+    justify-content: flex-start;
+}
+.carousel-control .navarrow-container.left {
+    justify-content: flex-end;
+}
+
+.carousel-control .navarrow-container .navarrow {
+    border-radius: 50%;
+    border: none;
+    background-color: #a7a9ac;
+    width: 45px;
+    height: 45px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: opacity ease-in 125ms;
+}
+.carousel-control .navarrow-container .navarrow.disabled {
+    cursor: default;
+    opacity: 0.6;
+    pointer-events: none;
+}
