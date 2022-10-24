@@ -1,10 +1,47 @@
 /*
+    ##Device = Smartphones, iPhone, portrait 480x320 phones
+    ##Screen = B/w 320px
+*/
+@media (min-width: 320px) {
+    .job-card {
+        width: 85%;
+        margin: 1.5%;
+    }
+
+}
+
+/*
+    ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+    ##Screen = B/w 481px
+*/
+@media (min-width: 481px) {
+    .job-card {
+        width: 80%;
+        margin: 1.5%;
+    }
+
+}
+
+/*
+    ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+    ##Screen = B/w 641px
+*/
+@media (min-width: 641px) {
+    .job-card {
+        width: 70%;
+        margin: 1.5%;
+    }
+
+}
+
+/*
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-
-
+    .job-card {
+        width: 55%;
+    }
 }
 
 /*
@@ -12,7 +49,10 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
+    .job-card {
+        flex: 0 0 40%;
+        margin: 1.25%;
+    }
 }
 
 /*
@@ -30,6 +70,9 @@
     ##Device = Desktops
     ##Screen = 1281px to higher resolution desktops
 */
-@media (min-width: 1281px) {
-
+@media (min-width: 1281px) and (max-width: 1590px) {
+    .job-card {
+        flex: 0 0 32%;
+        margin: 1.25%;
+    }
 }
