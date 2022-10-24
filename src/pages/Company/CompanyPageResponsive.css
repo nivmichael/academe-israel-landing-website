@@ -1,9 +1,48 @@
 /*
+    ##Device = Smartphones, iPhone, portrait 480x320 phones
+    ##Screen = B/w 320px to 480px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    #company-page-component .company-page-main-container .section.headline {
+        font-size: 1em;
+    }
+    #company-page-component .company-page-main-container .section.details {
+        flex-direction: column;
+    }
+}
+
+/*
+    ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+    ##Screen = B/w 481px to 640px
+*/
+@media (min-width: 481px) and (max-width: 640px) {
+    #company-page-component .company-page-main-container .section.headline {
+        font-size: 1em;
+    }
+    #company-page-component .company-page-main-container .section.details {
+        flex-direction: column;
+    }
+}
+
+/*
+    ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+    ##Screen = B/w 641px
+*/
+@media (min-width: 641px) {
+    #company-page-component .company-page-main-container .section.headline {
+        font-size: 1.3em;
+    }
+
+}
+
+/*
     ##Device = Tablets, Ipads (portrait)
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-
+    #company-page-component .company-page-main-container .section.headline {
+        font-size: 1.3em;
+    }
 
 }
 

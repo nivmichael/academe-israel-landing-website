@@ -130,7 +130,7 @@ export default class CompanyPage extends Component {
                                     <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.cover} alt="company-cover" />
                                 </div>
                                 <div className="pure-u-1 section details">
-                                    <div className="pure-u-1-5"></div>
+                                    <div className="pure-u-1-12 pure-u-sm-1-24"></div>
                                     <div className="pure-u-1-5">
                                         <div className="company-logo-container">
                                             <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.logo} alt="company-logo" />
@@ -140,14 +140,16 @@ export default class CompanyPage extends Component {
                                         <div>{ this.state.company.companyName }</div>
                                         <div>{ this.state.company.companyIndustry }</div>
                                     </div>
-                                    <div className="pure-u-1-5 company-social-links-container">
-                                        <SocialMediaButton name="twitter" link={ this.state.company.sections.social[1].social_twitter } />
-                                        <SocialMediaButton name="youtube" link={ this.state.company.sections.social[1].social_youtube } />
-                                        <SocialMediaButton name="instagram" link={ this.state.company.sections.social[1].social_instagram } />
-                                        <SocialMediaButton name="facebook" link={ this.state.company.sections.social[1].social_facebook } />
-                                        <SocialMediaButton name="linkedin" link={ this.state.company.sections.social[1].social_linkedin } />
+                                    <div className="pure-u-1-5">
+                                        <div className="company-social-links-container">
+                                            <SocialMediaButton name="twitter" link={ this.state.company.sections.social[1].social_twitter } />
+                                            <SocialMediaButton name="youtube" link={ this.state.company.sections.social[1].social_youtube } />
+                                            <SocialMediaButton name="instagram" link={ this.state.company.sections.social[1].social_instagram } />
+                                            <SocialMediaButton name="facebook" link={ this.state.company.sections.social[1].social_facebook } />
+                                            <SocialMediaButton name="linkedin" link={ this.state.company.sections.social[1].social_linkedin } />
+                                        </div>
                                     </div>
-                                    <div className="pure-u-1-5"></div>
+                                    <div className="pure-u-1-12 pure-u-sm-1-24"></div>
                                 </div>
                                 <div className="pure-u-1 section headline">
                                     { this.state.company.companyHeadline }
