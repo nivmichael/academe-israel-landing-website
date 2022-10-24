@@ -1,0 +1,97 @@
+/*
+    ##Device = Smartphones, iPhone, portrait 480x320 phones
+    ##Screen = B/w 320px
+*/
+@media (min-width: 320px) {
+    .company-section-card.section-card {
+        width: 85%;
+    }
+    .company-section-card.section-card.full-row {
+        width: 85%;
+    }
+    .videos-card-container iframe {
+        width: 100% !important;
+    }
+}
+
+/*
+    ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+    ##Screen = B/w 481px
+*/
+@media (min-width: 481px) {
+    .company-section-card.section-card {
+        width: 85%;
+    }
+    .company-section-card.section-card.full-row {
+        width: 85%;
+    }
+    .videos-card-container iframe {
+        width: 100% !important;
+    }
+}
+
+/*
+    ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+    ##Screen = B/w 641px
+*/
+@media (min-width: 641px) {
+    .company-section-card.section-card {
+        width: 85%;
+    }
+    .company-section-card.section-card.full-row {
+        width: 85%;
+    }
+    .videos-card-container iframe {
+        width: 100% !important;
+    }
+}
+
+/*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .company-section-card.section-card {
+        width: 75%;
+    }
+    .company-section-card.section-card.full-row {
+        width: 75%;
+    }
+    .videos-card-container iframe {
+        width: 85% !important;
+    }
+}
+
+/*
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .company-section-card.section-card {
+        width: 35.3%;
+    }
+    .company-section-card.section-card.full-row {
+        width: 77.7%;
+    }
+}
+
+/*
+    ##Device = Laptops, Desktops
+    ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .company-section-card.section-card {
+        width: 35.3%;
+    }
+    .company-section-card.section-card.full-row {
+        width: 77.7%;
+    }
+}
+
+/*
+    ##Device = Desktops
+    ##Screen = 1281px to higher resolution desktops
+*/
+@media (min-width: 1281px) {
+
+}
