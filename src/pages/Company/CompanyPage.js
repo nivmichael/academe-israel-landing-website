@@ -126,53 +126,61 @@ export default class CompanyPage extends Component {
                             ( this.state.isLoading === false && this.state.company.id )
                             &&
                             <div className="company-page-main-container">
-                                <div className="pure-u-1 section cover-container">
-                                    <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.cover} alt="company-cover" />
+                                <div className="pure-u-1">
+                                    <div className="section cover-container">
+                                        <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.cover} alt="company-cover" />
+                                    </div>
                                 </div>
-                                <div className="pure-u-1 section details">
-                                    <div className="pure-u-1-12 pure-u-sm-1-24"></div>
-                                    <div className="pure-u-1-5">
-                                        <div className="company-logo-container">
-                                            <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.logo} alt="company-logo" />
+                                <div className="pure-u-1">
+                                    <div className="section details">
+                                        <div className="pure-u-1-8">
+                                            <div className="company-logo-container">
+                                                <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.logo} alt="company-logo" />
+                                            </div>
+                                        </div>
+                                        <div className="pure-u-2-5">
+                                            <div>{ this.state.company.companyName }</div>
+                                            <div>{ this.state.company.companyIndustry }</div>
+                                        </div>
+                                        <div className="pure-u-1-5">
+                                            <SocialMediaBar links={ this.state.company.sections.social } />
                                         </div>
                                     </div>
-                                    <div className="pure-u-1-5">
-                                        <div>{ this.state.company.companyName }</div>
-                                        <div>{ this.state.company.companyIndustry }</div>
+                                </div>
+                                <div className="pure-u-1">
+                                    <div className="section headline">
+                                        { this.state.company.companyHeadline }
                                     </div>
-                                    <div className="pure-u-1-5">
-                                        <SocialMediaBar links={ this.state.company.sections.social } />
+                                </div>
+                                <div className="pure-u-1">
+                                    <div className="section career">
+                                        {
+                                            this.state.company.jobs.map((job) => {
+                                                return <JobCard data={ job }
+                                                                companyLogo={ this.state.company.sections.files.logo }
+                                                                companyName={ this.state.company.companyName }
+                                                                key={ job.jobId } />
+                                            })
+                                        }
                                     </div>
-                                    <div className="pure-u-1-12 pure-u-sm-1-24"></div>
                                 </div>
-                                <div className="pure-u-1 section headline">
-                                    { this.state.company.companyHeadline }
-                                </div>
-                                <div className="pure-u-1 section career">
-                                    {
-                                        this.state.company.jobs.map((job) => {
-                                            return <JobCard data={ job }
-                                                            companyLogo={ this.state.company.sections.files.logo }
-                                                            companyName={ this.state.company.companyName }
-                                                            key={ job.jobId } />
-                                        })
-                                    }
-                                </div>
-                                <div className="pure-u-1 section cards">
-                                    <AboutUsCard description={ this.state.company.companyDescription }
-                                                 presentation={this.state.company.sections.files.presentation} />
+                                <div className="pure-u-1">
+                                    <div className="section cards">
+                                        <AboutUsCard description={ this.state.company.companyDescription }
+                                                     presentation={this.state.company.sections.files.presentation} />
 
-                                    <AchievementsCard achievements={this.state.company.sections.achievements} />
+                                        <AchievementsCard achievements={this.state.company.sections.achievements} />
 
-                                    <VideosCard videos={this.state.company.sections.youtube} />
+                                        <VideosCard videos={this.state.company.sections.youtube} />
 
-                                    <TestimonialsCard testimonials={this.state.company.sections.testimonials} />
+                                        <TestimonialsCard testimonials={this.state.company.sections.testimonials} />
 
-                                    <BenefitsCard benefits={this.state.company.sections.benefits} />
+                                        <BenefitsCard benefits={this.state.company.sections.benefits} />
 
-                                    <FactsCard facts={this.state.company.sections.facts} />
+                                        <FactsCard facts={this.state.company.sections.facts} />
 
-                                    <GalleryCard gallery={this.state.company.sections.files.gallery} />
+                                        <GalleryCard gallery={this.state.company.sections.files.gallery} />
+                                    </div>
                                 </div>
                             </div>
                         }
