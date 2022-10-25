@@ -138,11 +138,11 @@ export default class CompanyPage extends Component {
                                                 <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.logo} alt="company-logo" />
                                             </div>
                                         </div>
-                                        <div className="pure-u-2-5">
+                                        <div className="pure-u-3-8">
                                             <div>{ this.state.company.companyName }</div>
                                             <div>{ this.state.company.companyIndustry }</div>
                                         </div>
-                                        <div className="pure-u-1-5">
+                                        <div className="pure-u-1-8">
                                             <SocialMediaBar links={ this.state.company.sections.social } />
                                         </div>
                                     </div>
