@@ -54,17 +54,6 @@
     min-width: 7vw;
 }
 
-#company-page-component .company-page-main-container .section.details .company-social-links-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#company-page-component .company-page-main-container .section.details .company-social-links-container > img {
-    margin: 0 0.1em;
-}
-
 #company-page-component .company-page-main-container .section.headline {
     justify-content: center;
     background: #DEDEDE;

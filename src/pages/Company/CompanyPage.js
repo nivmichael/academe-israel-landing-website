@@ -22,7 +22,7 @@ import VideosCard from "../../components/CompanySectionCards/VideosCard/VideosCa
 import GalleryCard from "../../components/CompanySectionCards/GalleryCard/GalleryCard";
 import FactsCard from "../../components/CompanySectionCards/FactsCard/FactsCard";
 import TestimonialsCard from "../../components/CompanySectionCards/TestimonialsCard/TestimonialsCard";
-import SocialMediaButton from "../../components/SocialMediaButton/SocialMediaButton";
+import SocialMediaBar from "../../components/SocialMediaBar/SocialMediaBar";
 
 export default class CompanyPage extends Component {
     cancelToken;
@@ -141,13 +141,7 @@ export default class CompanyPage extends Component {
                                         <div>{ this.state.company.companyIndustry }</div>
                                     </div>
                                     <div className="pure-u-1-5">
-                                        <div className="company-social-links-container">
-                                            <SocialMediaButton name="twitter" link={ this.state.company.sections.social[1].social_twitter } />
-                                            <SocialMediaButton name="youtube" link={ this.state.company.sections.social[1].social_youtube } />
-                                            <SocialMediaButton name="instagram" link={ this.state.company.sections.social[1].social_instagram } />
-                                            <SocialMediaButton name="facebook" link={ this.state.company.sections.social[1].social_facebook } />
-                                            <SocialMediaButton name="linkedin" link={ this.state.company.sections.social[1].social_linkedin } />
-                                        </div>
+                                        <SocialMediaBar links={ this.state.company.sections.social } />
                                     </div>
                                     <div className="pure-u-1-12 pure-u-sm-1-24"></div>
                                 </div>
