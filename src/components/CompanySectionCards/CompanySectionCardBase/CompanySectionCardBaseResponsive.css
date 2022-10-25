@@ -2,7 +2,7 @@
     ##Device = Smartphones, iPhone, portrait 480x320 phones
     ##Screen = B/w 320px
 */
-@media (min-width: 320px) {
+@media (min-width: 320px) and (max-width: 480px) {
     .company-section-card.section-card {
         width: 85%;
     }
@@ -18,7 +18,7 @@
     ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
     ##Screen = B/w 481px
 */
-@media (min-width: 481px) {
+@media (min-width: 481px) and (max-width: 640px) {
     .company-section-card.section-card {
         width: 85%;
     }
@@ -34,7 +34,7 @@
     ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
     ##Screen = B/w 641px
 */
-@media (min-width: 641px) {
+@media (min-width: 641px) and (max-width: 767px) {
     .company-section-card.section-card {
         width: 85%;
     }
