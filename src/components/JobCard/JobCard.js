@@ -34,11 +34,11 @@ export default function JobCard (props) {
                     </div>
                     <div className="details">
                         <div className="detail-container">
-                            <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/industry.png' } alt="industry"/>
+                            <img className="pure-img location-industry-icon" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/industry.png' } alt="industry"/>
                             <div>{ props.data.employment }</div>
                         </div>
-                        <div>
-                            <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/location.png' } alt="locations"/>
+                        <div className="detail-container">
+                            <img className="pure-img location-industry-icon" src={CONST_UNIVERSITY_BASE_URL + 'dev.academe.wanted.co.il/images/icons/location.png' } alt="locations"/>
                             <div>{ props.data.locationFormatted }</div>
                         </div>
                     </div>

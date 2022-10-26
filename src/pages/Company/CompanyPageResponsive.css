@@ -1,74 +1,151 @@
-/*
-    ##Device = Smartphones, iPhone, portrait 480x320 phones
-    ##Screen = B/w 320px to 480px
-*/
-@media (min-width: 320px) and (max-width: 480px) {
-    #company-page-component .company-page-main-container .section.headline {
-        font-size: 1em;
+/*!**/
+/*    ##Device = Smartphones, iPhone, portrait 480x320 phones*/
+/*    ##Screen = B/w 320px to 480px*/
+/**!*/
+/*@media (min-width: 320px) and (max-width: 480px) {*/
+/*    #company-page-component .company-page-main-container .section.headline {*/
+/*        font-size: 1em;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-general-details-container {*/
+/*        text-align: center;*/
+/*        margin: 10px 0;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-logo-container {*/
+/*        justify-content: center;*/
+/*    }*/
+/*}*/
+
+/*!**/
+/*    ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.*/
+/*    ##Screen = B/w 481px to 640px*/
+/**!*/
+/*@media (min-width: 481px) and (max-width: 640px) {*/
+/*    #company-page-component .company-page-main-container .section.headline {*/
+/*        font-size: 1em;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-general-details-container {*/
+/*        text-align: center;*/
+/*        margin: 10px 0;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-logo-container {*/
+/*        justify-content: center;*/
+/*    }*/
+/*}*/
+
+/*!**/
+/*    ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones*/
+/*    ##Screen = B/w 641px*/
+/**!*/
+/*@media (min-width: 641px) and (max-width: 767px) {*/
+/*    #company-page-component .company-page-main-container .section.headline {*/
+/*        font-size: 1.3em;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-general-details-container {*/
+/*        text-align: center;*/
+/*        margin: 10px 0;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-logo-container {*/
+/*        justify-content: center;*/
+/*    }*/
+/*}*/
+
+/*!**/
+/*    ##Device = Tablets, Ipads (portrait)*/
+/*    ##Screen = B/w 768px to 1024px*/
+/**!*/
+/*@media (min-width: 768px) and (max-width: 1024px) {*/
+/*    #company-page-component .company-page-main-container .section.headline {*/
+/*        font-size: 1.3em;*/
+/*    }*/
+/*    #company-page-component .company-page-main-container .section.details .company-general-details-container {*/
+/*        text-align: center;*/
+/*    }*/
+/*}*/
+
+/*!**/
+/*    ##Device = Tablets, Ipads (landscape)*/
+/*    ##Screen = B/w 768px to 1024px*/
+/**!*/
+/*@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {*/
+
+/*}*/
+
+/*!**/
+/*    ##Device = Laptops, Desktops*/
+/*    ##Screen = B/w 1025px to 1280px*/
+/**!*/
+/*@media (min-width: 1025px) and (max-width: 1280px) {*/
+/*    #company-page-component .company-page-main-container .section {*/
+/*        padding-top: 15px;*/
+/*        padding-bottom: 15px;*/
+/*    }*/
+/*}*/
+
+/*!**/
+/*    ##Device = Desktops*/
+/*    ##Screen = 1281px to higher resolution desktops*/
+/**!*/
+/*@media (min-width: 1281px) {*/
+
+/*}*/
+
+@media screen and (min-width: 35.5em) {
+        /*#company-page-component .company-page-main-container .section.headline {*/
+        /*    font-size: 1em;*/
+        /*}*/
+        /*#company-page-component .company-page-main-container .section.details {*/
+        /*    flex-direction: column;*/
+        /*}*/
+        /*#company-page-component .company-page-main-container .section.details .company-general-details-container {*/
+        /*    text-align: center;*/
+        /*    margin: 10px 0;*/
+        /*}*/
+        /*#company-page-component .company-page-main-container .section.details .company-logo-container {*/
+        /*    justify-content: center;*/
+        /*}*/
+    #company-page-component .company-page-main-container .section.cards {
+        padding: 0 8% 2%;
     }
+}
+
+@media screen and (min-width: 48em) {
+        /*#company-page-component .company-page-main-container .section.headline {*/
+        /*    font-size: 1em;*/
+        /*}*/
+        /*#company-page-component .company-page-main-container .section.details {*/
+        /*    flex-direction: column;*/
+        /*}*/
+        /*#company-page-component .company-page-main-container .section.details .company-general-details-container {*/
+        /*    text-align: center;*/
+        /*    margin: 10px 0;*/
+        /*}*/
+        /*#company-page-component .company-page-main-container .section.details .company-logo-container {*/
+        /*    justify-content: center;*/
+        /*}*/
+}
+
+@media screen and (min-width: 64em) {
+        /*#company-page-component .company-page-main-container .section {*/
+        /*    padding-top: 15px;*/
+        /*    padding-bottom: 15px;*/
+        /*}*/
     #company-page-component .company-page-main-container .section.details {
-        flex-direction: column;
+        padding: 0 17% 1%;
+    }
+    #company-page-component .company-page-main-container .section.career {
+        padding: 2% 17% 1%;
+    }
+    #company-page-component .company-page-main-container .section.cards {
+        padding: 0 17% 2%;
     }
 }
 
-/*
-    ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
-    ##Screen = B/w 481px to 640px
-*/
-@media (min-width: 481px) and (max-width: 640px) {
-    #company-page-component .company-page-main-container .section.headline {
-        font-size: 1em;
-    }
-    #company-page-component .company-page-main-container .section.details {
-        flex-direction: column;
-    }
-}
-
-/*
-    ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
-    ##Screen = B/w 641px
-*/
-@media (min-width: 641px) {
-    #company-page-component .company-page-main-container .section.headline {
-        font-size: 1.3em;
-    }
-
-}
-
-/*
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) {
-    #company-page-component .company-page-main-container .section.headline {
-        font-size: 1.3em;
-    }
-
-}
-
-/*
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-
-}
-
-/*
-    ##Device = Laptops, Desktops
-    ##Screen = B/w 1025px to 1280px
-*/
-@media (min-width: 1025px) and (max-width: 1280px) {
-    #company-page-component .company-page-main-container .section {
-        padding-top: 15px;
-        padding-bottom: 15px;
-    }
-}
-
-/*
-    ##Device = Desktops
-    ##Screen = 1281px to higher resolution desktops
-*/
-@media (min-width: 1281px) {
+@media screen and (min-width: 80em) {
 
 }

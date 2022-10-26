@@ -133,16 +133,18 @@ export default class CompanyPage extends Component {
                                 </div>
                                 <div className="pure-u-1">
                                     <div className="section details">
-                                        <div className="pure-u-lg-1-8 pure-u-md-5-24 pure-u-sm-3-3">
+                                        <div className="pure-u-lg-1-6 pure-u-md-5-24 pure-u-sm-1">
                                             <div className="company-logo-container">
                                                 <img className="pure-img" src={CONST_UNIVERSITY_BASE_URL + this.state.company.sections.files.logo} alt="company-logo" />
                                             </div>
                                         </div>
-                                        <div className="pure-u-lg-3-8 pure-u-md-9-24 pure-u-sm-3-3">
-                                            <div>{ this.state.company.companyName }</div>
-                                            <div>{ this.state.company.companyIndustry }</div>
+                                        <div className="pure-u-lg-3-8 pure-u-md-9-24 pure-u-sm-1">
+                                            <div className="company-general-details-container">
+                                                <div>{ this.state.company.companyName }</div>
+                                                <div>{ this.state.company.companyIndustry }</div>
+                                            </div>
                                         </div>
-                                        <div className="pure-u-lg-1-8 pure-u-md-6-24 pure-u-sm-3-3">
+                                        <div className="pure-u-lg-3-8 pure-u-md-6-24 pure-u-sm-1">
                                             <SocialMediaBar links={ this.state.company.sections.social } />
                                         </div>
                                     </div>
