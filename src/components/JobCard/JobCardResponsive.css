@@ -1,57 +1,28 @@
-/*
-    ##Device = Smartphones, iPhone, portrait 480x320 phones
-    ##Screen = B/w 320px
-*/
-@media (min-width: 320px) and (max-width: 480px) {
+@media screen and (max-width: 35.49em) {
     .job-card {
-        width: 85%;
-        margin: 1.5%;
+        flex: 1 0 75%;
     }
-
-}
-
-/*
-    ##Device = portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
-    ##Screen = B/w 481px
-*/
-@media (min-width: 481px) and (max-width: 640px) {
-    .job-card {
-        width: 80%;
-        margin: 1.5%;
+    .job-card .body .company-details .logo {
+        width: auto;
     }
-
+    .job-card:nth-child(3n+1) {
+        margin-right: 1.25%;
+    }
 }
 
 /*
     ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
     ##Screen = B/w 641px
 */
-@media (min-width: 641px) and (max-width: 767px) {
+@media screen and (min-width: 35.5em) {
     .job-card {
-        width: 70%;
-        margin: 1.5%;
+        flex: 1 0 75%;
     }
-
-}
-
-/*
-    ##Device = Tablets, Ipads (portrait)
-    ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) {
-    .job-card {
-        width: 55%;
+    .job-card .body .company-details .logo {
+        width: auto;
     }
-}
-
-/*
-    ##Device = Tablets, Ipads (landscape)
-    ##Screen = B/w 768px to 1024px
-*/
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    .job-card {
-        flex: 0 0 40%;
-        margin: 1.25%;
+    .job-card:nth-child(3n+1) {
+        margin-right: 1.25%;
     }
 }
 
@@ -59,10 +30,9 @@
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
 */
-@media (min-width: 1025px) and (max-width: 1280px) {
+@media screen and (min-width: 48em) {
     .job-card {
-        flex: 0 0 40%;
-        margin: 1.25%;
+        flex: 1 0 auto;
     }
 }
 
@@ -70,9 +40,23 @@
     ##Device = Desktops
     ##Screen = 1281px to higher resolution desktops
 */
-@media (min-width: 1281px) and (max-width: 1590px) {
+@media screen and (min-width: 64em) {
     .job-card {
-        flex: 0 0 32%;
-        margin: 1.25%;
+        flex: 0 0 47.5%;
+    }
+    .job-card .body .company-details .logo {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 80em) {
+    .job-card {
+        flex: 0 0 32.5%;
+    }
+    .job-card:nth-child(3n+1) {
+        margin-right: 0;
+    }
+    .job-card .body .company-details .logo {
+        width: auto;
     }
 }
