@@ -149,7 +149,7 @@ export default class CompanyPage extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="pure-u-1">
+                                <div className="pure-u-1 center">
                                     <div className="section headline">
                                         { this.state.company.companyHeadline }
                                     </div>

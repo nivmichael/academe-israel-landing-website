@@ -110,7 +110,13 @@
         /*    justify-content: center;*/
         /*}*/
     #company-page-component .company-page-main-container .section.cards {
-        padding: 0 8% 2%;
+        padding: 2% 8% 8%;
+    }
+    #company-page-component .company-page-main-container .section.details {
+        padding: 0 8% 1%;
+    }
+    #company-page-component .company-page-main-container .section.career {
+        padding: 1% 8% 1%;
     }
 }
 
