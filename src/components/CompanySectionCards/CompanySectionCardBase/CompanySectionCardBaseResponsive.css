@@ -3,9 +3,9 @@
     ##Screen = B/w 320px
 */
 @media (min-width: 320px) and (max-width: 480px) {
-    /*.company-section-card.section-card {*/
-    /*    width: 85%;*/
-    /*}*/
+    .company-section-card.section-card {
+        max-width: 100%;
+    }
     /*.company-section-card.section-card.full-row {*/
     /*    width: 85%;*/
     /*}*/
@@ -19,9 +19,9 @@
     ##Screen = B/w 481px
 */
 @media (min-width: 481px) and (max-width: 640px) {
-    /*.company-section-card.section-card {*/
-    /*    width: 85%;*/
-    /*}*/
+    .company-section-card.section-card {
+        max-width: 100%;
+    }
     /*.company-section-card.section-card.full-row {*/
     /*    width: 85%;*/
     /*}*/
@@ -35,9 +35,9 @@
     ##Screen = B/w 641px
 */
 @media (min-width: 641px) and (max-width: 767px) {
-    /*.company-section-card.section-card {*/
-    /*    width: 85%;*/
-    /*}*/
+    .company-section-card.section-card {
+        max-width: 100%;
+    }
     /*.company-section-card.section-card.full-row {*/
     /*    width: 85%;*/
     /*}*/
@@ -51,9 +51,9 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) {
-    /*.company-section-card.section-card {*/
-    /*    width: 75%;*/
-    /*}*/
+    .company-section-card.section-card {
+        max-width: 44.3%;
+    }
     /*.company-section-card.section-card.full-row {*/
     /*    width: 75%;*/
     /*}*/
