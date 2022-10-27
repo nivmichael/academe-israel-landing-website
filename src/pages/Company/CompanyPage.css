@@ -55,6 +55,11 @@
     min-width: 7vw;
 }
 
+#company-page-component .company-page-main-container .section.details .company-general-details-container > div:first-of-type {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
 #company-page-component .company-page-main-container .section.headline {
     justify-content: center;
     background: #DEDEDE;
