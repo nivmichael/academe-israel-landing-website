@@ -3,21 +3,12 @@ import './CompanySectionCardBase.css';
 import './CompanySectionCardBaseResponsive.css';
 
 export default function CompanySectionCardBase (props) {
-    const card = ['company-section-card', 'section-card'];
-    const base = ['pure-u-lg-11-24', 'pure-u-md-11-24', 'pure-u-sm-24-24'];
-    const full = ['full-width', 'pure-u-lg-24-24', 'pure-u-md-24-24', 'pure-u-sm-24-24'];
+    let card = ['company-section-card', 'section-card'];
+    let defaultWidth = ['pure-u-lg-11-24', 'pure-u-md-11-24', 'pure-u-sm-24-24'];
+    let fullWidth = ['full-width', 'pure-u-lg-24-24', 'pure-u-md-24-24', 'pure-u-sm-24-24'];
 
     function applyClassList () {
-        // const classList = ['company-section-card', 'section-card'];
-        let classList = ['company-section-card', 'section-card', 'pure-u-lg-11-24', 'pure-u-md-11-24', 'pure-u-sm-24-24'];
-        if (props.isFullRow) {
-            classList = ['company-section-card', 'section-card', 'full-width', 'pure-u-lg-24-24', 'pure-u-md-24-24', 'pure-u-sm-24-24'];
-            // classList.push('full-row');
-        } else if (props.isFullWidth) {
-            classList.push('full-width');
-        }
-
-        return classList.join(' ');
+        return  props.isFullRow ? card.concat(fullWidth).join(' ') : card.concat(defaultWidth).join(' ');
     }
 
     return (
