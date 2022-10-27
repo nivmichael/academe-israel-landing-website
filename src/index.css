@@ -22,3 +22,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 .bold_text {font-weight: bold}
+
+.dir-ltr {
+    direction: ltr;
+}
