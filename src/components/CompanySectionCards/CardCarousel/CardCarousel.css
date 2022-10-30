@@ -19,7 +19,7 @@
     scrollbar-width: none;  /* hides the scrollbar on firefox */
     height: 35vh;
     width: 100%;
-    position: relative;
+    /*position: relative;*/
 }
 .carousel-container .carousel::-webkit-scrollbar {  /* hides the scrollbar on chrome */
     display: none;
