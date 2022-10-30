@@ -5,6 +5,7 @@
 @media (min-width: 320px) and (max-width: 480px) {
     .company-section-card.section-card {
         max-width: 100%;
+        width: 100%;
     }
     /*.company-section-card.section-card.full-row {*/
     /*    width: 85%;*/
@@ -67,12 +68,10 @@
     ##Screen = B/w 768px to 1024px
 */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    /*.company-section-card.section-card {*/
-    /*    width: 35.3%;*/
-    /*}*/
-    /*.company-section-card.section-card.full-row {*/
-    /*    width: 77.7%;*/
-    /*}*/
+    .company-section-card.section-card {
+        min-height: 340px;
+        height: 340px;
+    }
 }
 
 /*
@@ -80,12 +79,7 @@
     ##Screen = B/w 1025px to 1280px
 */
 @media (min-width: 1025px) and (max-width: 1280px) {
-    /*.company-section-card.section-card {*/
-    /*    width: 35.3%;*/
-    /*}*/
-    /*.company-section-card.section-card.full-row {*/
-    /*    width: 77.7%;*/
-    /*}*/
+
 }
 
 /*
@@ -93,5 +87,8 @@
     ##Screen = 1281px to higher resolution desktops
 */
 @media (min-width: 1281px) {
-
+    .company-section-card.section-card {
+        min-height: 410px;
+        height: 410px;
+    }
 }
