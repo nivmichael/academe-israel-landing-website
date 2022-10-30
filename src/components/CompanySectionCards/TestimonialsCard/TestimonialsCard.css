@@ -18,9 +18,13 @@
     content: '\0000a0';     /* non breaking space */
 }
 
+.testimonials-card-container .testimonial-row.file {
+    height: 130px;
+    width: 130px;
+}
 .testimonials-card-container .testimonial-row.file > img {
-    height: 12.8vh;
-    width: 6.25vw;
+    height: 100%;
+    width: 100%;
     border-radius: 50%;
     align-self: center;
     object-fit: cover;
