@@ -5,8 +5,11 @@
     .job-card .body .company-details .logo {
         width: auto;
     }
+    .job-card {
+        margin: 1.25% 1.5%;
+    }
     .job-card:nth-child(3n+1) {
-        margin-right: 1.25%;
+        margin: 1.25% 1.5%;
     }
 }
 
