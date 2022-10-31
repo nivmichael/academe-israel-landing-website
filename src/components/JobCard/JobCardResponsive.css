@@ -1,31 +1,33 @@
-@media screen and (max-width: 35.49em) {
+/*
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
     .job-card {
-        flex: 1 0 75%;
+        flex: 0 0 47%;
+        max-height: 31.8vh;
+        height: 13.8vh;
     }
     .job-card .body .company-details .logo {
         width: auto;
     }
-    .job-card {
-        margin: 1.25% 1.5%;
-    }
-    .job-card:nth-child(3n+1) {
-        margin: 1.25% 1.5%;
+    .job-card .header .info {
+        font-size: 0.7em;
     }
 }
 
 /*
-    ##Device = portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
-    ##Screen = B/w 641px
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
 */
-@media screen and (min-width: 35.5em) {
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .job-card {
-        flex: 1 0 75%;
+        flex: 0 0 47%;
+        max-height: 31.8vh;
+        height: 31.8vh;
     }
     .job-card .body .company-details .logo {
         width: auto;
-    }
-    .job-card:nth-child(3n+1) {
-        margin-right: 1.25%;
     }
 }
 
@@ -33,28 +35,18 @@
     ##Device = Laptops, Desktops
     ##Screen = B/w 1025px to 1280px
 */
-@media screen and (min-width: 48em) {
-    .job-card {
-        flex: 1 0 auto;
-    }
+@media (min-width: 1025px) and (max-width: 1280px) {
+
 }
 
 /*
     ##Device = Desktops
     ##Screen = 1281px to higher resolution desktops
 */
-@media screen and (min-width: 64em) {
-    .job-card {
-        flex: 0 0 47.5%;
-    }
-    .job-card .body .company-details .logo {
-        width: auto;
-    }
-}
-
-@media screen and (min-width: 80em) {
+@media (min-width: 1281px) {
     .job-card {
         flex: 0 0 32.5%;
+        margin: 0 1.25% 1.25% 0;
     }
     .job-card:nth-child(3n+1) {
         margin-right: 0;

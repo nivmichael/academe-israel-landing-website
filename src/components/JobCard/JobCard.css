@@ -1,12 +1,11 @@
 .job-card {
     display: flex;
     flex-direction: column;
-    /*width: 21.3%;*/
     width: 32.5%;
     max-height: 14.8vh;
     height: 14.8vh;
-    /*margin: 1.25% 1.5%;*/
-    margin: 0 1.25% 1.25% 0;
+    flex: 1 0 75%;
+    margin: 1.25% 1.5%;
     padding: 5px 10px;
     border: 2px solid #2194CE;
     border-radius: 5px;
@@ -18,9 +17,6 @@
 }
 .job-card:hover {
     box-shadow: 0 2px 0 0 #2194d3;
-}
-.job-card:nth-child(3n+1) {
-    margin-right: 0;
 }
 
 .job-card .header {

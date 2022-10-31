@@ -37,15 +37,15 @@
 }
 
 #company-page-component .company-page-main-container .section.details {
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
+    padding: 3% 2%;
+    text-align: center;
 }
 #company-page-component .company-page-main-container .section.details .company-logo-container {
-    /*flex: 1;*/
-    /*max-width: 350px;*/
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
 }
 #company-page-component .company-page-main-container .section.details .company-logo-container > img {
     max-width: 140px;
@@ -54,7 +54,9 @@
     border-radius: 5px;
     min-width: 7vw;
 }
-
+#company-page-component .company-page-main-container .section.details .company-general-details-container {
+    margin: 6px auto;
+}
 #company-page-component .company-page-main-container .section.details .company-general-details-container > div:first-of-type {
     font-size: 1.5em;
     font-weight: bold;
@@ -63,23 +65,23 @@
 #company-page-component .company-page-main-container .section.headline {
     justify-content: center;
     background: #DEDEDE;
-    font-size: 1.7em;
+    font-size: 1.3em;
     font-weight: bold;
-    padding: 13px 0;
+    padding: 14px 7px;
 }
 
 #company-page-component .company-page-main-container .section.career {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
-    /*padding-bottom: 0;*/
+    padding: 1% 2% 1%;
 }
 
 #company-page-component .company-page-main-container .section.cards {
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    /*justify-content: center;*/
+    /*justify-content: space-between;*/
+    justify-content: center;
     background: #E6E7E8;
-    padding: 0 18% 2%;
+    padding: 2% 2% 8%;
 }

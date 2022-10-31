@@ -9,7 +9,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*justify-content: flex-start;*/
     flex-wrap: nowrap;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -19,7 +18,6 @@
     scrollbar-width: none;  /* hides the scrollbar on firefox */
     height: 35vh;
     width: 100%;
-    /*position: relative;*/
 }
 .carousel-container .carousel::-webkit-scrollbar {  /* hides the scrollbar on chrome */
     display: none;
