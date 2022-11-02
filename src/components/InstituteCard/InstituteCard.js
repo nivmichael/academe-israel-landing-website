@@ -4,8 +4,15 @@ import './InstituteCard.css';
 import './InstituteCardResponsive.css';
 
 export default function InstituteCard (props) {
+    const card = ['pure-u-lg-1', 'pure-u-md-1', 'pure-u-sm-1', 'site-container'];
+    const withLogo = ['with-logo'];
+
+    function applyClassList () {
+        return props.withLogos ? card.concat(withLogo).join(' ') : card.join(' ');
+    }
+
     return (
-        <div id="institute-card" className={ props.withLogos ? 'site-container with-logo' : 'site-container' }
+        <div id="institute-card" className={ applyClassList() }
             onClick={ (e) => props.withLogos && props.handleCardClick(e, props.name) }>
             {
                 props.withLogos ?
