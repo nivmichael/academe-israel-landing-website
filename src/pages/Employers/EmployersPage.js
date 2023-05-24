@@ -39,6 +39,7 @@ import attLogo from './../../images/logos/companies/att-50x76.png';
 import facebookLogo from './../../images/logos/companies/facebook-100x38.png';
 import intelLogo from './../../images/logos/companies/intel-100x76.png';
 import paypalLogo from './../../images/logos/companies/paypal-100x27.png';
+import mccannLogo from './../../images/logos/companies/mccann-100x20.png';
 
 import microsoftLogo from './../../images/logos/companies/microsoft-120x26.png';
 import nessLogo from './../../images/logos/companies/ness-75x75.png';
@@ -81,7 +82,7 @@ const companiesList = {
     'google'    : googleLogo,
     'sap'       : sapLogo,
     'nielsen'   : nielsenLogo,
-    'yahoo'     : yahooLogo,
+    'mccann'    : mccannLogo,
     'pg'        : pgLogo,
     'deloitte'  : deloitteLogo,
     'hp'        : hpLogo,
@@ -89,14 +90,15 @@ const companiesList = {
     'att'       : attLogo,
     'facebook'  : facebookLogo,
     'intel'     : intelLogo,
-    'paypal'    : paypalLogo,
     'microsoft' : microsoftLogo,
     'ness'      : nessLogo,
     'amdocs'    : amdocsLogo,
-    'amazon'    : amazonLogo
+    'amazon'    : amazonLogo,
+    'yahoo'     : yahooLogo
 };
 
 const companiesCollapsedList = {
+    'paypal'        : paypalLogo,
     'comverse'      : comverseLogo,
     'apple'         : appleLogo,
     'audiocodes'    : audiocodesLogo,
